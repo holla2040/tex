@@ -2,6 +2,5 @@ possible p-ch drivers for PWM'ed p-ch mosfets
     TPL7407L
 
 p-ch fets 
-    AO3401A vgs max 12v
-    DMP3099L vgs max 20v
-    DMN3404L 5A vgs max 20v, $0.10/100 <<< good choice
+    AO3401A 4.0A vgs max 12v
+    DMP3099L 3.8A vgs max 20v
