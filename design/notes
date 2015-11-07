@@ -4,3 +4,76 @@ possible p-ch drivers for PWM'ed p-ch mosfets
 p-ch fets 
     AO3401A 4.0A vgs max 12v
     DMP3099L 3.8A vgs max 20v
+
+motor control
+    A3982   I < 2A
+    A3921   I > 3A
+    MC33926 I=5A peak, excellent part
+
+--- B-52 ---
+
+22 lights total:
+1) Landing (2 lights: Forward landing gear doors)
+2) Cross Wind (1 light: Right forward landing gear door)
+3) Taxi (1: Right forward landing gear, 1: Left tip gear door, 1: Right tip beer door)
+4) In Flight Refueling (2: Left slipway, 2: Right slipway, 1 Refueling receptacle)
+5) Terrain (1: Forward lower fuselage)
+6) Anti-Collision (2: Upper fuselage left & right - rotating , 1: Lower fuselage - rotating)
+7) Navigation (2: Wing tips, 2: Tail white and yellow, 3: Three mid-body (color?))
+
+Relay 1: Terrain motor up
+Relay 2: Terrain motor down
+
+
+Or if wanted all anti-collision to be out of sync:
+1) Landing (2: Forward landing gear doors)
+   Cross Wind (1: Right forward landing gear door)
+   Taxi (1: Right forward landing gear, 1: Left tip gear door, 1: Right tip beer door)
+2) In Flight Refueling (2: Left slipway, 2: Right slipway, 1 Refueling receptacle)
+3) Terrain (1: Forward lower fuselage)
+4) Anti-Collision (1: Upper fuselage left - rotating
+5) Anti-Collision (1: Upper fuselage right - rotating
+6) Anti-Collision (1: Lower fuselage - rotating)
+7) Navigation (2: Wing tips, 2: Tail white and yellow, 3: Three mid-body (color?))
+
+Relay 1: Terrain motor up
+Relay 2: Terrain motor down
+
+OR, fewer channel option (could also use current Arduino board):
+1) Landing, Crosswind, Taxi
+2) In Flight Refueling
+3) Terrain
+4) Anti-Collision (variable)
+5) Navigation     (variable)
+
+Channel 6 or Relay 1: Terrain motor up
+Channel 7 or Relay 2: Terrain motor down
+
+--- Current F-16 ---
+
+Current and New Board:
+1) wing tips, inlet (variable)
+2) anti collision (variable)
+3) tail illumination 
+4) landing
+
+--- B-29 ---
+
+Current:
+1 Identification
+2 Landing
+3 Landing Motor Up
+4 Wheel Wells
+5 Position (variable)
+6 Formation (variable0
+7 Landing Motor Down
+
+New Board:#1) Identification
+2) Landing
+3) Wheel Wells
+4) Position: Tail
+5) Position: Wing Tips
+6) Formation
+
+Relay 1: Landing Motor Up
+Relay 2: Landing Motor Down
