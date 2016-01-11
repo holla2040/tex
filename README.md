@@ -1,2 +1,2 @@
 # tex
-Lighting Controller for B-52
+    Controller for NMNSH's B-52, single axis tracker, a water turbine 

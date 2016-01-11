@@ -1,14 +1,85 @@
 possible p-ch drivers for PWM'ed p-ch mosfets
-    TPL7407L
+    TPL7407L 40V, 7-Channel NMOS Array, Low Side Driver
+    TLC5947  24-ch spi vcc 30V
+    TLC59711 12-ch spi vcc 18V, adafruit lib for arduino
+
+
+    adafruit n-ch
+        pca9685 i2c 16-ch pwm, 5v output
 
 p-ch fets 
-    AO3401A 4.0A vgs max 12v
-    DMP3099L 3.8A vgs max 20v
+    AO3401A 4.0A, 30V
+    DMP3099L 3.8A, 30V
+    DMG2305UX-13 5A, 20V
+
+    SLA5086 5 p-ch array
+
+n-ch fets for motor
+    NTD5865NT4G 60V@43A@18mOhms    100@0.43
+    STD70N10F4  100V@60A@19.5mOhms 100@0.95
+    NTD4969NT4G 30VA41A@13mOhms    100@0.31
+
+h-bridges
+    DMHC3025LSD-13 4.2A, 30V
+    DRV8871 3.6A@45V
+
+half-bridge
+    SI4916DY-T1-E3 10A, 30V 
+
+
+
+adc
+    ADS1015 12 bit 4-ch PGA, I2C, adafruit rpi support
+    ADS1115 16 bit 4-ch PGA
+    MCP3208 12 bit 8-ch    , SPI
+    MAX11615 12 bit 8-ch   , SPI
+    
+i/o expander
+    mcp23017
+
+analog multiplexer
+    HC4051
+    
+    
+    
 
 motor control
-    A3982   I < 2A
-    A3921   I > 3A
-    MC33926 I=5A peak, excellent part
+    A3982       I < 2A
+    A3921       I > 3A
+    DRV8432     14A integrated, 2x7A or stepper
+    DRV8701P    pre-driver with current sense and pwm current limiting
+    MC33926     I=5A peak, excellent part
+    TLE9201SG   6A h-bridge with spi    
+
+    provision for 3 or 4? A4988/DRV8825 carriers 
+        see http://wiki.protoneer.co.nz/Raspberry_Pi_CNC
+
+connectors
+    http://www.mouser.com/Connectors/Terminal-Blocks/Pluggable-Terminal-Blocks/_/N-7rqe3/
+        something like 20020004-D101B01LF 
+    http://www.digikey.com/product-search/en/connectors-interconnects/terminal-blocks-headers-plugs-and-sockets/1442750
+        OSTOQ047151 20A@5mm
+        20020107-D041A01LF 10A@3.81mm mating 20020004-D041B01LF
+        OSTOQ043250 10A@3.81mm mating OSTTJ0431530 only at digikey
+        EDSTLZ1555/4 looks like clone of phoenix 1803442, 1803594
+        20020302-D041B01LF 6A, no screws
+
+        another option  
+            phoenix contact combicon compact
+                1984031 with 1945119
+
+    for 2.5mm small wires
+        0397000204 accepts 26awg
+        1990067 combicon ptsa 2A@2.5mm
+        1989777
+
+    just jst header thermistors
+        $0.99 1m NTC Thermistor accuracy temperature sensor 10K 1% 3950 Waterproof Probe
+
+
+
+adafruit python code
+    https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code
 
 --- B-52 ---
 
@@ -77,3 +148,4 @@ New Board:#1) Identification
 
 Relay 1: Landing Motor Up
 Relay 2: Landing Motor Down
+
