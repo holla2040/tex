@@ -1,11 +1,20 @@
 possible p-ch drivers for PWM'ed p-ch mosfets
-    TPL7407L 40V, 7-Channel NMOS Array, Low Side Driver
-    TLC5947  24-ch spi vcc 30V
-    TLC59711 12-ch spi vcc 18V, adafruit lib for arduino
-
-
-    adafruit n-ch
+    preferred option for p-ch pwm, pca9685 with TPL7407L, resistors and p-ch fet
         pca9685 i2c 16-ch pwm, 5v output
+            couple with ULN2803A or TPL7407L for inversion p-ch driver
+            TPL7407L 40V, 7-Channel NMOS Array, Low Side Driver
+
+    parts excluded due to common plane ground
+        TLC5947  24-ch spi vcc 30V, 
+        TLC59711 12-ch spi vcc 18V, adafruit lib for arduino
+
+    MAX7313
+
+    also option, high-side switch
+        VNQ5050K-E, can switch at 65khz
+        http://www.nxp.com/products/discretes-and-logic/mosfets/high-side-switches:PWRHISIDESW?cof=0&am=0
+            12XS6D3
+            07XSF517
 
 p-ch fets 
     AO3401A 4.0A, 30V
