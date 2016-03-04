@@ -17,9 +17,14 @@ possible p-ch drivers for PWM'ed p-ch mosfets
             07XSF517
 
 p-ch fets 
+    preferred 
+        AOD417 MOSFET P-CH 30V 25A TO252, 30V, 25A 32mOhm, $0.53
+
+    AO3407 MOSFET P-CH 30V 4.3A SOT23
+
+    AOD480 25A, 30V, dpak
     AO3401A 4.0A, 30V
     DMP3099L 3.8A, 30V
-    DMG2305UX-13 5A, 20V
 
     SLA5086 5 p-ch array
 
@@ -38,16 +43,28 @@ half-bridge
 
 
 adc
-    ADS1015 12 bit 4-ch PGA, I2C, adafruit rpi support
-    ADS1115 16 bit 4-ch PGA
-    MCP3208 12 bit 8-ch    , SPI
-    MAX11615 12 bit 8-ch   , SPI
+    ADS1015     12 bit 4-ch PGA, I2C, adafruit rpi support
+    ADS1115     16 bit 4-ch PGA
+    MCP3208     12 bit 8-ch    , SPI
+    MAX11615    12 bit 8-ch   , SPI
+    MAX11629EEE 12 bit 8-ch
     
 i/o expander
     mcp23017
 
 analog multiplexer
     HC4051
+
+display
+    SSD1306, i2c oled
+
+relay
+    JQX-15F/005
+    http://www.banggood.com/20Pcs-SONGLE-Mini-12V-DC-Power-Relay-SRD-12VDC-SL-C-PCB-Type-p-955804.html
+
+power supply
+    LM2596 DC-DC Adjustable Step Down, http://www.banggood.com/3Pcs-LM2596-DC-DC-Adjustable-Step-Down-Power-Supply-Module-p-1029697.html
+        naw, just get module for this
     
     
     
@@ -73,9 +90,6 @@ connectors
         EDSTLZ1555/4 looks like clone of phoenix 1803442, 1803594
         20020302-D041B01LF 6A, no screws
 
-        another option  
-            phoenix contact combicon compact
-                1984031 with 1945119
 
     for 2.5mm small wires
         0397000204 accepts 26awg
@@ -85,76 +99,12 @@ connectors
     just jst header thermistors
         $0.99 1m NTC Thermistor accuracy temperature sensor 10K 1% 3950 Waterproof Probe
 
+    preferred choice is
+        wire to board, phoenix 1792944, 10 pos
+        phoenix 1934890, 12A 5mm, mating 1933215, 5 pos
+
 
 
 adafruit python code
     https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code
-
---- B-52 ---
-
-22 lights total:
-1) Landing (2 lights: Forward landing gear doors)
-2) Cross Wind (1 light: Right forward landing gear door)
-3) Taxi (1: Right forward landing gear, 1: Left tip gear door, 1: Right tip beer door)
-4) In Flight Refueling (2: Left slipway, 2: Right slipway, 1 Refueling receptacle)
-5) Terrain (1: Forward lower fuselage)
-6) Anti-Collision (2: Upper fuselage left & right - rotating , 1: Lower fuselage - rotating)
-7) Navigation (2: Wing tips, 2: Tail white and yellow, 3: Three mid-body (color?))
-
-Relay 1: Terrain motor up
-Relay 2: Terrain motor down
-
-
-Or if wanted all anti-collision to be out of sync:
-1) Landing (2: Forward landing gear doors)
-   Cross Wind (1: Right forward landing gear door)
-   Taxi (1: Right forward landing gear, 1: Left tip gear door, 1: Right tip beer door)
-2) In Flight Refueling (2: Left slipway, 2: Right slipway, 1 Refueling receptacle)
-3) Terrain (1: Forward lower fuselage)
-4) Anti-Collision (1: Upper fuselage left - rotating
-5) Anti-Collision (1: Upper fuselage right - rotating
-6) Anti-Collision (1: Lower fuselage - rotating)
-7) Navigation (2: Wing tips, 2: Tail white and yellow, 3: Three mid-body (color?))
-
-Relay 1: Terrain motor up
-Relay 2: Terrain motor down
-
-OR, fewer channel option (could also use current Arduino board):
-1) Landing, Crosswind, Taxi
-2) In Flight Refueling
-3) Terrain
-4) Anti-Collision (variable)
-5) Navigation     (variable)
-
-Channel 6 or Relay 1: Terrain motor up
-Channel 7 or Relay 2: Terrain motor down
-
---- Current F-16 ---
-
-Current and New Board:
-1) wing tips, inlet (variable)
-2) anti collision (variable)
-3) tail illumination 
-4) landing
-
---- B-29 ---
-
-Current:
-1 Identification
-2 Landing
-3 Landing Motor Up
-4 Wheel Wells
-5 Position (variable)
-6 Formation (variable0
-7 Landing Motor Down
-
-New Board:#1) Identification
-2) Landing
-3) Wheel Wells
-4) Position: Tail
-5) Position: Wing Tips
-6) Formation
-
-Relay 1: Landing Motor Up
-Relay 2: Landing Motor Down
 
