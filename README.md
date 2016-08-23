@@ -1,2 +1,2 @@
 # tex
-    Controller for NMNSH's B-52, single axis tracker, a water turbine 
+    RasberryPi super controller board for multiple uses: for example museum static airplanes, solar tracker and off-grid water turbine automation.  
