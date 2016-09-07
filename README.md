@@ -2,6 +2,7 @@
     RaspberryPi super controller board for multiple uses: for example museum static airplanes, solar tracker and off-grid water turbine automation.  
 
 ### features
+<pre>
  DC motor 1 h-bridge            discrete fets
  DC motor 1 encoder             cpu interrupt opto-coupled
  DC motor 1 current detect      gain
@@ -56,4 +57,4 @@
  Power supply current monitor   high-side current monitor
  Display                        OLED 0.96 mount intended
  Reverse Battery Protection     FET biased forward bias protection 
-
+</pre>
