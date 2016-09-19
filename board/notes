@@ -1,3 +1,16 @@
+todo
+    revise board labels
+        j16, j20,j11 for sure
+        j10 needs rs485 signaling tx+/-, rx+/-
+    separate switches
+    j28 needs top/bottom pad with vias
+    move serial number white label pad to bottom left of board
+        
+
+
+
+
+
 https://github.com/acrobotic/Ai_HAT_ADDA/tree/master/pcb
 
 http://www.banggood.com/OLED-Display-Module-For-Raspberry-Pi-2-Model-B-B-p-1029505.html
@@ -7,3 +20,6 @@ http://www.instructables.com/id/Connect-the-Raspberry-Pi-to-network-using-UART/
 hats, https://github.com/raspberrypi/hats
 
 MCP79410
+
+
+
