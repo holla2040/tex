@@ -6106,48 +6106,48 @@ Source:  FDD4141.pdf</description>
 <part name="GND6" library="holla" deviceset="GND" device=""/>
 <part name="C8" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
 <part name="GND8" library="holla" deviceset="GND" device=""/>
-<part name="D32" library="holla" deviceset="LED" device="-0603"/>
-<part name="D33" library="holla" deviceset="LED" device="-0603"/>
-<part name="D34" library="holla" deviceset="LED" device="-0603"/>
+<part name="D32" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="D33" library="holla" deviceset="LED" device="-0603" value="RED"/>
+<part name="D34" library="holla" deviceset="LED" device="-0603" value="BLUE"/>
 <part name="GND7" library="holla" deviceset="GND" device=""/>
-<part name="R60" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R61" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R62" library="holla" deviceset="R" device="-US_R0603"/>
+<part name="R60" library="holla" deviceset="R" device="-US_R0603" value="220"/>
+<part name="R61" library="holla" deviceset="R" device="-US_R0603" value="220"/>
+<part name="R62" library="holla" deviceset="R" device="-US_R0603" value="220"/>
 <part name="FRAME5" library="holla" deviceset="FRAME_A_L" device="" value="LED"/>
 <part name="U5" library="holla" deviceset="IO-PCA9685" device="-TSSOP28"/>
-<part name="C2" library="holla" deviceset="C" device="-USC0603"/>
+<part name="C2" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
 <part name="GND46" library="holla" deviceset="GND" device=""/>
 <part name="GND41" library="holla" deviceset="GND" device=""/>
-<part name="Q30" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="Q10" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="Q29" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="Q9" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="Q28" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="Q8" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="Q27" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="Q7" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="Q26" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="Q6" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="D16" library="holla" deviceset="LED" device="-0603"/>
-<part name="R13" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R12" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R11" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R10" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R9" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R8" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R7" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R6" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R5" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R4" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D15" library="holla" deviceset="LED" device="-0603"/>
-<part name="D14" library="holla" deviceset="LED" device="-0603"/>
-<part name="D13" library="holla" deviceset="LED" device="-0603"/>
-<part name="D12" library="holla" deviceset="LED" device="-0603"/>
-<part name="D11" library="holla" deviceset="LED" device="-0603"/>
-<part name="D10" library="holla" deviceset="LED" device="-0603"/>
-<part name="D9" library="holla" deviceset="LED" device="-0603"/>
-<part name="D8" library="holla" deviceset="LED" device="-0603"/>
-<part name="D7" library="holla" deviceset="LED" device="-0603"/>
+<part name="Q30" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="Q10" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="Q29" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="Q9" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="Q28" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="Q8" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="Q27" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="Q7" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="Q26" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="Q6" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="D16" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="R13" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R12" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R11" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R10" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R9" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R8" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R7" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R6" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R5" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R4" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D15" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="D14" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="D13" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="D12" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="D11" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="D10" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="D9" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="D8" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="D7" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND25" library="holla" deviceset="GND" device=""/>
 <part name="GND26" library="holla" deviceset="GND" device=""/>
 <part name="GND27" library="holla" deviceset="GND" device=""/>
@@ -6158,26 +6158,26 @@ Source:  FDD4141.pdf</description>
 <part name="GND32" library="holla" deviceset="GND" device=""/>
 <part name="GND33" library="holla" deviceset="GND" device=""/>
 <part name="GND34" library="holla" deviceset="GND" device=""/>
-<part name="Q40" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q12" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q36" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q13" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q37" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q14" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q38" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q16" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q15" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q39" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="R50" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R24" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R49" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R23" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R48" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R22" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R47" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R21" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R45" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R20" library="holla" deviceset="R" device="-US_R0603"/>
+<part name="Q40" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q12" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q36" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q13" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q37" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q14" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q38" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q16" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q15" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q39" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="R50" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R24" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R49" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R23" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R48" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R22" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R47" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R21" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R45" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R20" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
 <part name="GND47" library="holla" deviceset="GND" device=""/>
 <part name="GND48" library="holla" deviceset="GND" device=""/>
 <part name="GND49" library="holla" deviceset="GND" device=""/>
@@ -6188,47 +6188,47 @@ Source:  FDD4141.pdf</description>
 <part name="GND54" library="holla" deviceset="GND" device=""/>
 <part name="GND55" library="holla" deviceset="GND" device=""/>
 <part name="GND56" library="holla" deviceset="GND" device=""/>
-<part name="Q22" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="R37" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="Q33" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q2" library="holla" deviceset="FET-NCHANNEL" device="-TO252"/>
+<part name="Q22" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="R37" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="Q33" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q2" library="holla" deviceset="FET-NCHANNEL" device="-TO252" value="IRFZ44"/>
 <part name="GND44" library="holla" deviceset="GND" device=""/>
-<part name="Q21" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="R36" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="Q32" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q1" library="holla" deviceset="FET-NCHANNEL" device="-TO252"/>
+<part name="Q21" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="R36" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="Q32" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q1" library="holla" deviceset="FET-NCHANNEL" device="-TO252" value="IRFZ44"/>
 <part name="GND45" library="holla" deviceset="GND" device=""/>
-<part name="R33" library="holla" deviceset="R" device="-US_R1210"/>
-<part name="Q24" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="R35" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="Q31" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q4" library="holla" deviceset="FET-NCHANNEL" device="-TO252"/>
+<part name="R33" library="holla" deviceset="R" device="-US_R1210" value="1"/>
+<part name="Q24" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="R35" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="Q31" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q4" library="holla" deviceset="FET-NCHANNEL" device="-TO252" value="IRFZ44"/>
 <part name="GND42" library="holla" deviceset="GND" device=""/>
-<part name="Q23" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="R38" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="Q34" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q3" library="holla" deviceset="FET-NCHANNEL" device="-TO252"/>
+<part name="Q23" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="R38" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="Q34" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q3" library="holla" deviceset="FET-NCHANNEL" device="-TO252" value="IRFZ44"/>
 <part name="GND43" library="holla" deviceset="GND" device=""/>
-<part name="R34" library="holla" deviceset="R" device="-US_R1210"/>
-<part name="R18" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D18" library="holla" deviceset="LED" device="-0603"/>
-<part name="D20" library="holla" deviceset="LED" device="-0603"/>
-<part name="R15" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D17" library="holla" deviceset="LED" device="-0603"/>
-<part name="D19" library="holla" deviceset="LED" device="-0603"/>
-<part name="Q25" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="Q5" library="holla" deviceset="FET-PCHANNEL" device="-TO252"/>
-<part name="Q11" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q35" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="R46" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R27" library="holla" deviceset="R" device="-US_R0603"/>
+<part name="R34" library="holla" deviceset="R" device="-US_R1210" value="1"/>
+<part name="R18" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D18" library="holla" deviceset="LED" device="-0603" value="RED"/>
+<part name="D20" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="R15" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D17" library="holla" deviceset="LED" device="-0603" value="RED"/>
+<part name="D19" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="Q25" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="Q5" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
+<part name="Q11" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q35" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="R46" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R27" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
 <part name="GND57" library="holla" deviceset="GND" device=""/>
 <part name="GND58" library="holla" deviceset="GND" device=""/>
-<part name="R3" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D6" library="holla" deviceset="LED" device="-0603"/>
+<part name="R3" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D6" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND35" library="holla" deviceset="GND" device=""/>
-<part name="R2" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D5" library="holla" deviceset="LED" device="-0603"/>
+<part name="R2" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D5" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND36" library="holla" deviceset="GND" device=""/>
 <part name="R44" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
 <part name="R55" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
@@ -6248,47 +6248,47 @@ Source:  FDD4141.pdf</description>
 <part name="GND10" library="holla" deviceset="GND" device=""/>
 <part name="R73" library="holla" deviceset="R" device="-US_R0603" value="3.9k"/>
 <part name="R74" library="holla" deviceset="R" device="-US_R0603" value="3.9k"/>
-<part name="R17" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D3" library="holla" deviceset="LED" device="-0603"/>
+<part name="R17" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D3" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND38" library="holla" deviceset="GND" device=""/>
-<part name="R1" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D4" library="holla" deviceset="LED" device="-0603"/>
+<part name="R1" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D4" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND37" library="holla" deviceset="GND" device=""/>
-<part name="R16" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D2" library="holla" deviceset="LED" device="-0603"/>
+<part name="R16" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D2" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND39" library="holla" deviceset="GND" device=""/>
-<part name="R14" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D1" library="holla" deviceset="LED" device="-0603"/>
+<part name="R14" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D1" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND40" library="holla" deviceset="GND" device=""/>
-<part name="R51" library="holla" deviceset="R" device="-US_R1210"/>
+<part name="R51" library="holla" deviceset="R" device="-US_R1210" value="10"/>
 <part name="J20" library="holla" deviceset="M02" device="-6.35MM"/>
 <part name="J4" library="holla" deviceset="M04" device="-PLUGIN-SCREW"/>
 <part name="J3" library="holla" deviceset="M04" device="-PLUGIN-SCREW"/>
 <part name="J2" library="holla" deviceset="M04" device="-PLUGIN-SCREW"/>
 <part name="J1" library="holla" deviceset="M04" device="-PLUGIN-SCREW"/>
-<part name="Q44" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
+<part name="Q44" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="GND61" library="holla" deviceset="GND" device=""/>
-<part name="Q43" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q42" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q47" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
+<part name="Q43" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q42" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q47" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="GND62" library="holla" deviceset="GND" device=""/>
-<part name="Q46" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q45" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="R82" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R81" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R80" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R85" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R84" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R83" library="holla" deviceset="R" device="-US_R0603"/>
+<part name="Q46" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q45" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="R82" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R81" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R80" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R85" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R84" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R83" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
 <part name="U14" library="holla" deviceset="OPTO-LTV817" device=""/>
 <part name="U15" library="holla" deviceset="OPTO-LTV817" device=""/>
 <part name="U12" library="holla" deviceset="OPTO-LTV817" device=""/>
 <part name="U13" library="holla" deviceset="OPTO-LTV817" device=""/>
 <part name="GND60" library="holla" deviceset="GND" device=""/>
-<part name="R67" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R68" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R65" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R66" library="holla" deviceset="R" device="-US_R0603"/>
+<part name="R67" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R68" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R65" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R66" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
 <part name="J15" library="holla" deviceset="M04" device="-PLUGIN-SCREW"/>
 <part name="J14" library="holla" deviceset="M04" device="-PLUGIN-SCREW"/>
 <part name="GND59" library="holla" deviceset="GND" device=""/>
@@ -6300,34 +6300,34 @@ Source:  FDD4141.pdf</description>
 <part name="J8" library="holla" deviceset="M03" device="-PLUGIN-SCREW"/>
 <part name="J7" library="holla" deviceset="M03" device="-PLUGIN-SCREW"/>
 <part name="J10" library="holla" deviceset="M03" device="-PLUGIN-SCREW"/>
-<part name="Q20" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q17" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q19" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
-<part name="Q18" library="holla" deviceset="FET-NCHANNEL" device="-SOT23"/>
+<part name="Q20" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q17" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q19" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
+<part name="Q18" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="GND24" library="holla" deviceset="GND" device=""/>
 <part name="GND23" library="holla" deviceset="GND" device=""/>
 <part name="GND21" library="holla" deviceset="GND" device=""/>
 <part name="GND18" library="holla" deviceset="GND" device=""/>
-<part name="D24" library="holla" deviceset="DIODE" device="-0603"/>
-<part name="D23" library="holla" deviceset="DIODE" device="-0603"/>
-<part name="D22" library="holla" deviceset="DIODE" device="-0603"/>
-<part name="D21" library="holla" deviceset="DIODE" device="-0603"/>
-<part name="R32" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D30" library="holla" deviceset="LED" device="-0603"/>
-<part name="R31" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D29" library="holla" deviceset="LED" device="-0603"/>
-<part name="R30" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D28" library="holla" deviceset="LED" device="-0603"/>
-<part name="R29" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D27" library="holla" deviceset="LED" device="-0603"/>
+<part name="D24" library="holla" deviceset="DIODE" device="-0603" value="1n4148"/>
+<part name="D23" library="holla" deviceset="DIODE" device="-0603" value="1n4148"/>
+<part name="D22" library="holla" deviceset="DIODE" device="-0603" value="1n4148"/>
+<part name="D21" library="holla" deviceset="DIODE" device="-0603" value="1n4148"/>
+<part name="R32" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D30" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="R31" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D29" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="R30" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D28" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="R29" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="D27" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="U2" library="holla" deviceset="RELAY-S108T02" device="PTH"/>
 <part name="U1" library="holla" deviceset="RELAY-S108T02" device="PTH"/>
 <part name="J6" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
 <part name="J5" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
-<part name="R26" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R25" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D26" library="holla" deviceset="LED" device="-0603"/>
-<part name="D25" library="holla" deviceset="LED" device="-0603"/>
+<part name="R26" library="holla" deviceset="R" device="-US_R0603" value="220"/>
+<part name="R25" library="holla" deviceset="R" device="-US_R0603" value="220"/>
+<part name="D26" library="holla" deviceset="LED" device="-0603" value="GRN"/>
+<part name="D25" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND3" library="holla" deviceset="GND" device=""/>
 <part name="FRAME6" library="holla" deviceset="FRAME_A_L" device="" value="SENSORS"/>
 <part name="FRAME7" library="holla" deviceset="FRAME_A_L" device="" value="MOTOR"/>
@@ -6337,12 +6337,12 @@ Source:  FDD4141.pdf</description>
 <part name="U16" library="holla" deviceset="IO-MCP23017" device="SO"/>
 <part name="GND20" library="holla" deviceset="GND" device=""/>
 <part name="J29" library="holla" deviceset="M06" device="-PLUGIN-SCREW"/>
-<part name="C29" library="holla" deviceset="C" device="-USC0603"/>
-<part name="C28" library="holla" deviceset="C" device="-USC0603"/>
-<part name="C27" library="holla" deviceset="C" device="-USC0603"/>
-<part name="C26" library="holla" deviceset="C" device="-USC0603"/>
-<part name="C25" library="holla" deviceset="C" device="-USC0603"/>
-<part name="C24" library="holla" deviceset="C" device="-USC0603"/>
+<part name="C29" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C28" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C27" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C26" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C25" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C24" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
 <part name="GND19" library="holla" deviceset="GND" device=""/>
 <part name="J16" library="holla" deviceset="M06" device="-PLUGIN-SCREW"/>
 <part name="J19" library="holla" deviceset="M06" device="-PLUGIN-SCREW"/>
@@ -6351,24 +6351,24 @@ Source:  FDD4141.pdf</description>
 <part name="J22" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
 <part name="J23" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
 <part name="J24" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
-<part name="R90" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="C19" library="holla" deviceset="C" device="-USC0603"/>
-<part name="C18" library="holla" deviceset="C" device="-USC0603"/>
+<part name="R90" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
+<part name="C19" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C18" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
 <part name="J27" library="holla" deviceset="M03" device="-PLUGIN-SCREW"/>
 <part name="J28" library="holla" deviceset="M03" device="-PLUGIN-SCREW"/>
-<part name="C23" library="holla" deviceset="C" device="-USC0603"/>
-<part name="C22" library="holla" deviceset="C" device="-USC0603"/>
-<part name="C21" library="holla" deviceset="C" device="-USC0603"/>
-<part name="C20" library="holla" deviceset="C" device="-USC0603"/>
-<part name="C7" library="holla" deviceset="C" device="-USC0603"/>
+<part name="C23" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C22" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C21" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C20" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C7" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
 <part name="J25" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
 <part name="J26" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
-<part name="R86" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R87" library="holla" deviceset="R" device="-US_R0603"/>
+<part name="R86" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R87" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
 <part name="U7" library="holla" deviceset="ADC-INA219" device="-SOIC8"/>
 <part name="U4" library="brightleaf" deviceset="AZ23CXXX" device="" value="AZ23C5V1"/>
 <part name="Q41" library="brightleaf" deviceset="FDD4141" device="TO252" value="FDD4141"/>
-<part name="C6" library="holla" deviceset="C" device="-USC0603"/>
+<part name="C6" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
 <part name="GND17" library="holla" deviceset="GND" device=""/>
 <part name="GND16" library="holla" deviceset="GND" device=""/>
 <part name="J30" library="holla" deviceset="M06" device="-PLUGIN-SCREW"/>
@@ -6377,10 +6377,10 @@ Source:  FDD4141.pdf</description>
 <part name="J17" library="holla" deviceset="M05" device="-PLUGIN-SCREW"/>
 <part name="GND63" library="holla" deviceset="GND" device=""/>
 <part name="GND64" library="holla" deviceset="GND" device=""/>
-<part name="R94" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R93" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R92" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R91" library="holla" deviceset="R" device="-US_R0603"/>
+<part name="R94" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
+<part name="R93" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
+<part name="R92" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
+<part name="R91" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
 <part name="U20" library="holla" deviceset="DISP-I2C-4PIN" device=""/>
 <part name="U3" library="holla" deviceset="COMM-MAX13433E" device=""/>
 <part name="J13" library="holla" deviceset="M05" device="-PLUGIN-SCREW"/>
@@ -6392,17 +6392,17 @@ Source:  FDD4141.pdf</description>
 <part name="C1" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
 <part name="GND11" library="holla" deviceset="GND" device=""/>
 <part name="R52" library="holla" deviceset="R" device="-US_R0603" value="120"/>
-<part name="R42" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R41" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D31" library="holla" deviceset="DIODE" device="-SMA"/>
-<part name="D35" library="holla" deviceset="DIODE" device="-0805"/>
-<part name="R76" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="D36" library="holla" deviceset="DIODE" device="-0805"/>
-<part name="R75" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R88" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R89" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="C17" library="holla" deviceset="C" device="-USC0603"/>
-<part name="C11" library="holla" deviceset="C" device="-USC0603"/>
+<part name="R42" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R41" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="D31" library="holla" deviceset="DIODE" device="-SMA" value="VZ=15.0"/>
+<part name="D35" library="holla" deviceset="DIODE" device="-0805" value="1n4148"/>
+<part name="R76" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
+<part name="D36" library="holla" deviceset="DIODE" device="-0805" value="1n4148"/>
+<part name="R75" library="holla" deviceset="R" device="-US_R0603" value="DNP"/>
+<part name="R88" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R89" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
+<part name="C17" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C11" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
 <part name="R72" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
 <part name="R71" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
 <part name="U11" library="holla" deviceset="AMP-OPAMP-DUAL" device="-SO08"/>
@@ -6413,8 +6413,8 @@ Source:  FDD4141.pdf</description>
 <part name="R69" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
 <part name="AGND3" library="holla" deviceset="AGND" device=""/>
 <part name="C12" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="R58" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="R59" library="holla" deviceset="R" device="-US_R0603"/>
+<part name="R58" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R59" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
 <part name="AGND4" library="holla" deviceset="AGND" device=""/>
 <part name="AGND7" library="holla" deviceset="AGND" device=""/>
 <part name="AGND9" library="holla" deviceset="AGND" device=""/>
@@ -6432,20 +6432,20 @@ Source:  FDD4141.pdf</description>
 <part name="AGND18" library="holla" deviceset="AGND" device=""/>
 <part name="AGND2" library="holla" deviceset="AGND" device=""/>
 <part name="GND13" library="holla" deviceset="GND" device=""/>
-<part name="R64" library="holla" deviceset="R" device="-US_R0603"/>
+<part name="R64" library="holla" deviceset="R" device="-US_R0603" value="0"/>
 <part name="R43" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
 <part name="U19" library="holla" deviceset="RTC-MCP7940N" device=""/>
 <part name="R79" library="holla" deviceset="R" device="-US_R0603" value="120"/>
 <part name="B100" library="holla" deviceset="CONN-COINBATTERYHOLDER-20MM" device=""/>
 <part name="GND4" library="holla" deviceset="GND" device=""/>
-<part name="C13" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C14" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C13" library="holla" deviceset="C" device="-USC0603" value="10p"/>
+<part name="C14" library="holla" deviceset="C" device="-USC0603" value="10p"/>
 <part name="GND2" library="holla" deviceset="GND" device=""/>
 <part name="J11" library="holla" deviceset="M04" device="-0.1"/>
 <part name="R39" library="holla" deviceset="R" device="-US_R0603" value="120"/>
 <part name="R40" library="holla" deviceset="R" device="-US_R0603" value="120"/>
-<part name="R78" library="holla" deviceset="R" device="-US_R0603"/>
-<part name="C15" library="holla" deviceset="C" device="-USC0603"/>
+<part name="R78" library="holla" deviceset="R" device="-US_R0603" value="100"/>
+<part name="C15" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
 <part name="AGND1" library="holla" deviceset="AGND" device=""/>
 <part name="TP1" library="holla" deviceset="TESTPOINT" device="THRU"/>
 <part name="JP1" library="holla" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
@@ -11317,12 +11317,6 @@ install 0ohm resistor to select</text>
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,2,25.4,91.44,U3,VCC,+5V,,,"/>
-<approved hash="104,5,30.48,170.18,U13,VCC,+5V,,,"/>
-<approved hash="104,7,76.2,60.96,U10A,V+,AVCC,,,"/>
-<approved hash="104,7,76.2,45.72,U10A,V-,AGND,,,"/>
-<approved hash="104,4,35.56,149.86,U22,VDD,+5V,,,"/>
-<approved hash="104,4,35.56,109.22,U22,VSS,GND,,,"/>
 <approved hash="104,6,172.72,165.1,U11A,V+,AVCC,,,"/>
 <approved hash="104,6,172.72,149.86,U11A,V-,AGND,,,"/>
 </errors>
