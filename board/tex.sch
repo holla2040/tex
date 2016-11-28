@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -405,8 +405,8 @@ Digikey 3557-2K-ND</description>
 <wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.2032" layer="51"/>
 <smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
 <smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="0" y="0.762" size="1.016" layer="25" ratio="21" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-0.762" size="1.016" layer="27" ratio="21" align="top-center">&gt;VALUE</text>
+<text x="0" y="1.016" size="1.016" layer="25" ratio="21" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.016" size="1.016" layer="27" ratio="21" align="top-center">&gt;VALUE</text>
 <rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
@@ -795,8 +795,8 @@ LB Q993&lt;br&gt;
 Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <smd name="C" x="0" y="0.75" dx="0.8" dy="0.8" layer="1"/>
 <smd name="A" x="0" y="-0.75" dx="0.8" dy="0.8" layer="1"/>
-<text x="-0.635" y="-0.635" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="1.905" y="-0.635" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-0.835" y="-0.635" size="1.016" layer="25" ratio="21" rot="R90">&gt;NAME</text>
+<text x="1.905" y="-0.635" size="1.016" layer="27" ratio="21" rot="R90">&gt;VALUE</text>
 <rectangle x1="-0.635" y1="0.45" x2="0.635" y2="0.85" layer="51"/>
 <rectangle x1="-0.45" y1="-0.85" x2="0.45" y2="-0.45" layer="51"/>
 <wire x1="0" y1="0.381" x2="-0.381" y2="-0.127" width="0.2032" layer="51"/>
@@ -1100,21 +1100,6 @@ Digikey WM4200-ND</description>
 <wire x1="-0.5" y1="-1.95" x2="0.5" y2="-1.95" width="0.2032" layer="21"/>
 <wire x1="0.5" y1="-1.95" x2="0.5" y2="-6" width="0.2032" layer="21"/>
 </package>
-<package name="1984617">
-<wire x1="-1.75" y1="3.1" x2="5.336" y2="3.1" width="0.2032" layer="21"/>
-<wire x1="5.336" y1="-3.9" x2="5.336" y2="3.1" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-3.9" x2="5.336" y2="-3.9" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-3.9" x2="-1.75" y2="3.1" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="0" drill="1.3" shape="square" rot="R90"/>
-<pad name="2" x="3.5" y="0" drill="1.3" rot="R90"/>
-<text x="-2.095" y="-3.3425" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
-<text x="7.176" y="-3.3425" size="1.27" layer="27" font="vector" rot="R90">&gt;VALUE</text>
-<polygon width="0.2032" layer="21">
-<vertex x="-0.0535" y="-4.5695"/>
-<vertex x="-0.371" y="-3.8845"/>
-<vertex x="0.264" y="-3.8845"/>
-</polygon>
-</package>
 <package name="MKDSN1,5/2-5,08">
 <description>&lt;b&gt;MKDSN 1,5/ 2-5,08&lt;/b&gt; Printklemme&lt;p&gt;
 Nennstrom: 13,5 A&lt;br&gt;
@@ -1181,21 +1166,6 @@ Source: http://eshop.phoenixcontact.com .. 1729128.pdf</description>
 <pad name="2" x="2.5189" y="0.025" drill="1.3" diameter="2"/>
 <text x="-4.7511" y="4.445" size="1.27" layer="25">&gt;NAME</text>
 <text x="6.985" y="-3.81" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-</package>
-<package name="1985195">
-<wire x1="5.5" y1="7.25" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="7.25" x2="-3.25" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-3.25" y1="7.25" x2="-3.25" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="-3.25" y1="-4.75" x2="-1.75" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-4.75" x2="5.5" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="5.5" y1="-4.75" x2="5.5" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-4.75" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
-<circle x="0" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="3.75" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="5" drill="1.1" shape="square"/>
-<pad name="2" x="3.5" y="0" drill="1.1"/>
-<text x="-3" y="7.75" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.75" y="-6.5" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="1989748">
 <description>Phoenix Contact 1989748</description>
@@ -1402,43 +1372,6 @@ Source: http://www.molex.com</description>
 <wire x1="1.27" y1="5.08" x2="1.27" y2="4.76" width="0.127" layer="21"/>
 <wire x1="-1.27" y1="-5.08" x2="1.27" y2="-5.08" width="0.127" layer="22"/>
 </package>
-<package name="1984633">
-<description>&lt;b&gt;Phoenix Contact 1984646&lt;/b&gt;</description>
-<wire x1="-1.75" y1="3.1" x2="12.575" y2="3.1" width="0.2032" layer="21"/>
-<wire x1="12.575" y1="-3.9" x2="12.575" y2="3.1" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-3.9" x2="12.575" y2="-3.9" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-3.9" x2="-1.75" y2="3.1" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="0" drill="1.3" shape="square" rot="R90"/>
-<pad name="2" x="3.5" y="0" drill="1.3" rot="R90"/>
-<pad name="3" x="7" y="0" drill="1.3" rot="R90"/>
-<pad name="4" x="10.5" y="0" drill="1.3" rot="R90"/>
-<text x="-2.095" y="-3.3425" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
-<text x="14.415" y="-3.3425" size="1.27" layer="27" font="vector" rot="R90">&gt;VALUE</text>
-<polygon width="0.2032" layer="21">
-<vertex x="-0.0535" y="-4.5695"/>
-<vertex x="-0.371" y="-3.8845"/>
-<vertex x="0.264" y="-3.8845"/>
-</polygon>
-</package>
-<package name="1985218">
-<wire x1="12" y1="7.25" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="7.25" x2="-3.25" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-3.25" y1="7.25" x2="-3.25" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="-3.25" y1="-4.75" x2="-1.75" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-4.75" x2="12" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="12" y1="-4.75" x2="12" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-4.75" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
-<circle x="0" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="3.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="7" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="10.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="5" drill="1.1" shape="square"/>
-<pad name="2" x="3.5" y="0" drill="1.1"/>
-<pad name="3" x="7" y="5" drill="1.1"/>
-<pad name="4" x="10.5" y="0" drill="1.1"/>
-<text x="-3" y="7.75" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.75" y="-6.5" size="1.27" layer="27">&gt;VALUE</text>
-</package>
 <package name="1989764">
 <description>Phoenix Contact 1989764</description>
 <wire x1="8.75" y1="7.25" x2="-1.25" y2="7.25" width="0.2032" layer="21"/>
@@ -1614,39 +1547,6 @@ Source: http://eshop.phoenixcontact.com .. 1729131.pdf</description>
 <pad name="3" x="2.5189" y="0.025" drill="1.3" diameter="2"/>
 <text x="-9.8311" y="4.445" size="1.27" layer="25">&gt;NAME</text>
 <text x="-3.81" y="4.445" size="1.27" layer="27">&gt;VALUE</text>
-</package>
-<package name="1984620">
-<wire x1="-1.75" y1="3.1" x2="9.019" y2="3.1" width="0.2032" layer="21"/>
-<wire x1="9.019" y1="-3.9" x2="9.019" y2="3.1" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-3.9" x2="9.019" y2="-3.9" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-3.9" x2="-1.75" y2="3.1" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="0" drill="1.3" shape="square" rot="R90"/>
-<pad name="2" x="3.5" y="0" drill="1.3" rot="R90"/>
-<pad name="3" x="7" y="0" drill="1.3" rot="R90"/>
-<text x="-2.095" y="-3.3425" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
-<text x="10.605" y="-3.3425" size="1.27" layer="27" font="vector" rot="R90">&gt;VALUE</text>
-<polygon width="0.2032" layer="21">
-<vertex x="-0.0535" y="-4.5695"/>
-<vertex x="-0.371" y="-3.8845"/>
-<vertex x="0.264" y="-3.8845"/>
-</polygon>
-</package>
-<package name="1985205">
-<wire x1="9" y1="7.25" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="7.25" x2="-3.25" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-3.25" y1="7.25" x2="-3.25" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="-3.25" y1="-4.75" x2="-1.75" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-4.75" x2="9" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="9" y1="-4.75" x2="9" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-4.75" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
-<circle x="0" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="3.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="7" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="5" drill="1.1" shape="square"/>
-<pad name="2" x="3.5" y="0" drill="1.1"/>
-<pad name="3" x="7" y="5" drill="1.1"/>
-<text x="-3" y="7.75" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.75" y="-6.5" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="1989751">
 <wire x1="6.25" y1="7.25" x2="-1.25" y2="7.25" width="0.2032" layer="21"/>
@@ -2411,48 +2311,6 @@ Molex 22-23-2061 Digikey WM4204-ND</description>
 <wire x1="1.27" y1="7.62" x2="1.27" y2="7.3" width="0.127" layer="21"/>
 <wire x1="-1.27" y1="-7.62" x2="-1.27" y2="-7.3" width="0.127" layer="21"/>
 </package>
-<package name="1984659">
-<wire x1="-1.75" y1="3.1" x2="19.56" y2="3.1" width="0.2032" layer="21"/>
-<wire x1="19.56" y1="-3.9" x2="19.56" y2="3.1" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-3.9" x2="19.56" y2="-3.9" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-3.9" x2="-1.75" y2="3.1" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="0" drill="1.3" shape="square" rot="R90"/>
-<pad name="2" x="3.5" y="0" drill="1.3" rot="R90"/>
-<pad name="3" x="7" y="0" drill="1.3" rot="R90"/>
-<pad name="4" x="10.5" y="0" drill="1.3" rot="R90"/>
-<pad name="5" x="14" y="0" drill="1.3" rot="R90"/>
-<pad name="6" x="17.5" y="0" drill="1.3" rot="R90"/>
-<text x="-2.095" y="-2.7075" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
-<text x="21.4" y="-3.3425" size="1.27" layer="27" font="vector" rot="R90">&gt;VALUE</text>
-<polygon width="0.2032" layer="21">
-<vertex x="-0.0535" y="-4.5695"/>
-<vertex x="-0.371" y="-3.8845"/>
-<vertex x="0.264" y="-3.8845"/>
-</polygon>
-</package>
-<package name="1985234">
-<wire x1="19" y1="7.25" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="7.25" x2="-3.25" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-3.25" y1="7.25" x2="-3.25" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="-3.25" y1="-4.75" x2="-1.75" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-4.75" x2="19" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="19" y1="-4.75" x2="19" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-4.75" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
-<circle x="0" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="3.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="7" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="10.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="14" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="17.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="5" drill="1.1" shape="square"/>
-<pad name="2" x="3.5" y="0" drill="1.1"/>
-<pad name="3" x="7" y="5" drill="1.1"/>
-<pad name="4" x="10.5" y="0" drill="1.1"/>
-<pad name="5" x="14" y="5" drill="1.1"/>
-<pad name="6" x="17.5" y="0" drill="1.1"/>
-<text x="-3" y="7.75" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.75" y="-6.5" size="1.27" layer="27">&gt;VALUE</text>
-</package>
 <package name="1989780">
 <wire x1="13.75" y1="7.25" x2="-1.25" y2="7.25" width="0.2032" layer="21"/>
 <wire x1="-1.25" y1="7.25" x2="-2.75" y2="7.25" width="0.2032" layer="21"/>
@@ -2627,46 +2485,6 @@ Molex 22-23-2061 Digikey WM4204-ND</description>
 <wire x1="1.27" y1="4.13" x2="1.27" y2="1.03" width="0.127" layer="21"/>
 <wire x1="1.27" y1="6.35" x2="1.27" y2="6.03" width="0.127" layer="21"/>
 <wire x1="1.27" y1="-6.35" x2="-1.27" y2="-6.35" width="0.127" layer="21"/>
-</package>
-<package name="1984646">
-<description>&lt;b&gt;Phoenix Contact 1984646&lt;/b&gt;</description>
-<wire x1="-1.75" y1="3.1" x2="15.75" y2="3.1" width="0.2032" layer="21"/>
-<wire x1="15.75" y1="-3.9" x2="15.75" y2="3.1" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-3.9" x2="15.75" y2="-3.9" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-3.9" x2="-1.75" y2="3.1" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="0" drill="1.3" shape="square" rot="R90"/>
-<pad name="2" x="3.5" y="0" drill="1.3" rot="R90"/>
-<pad name="3" x="7" y="0" drill="1.3" rot="R90"/>
-<pad name="4" x="10.5" y="0" drill="1.3" rot="R90"/>
-<pad name="5" x="14" y="0" drill="1.3" rot="R90"/>
-<text x="-2.095" y="-2.7075" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
-<text x="17.59" y="-3.3425" size="1.27" layer="27" font="vector" rot="R90">&gt;VALUE</text>
-<polygon width="0.2032" layer="21">
-<vertex x="-0.0535" y="-4.5695"/>
-<vertex x="-0.371" y="-3.8845"/>
-<vertex x="0.264" y="-3.8845"/>
-</polygon>
-</package>
-<package name="1985221">
-<wire x1="15.5" y1="7.25" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="7.25" x2="-3.25" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-3.25" y1="7.25" x2="-3.25" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="-3.25" y1="-4.75" x2="-1.75" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-4.75" x2="15.5" y2="-4.75" width="0.2032" layer="21"/>
-<wire x1="15.5" y1="-4.75" x2="15.5" y2="7.25" width="0.2032" layer="21"/>
-<wire x1="-1.75" y1="-4.75" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
-<circle x="0" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="3.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="7" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="10.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<circle x="14" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="5" drill="1.1" shape="square"/>
-<pad name="2" x="3.5" y="0" drill="1.1"/>
-<pad name="3" x="7" y="5" drill="1.1"/>
-<pad name="4" x="10.5" y="0" drill="1.1"/>
-<pad name="5" x="14" y="5" drill="1.1"/>
-<text x="-3" y="7.75" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.75" y="-6.5" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="1989777">
 <description>Phoenix Contact 1989777</description>
@@ -3186,42 +3004,6 @@ C&amp;K PTS525SM10SMTR LFS</description>
 <vertex x="1.8003" y="-1.6"/>
 </polygon>
 </package>
-<package name="EVQ5PN">
-<wire x1="-2.94" y1="1.782" x2="3.01" y2="1.782" width="0.1016" layer="51"/>
-<wire x1="3.01" y1="1.782" x2="3.01" y2="-1.768" width="0.1016" layer="51"/>
-<wire x1="3.01" y1="-1.768" x2="-2.94" y2="-1.768" width="0.1016" layer="51"/>
-<wire x1="-2.94" y1="-1.768" x2="-2.94" y2="1.782" width="0.1016" layer="51"/>
-<smd name="2" x="2.7" y="0" dx="2" dy="1.6" layer="1"/>
-<smd name="1" x="-2.7" y="0" dx="2" dy="1.6" layer="1"/>
-<text x="-3.59" y="2.282" size="1.27" layer="25">&gt;NAME</text>
-<text x="-3.59" y="-3.593" size="1.27" layer="27">&gt;VALUE</text>
-</package>
-<package name="BAT-HLD-001">
-<circle x="0" y="0" radius="9.919" width="0.127" layer="21"/>
-<smd name="+1" x="-11.43" y="0" dx="2.54" dy="5.08" layer="1"/>
-<smd name="+2" x="11.43" y="0" dx="2.54" dy="5.08" layer="1"/>
-<smd name="-" x="0" y="0" dx="2.54" dy="5.08" layer="1"/>
-<text x="-12.7" y="3.81" size="1.27" layer="25">&gt;NAME</text>
-<polygon width="0.254" layer="1">
-<vertex x="-8.89" y="0" curve="-90"/>
-<vertex x="0" y="8.89" curve="-90"/>
-<vertex x="8.89" y="0" curve="-90"/>
-<vertex x="0" y="-8.89" curve="-90"/>
-</polygon>
-<polygon width="0.127" layer="29">
-<vertex x="-8.89" y="0" curve="-90"/>
-<vertex x="0" y="8.89" curve="-90"/>
-<vertex x="8.89" y="0" curve="-90"/>
-<vertex x="0" y="-8.89" curve="-90"/>
-</polygon>
-<polygon width="0.127" layer="31">
-<vertex x="-8.89" y="0" curve="-90"/>
-<vertex x="0" y="8.89" curve="-90"/>
-<vertex x="8.89" y="0" curve="-90"/>
-<vertex x="0" y="-8.89" curve="-90"/>
-</polygon>
-<circle x="0" y="0" radius="9.919" width="0.127" layer="41"/>
-</package>
 <package name="TP0.5R">
 <description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
 <wire x1="-0.635" y1="0" x2="0.635" y2="0" width="0.0024" layer="37"/>
@@ -3255,6 +3037,236 @@ C&amp;K PTS525SM10SMTR LFS</description>
 </package>
 <package name="MICRO-FIDUCIAL">
 <smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
+<wire x1="0" y1="0" x2="0" y2="0.762" width="0.2032" layer="1"/>
+<wire x1="0" y1="0" x2="0.762" y2="0" width="0.2032" layer="1"/>
+<wire x1="0" y1="0" x2="0" y2="-0.762" width="0.2032" layer="1"/>
+<wire x1="0" y1="0" x2="-0.762" y2="0" width="0.2032" layer="1"/>
+</package>
+<package name="EVQ5PN">
+<wire x1="-2.94" y1="1.782" x2="3.01" y2="1.782" width="0.3048" layer="51"/>
+<wire x1="3.01" y1="1.782" x2="3.01" y2="-1.768" width="0.3048" layer="51"/>
+<wire x1="3.01" y1="-1.768" x2="-2.94" y2="-1.768" width="0.3048" layer="51"/>
+<wire x1="-2.94" y1="-1.768" x2="-2.94" y2="1.782" width="0.3048" layer="51"/>
+<smd name="2" x="2.7" y="0" dx="2" dy="1.6" layer="1"/>
+<smd name="1" x="-2.7" y="0" dx="2" dy="1.6" layer="1"/>
+<text x="0" y="2.282" size="1.016" layer="25" ratio="21" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.323" size="1.016" layer="27" ratio="21" align="top-center">&gt;VALUE</text>
+</package>
+<package name="1984617">
+<description>Phoenix Contact CONN TERM BLOCK T/H 2POS 3.5MM</description>
+<wire x1="-1.75" y1="3.1" x2="5.336" y2="3.1" width="0.2032" layer="21"/>
+<wire x1="5.336" y1="-3.9" x2="5.336" y2="3.1" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-3.9" x2="5.336" y2="-3.9" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-3.9" x2="-1.75" y2="3.1" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.3" shape="square" rot="R90"/>
+<pad name="2" x="3.5" y="0" drill="1.3" rot="R90"/>
+<text x="-2.095" y="-3.3425" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
+<text x="7.176" y="-3.3425" size="1.27" layer="27" font="vector" rot="R90">&gt;VALUE</text>
+<polygon width="0.2032" layer="21">
+<vertex x="-0.0535" y="-4.5695"/>
+<vertex x="-0.371" y="-3.8845"/>
+<vertex x="0.264" y="-3.8845"/>
+</polygon>
+</package>
+<package name="1985195">
+<description>Phoenix Contact PTSA 1,5/ 2-3,5-Z - 1985195</description>
+<wire x1="5.5" y1="7.25" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="7.25" x2="-3.25" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-3.25" y1="7.25" x2="-3.25" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="-3.25" y1="-4.75" x2="-1.75" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-4.75" x2="5.5" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="5.5" y1="-4.75" x2="5.5" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-4.75" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
+<circle x="0" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="3.75" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="5" drill="1.1" shape="square"/>
+<pad name="2" x="3.5" y="0" drill="1.1"/>
+<text x="-3" y="7.75" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.75" y="-6.5" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="1984633">
+<description>Phoenix Contact CONN TERM BLOCK T/H 4POS 3.5MM - 1984633</description>
+<wire x1="-1.75" y1="3.1" x2="12.575" y2="3.1" width="0.2032" layer="21"/>
+<wire x1="12.575" y1="-3.9" x2="12.575" y2="3.1" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-3.9" x2="12.575" y2="-3.9" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-3.9" x2="-1.75" y2="3.1" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.3" shape="square" rot="R90"/>
+<pad name="2" x="3.5" y="0" drill="1.3" rot="R90"/>
+<pad name="3" x="7" y="0" drill="1.3" rot="R90"/>
+<pad name="4" x="10.5" y="0" drill="1.3" rot="R90"/>
+<text x="-2.095" y="-3.3425" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
+<text x="14.415" y="-3.3425" size="1.27" layer="27" font="vector" rot="R90">&gt;VALUE</text>
+<polygon width="0.2032" layer="21">
+<vertex x="-0.0535" y="-4.5695"/>
+<vertex x="-0.371" y="-3.8845"/>
+<vertex x="0.264" y="-3.8845"/>
+</polygon>
+</package>
+<package name="1985218">
+<description>Phoenix Contact PTSA 1,5/ 4-3,5-Z - 1985218</description>
+<wire x1="12" y1="7.25" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="7.25" x2="-3.25" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-3.25" y1="7.25" x2="-3.25" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="-3.25" y1="-4.75" x2="-1.75" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-4.75" x2="12" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="12" y1="-4.75" x2="12" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-4.75" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
+<circle x="0" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="3.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="7" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="10.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="5" drill="1.1" shape="square"/>
+<pad name="2" x="3.5" y="0" drill="1.1"/>
+<pad name="3" x="7" y="5" drill="1.1"/>
+<pad name="4" x="10.5" y="0" drill="1.1"/>
+<text x="-3" y="7.75" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.75" y="-6.5" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="1984620">
+<description>Phoenix Contact CONN TERM BLOCK T/H 3POS 3.5MM</description>
+<wire x1="-1.75" y1="3.1" x2="9.019" y2="3.1" width="0.2032" layer="21"/>
+<wire x1="9.019" y1="-3.9" x2="9.019" y2="3.1" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-3.9" x2="9.019" y2="-3.9" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-3.9" x2="-1.75" y2="3.1" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.3" shape="square" rot="R90"/>
+<pad name="2" x="3.5" y="0" drill="1.3" rot="R90"/>
+<pad name="3" x="7" y="0" drill="1.3" rot="R90"/>
+<text x="-2.095" y="-3.3425" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
+<text x="10.605" y="-3.3425" size="1.27" layer="27" font="vector" rot="R90">&gt;VALUE</text>
+<polygon width="0.2032" layer="21">
+<vertex x="-0.0535" y="-4.5695"/>
+<vertex x="-0.371" y="-3.8845"/>
+<vertex x="0.264" y="-3.8845"/>
+</polygon>
+</package>
+<package name="1985205">
+<description>Phoenix Contact PTSA 1,5/ 3-3,5-Z - 1985205</description>
+<wire x1="9" y1="7.25" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="7.25" x2="-3.25" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-3.25" y1="7.25" x2="-3.25" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="-3.25" y1="-4.75" x2="-1.75" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-4.75" x2="9" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="9" y1="-4.75" x2="9" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-4.75" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
+<circle x="0" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="3.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="7" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="5" drill="1.1" shape="square"/>
+<pad name="2" x="3.5" y="0" drill="1.1"/>
+<pad name="3" x="7" y="5" drill="1.1"/>
+<text x="-3" y="7.75" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.75" y="-6.5" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="1984659">
+<description>Phoenix Contact CONN TERM BLOCK T/H 6POS 3.5MM - 1984659</description>
+<wire x1="-1.75" y1="3.1" x2="19.56" y2="3.1" width="0.2032" layer="21"/>
+<wire x1="19.56" y1="-3.9" x2="19.56" y2="3.1" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-3.9" x2="19.56" y2="-3.9" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-3.9" x2="-1.75" y2="3.1" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.3" shape="square" rot="R90"/>
+<pad name="2" x="3.5" y="0" drill="1.3" rot="R90"/>
+<pad name="3" x="7" y="0" drill="1.3" rot="R90"/>
+<pad name="4" x="10.5" y="0" drill="1.3" rot="R90"/>
+<pad name="5" x="14" y="0" drill="1.3" rot="R90"/>
+<pad name="6" x="17.5" y="0" drill="1.3" rot="R90"/>
+<text x="-2.095" y="-2.7075" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
+<text x="21.4" y="-3.3425" size="1.27" layer="27" font="vector" rot="R90">&gt;VALUE</text>
+<polygon width="0.2032" layer="21">
+<vertex x="-0.0535" y="-4.5695"/>
+<vertex x="-0.371" y="-3.8845"/>
+<vertex x="0.264" y="-3.8845"/>
+</polygon>
+</package>
+<package name="1985234">
+<description>Phoenix Contact PTSA 1,5/ 6-3,5-Z - 1985234</description>
+<wire x1="19" y1="7.25" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="7.25" x2="-3.25" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-3.25" y1="7.25" x2="-3.25" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="-3.25" y1="-4.75" x2="-1.75" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-4.75" x2="19" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="19" y1="-4.75" x2="19" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-4.75" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
+<circle x="0" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="3.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="7" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="10.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="14" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="17.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="5" drill="1.1" shape="square"/>
+<pad name="2" x="3.5" y="0" drill="1.1"/>
+<pad name="3" x="7" y="5" drill="1.1"/>
+<pad name="4" x="10.5" y="0" drill="1.1"/>
+<pad name="5" x="14" y="5" drill="1.1"/>
+<pad name="6" x="17.5" y="0" drill="1.1"/>
+<text x="-3" y="7.75" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.75" y="-6.5" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="1984646">
+<description>Phoenix Contact CONN TERM BLOCK T/H 5POS 3.5MM - 1984646</description>
+<wire x1="-1.75" y1="3.1" x2="15.75" y2="3.1" width="0.2032" layer="21"/>
+<wire x1="15.75" y1="-3.9" x2="15.75" y2="3.1" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-3.9" x2="15.75" y2="-3.9" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-3.9" x2="-1.75" y2="3.1" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.3" shape="square" rot="R90"/>
+<pad name="2" x="3.5" y="0" drill="1.3" rot="R90"/>
+<pad name="3" x="7" y="0" drill="1.3" rot="R90"/>
+<pad name="4" x="10.5" y="0" drill="1.3" rot="R90"/>
+<pad name="5" x="14" y="0" drill="1.3" rot="R90"/>
+<text x="-2.095" y="-2.7075" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
+<text x="17.59" y="-3.3425" size="1.27" layer="27" font="vector" rot="R90">&gt;VALUE</text>
+<polygon width="0.2032" layer="21">
+<vertex x="-0.0535" y="-4.5695"/>
+<vertex x="-0.371" y="-3.8845"/>
+<vertex x="0.264" y="-3.8845"/>
+</polygon>
+</package>
+<package name="1985221">
+<description>Phoenix Contact PTSA 1,5/ 5-3,5-Z - 1985521</description>
+<wire x1="15.5" y1="7.25" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="7.25" x2="-3.25" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-3.25" y1="7.25" x2="-3.25" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="-3.25" y1="-4.75" x2="-1.75" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-4.75" x2="15.5" y2="-4.75" width="0.2032" layer="21"/>
+<wire x1="15.5" y1="-4.75" x2="15.5" y2="7.25" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-4.75" x2="-1.75" y2="7.25" width="0.2032" layer="21"/>
+<circle x="0" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="3.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="7" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="10.5" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<circle x="14" y="-2.5" radius="1.27" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="5" drill="1.1" shape="square"/>
+<pad name="2" x="3.5" y="0" drill="1.1"/>
+<pad name="3" x="7" y="5" drill="1.1"/>
+<pad name="4" x="10.5" y="0" drill="1.1"/>
+<pad name="5" x="14" y="5" drill="1.1"/>
+<text x="-3" y="7.75" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.75" y="-6.5" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="BAT-HLD-001">
+<circle x="0" y="0" radius="9.919" width="0.127" layer="21"/>
+<smd name="+1" x="-11.43" y="0" dx="2.54" dy="5.08" layer="1"/>
+<smd name="+2" x="11.43" y="0" dx="2.54" dy="5.08" layer="1"/>
+<smd name="-" x="0" y="0" dx="2.54" dy="5.08" layer="1"/>
+<text x="-12.7" y="3.81" size="1.27" layer="25">&gt;NAME</text>
+<polygon width="0.254" layer="1">
+<vertex x="-8.89" y="0" curve="-90"/>
+<vertex x="0" y="8.89" curve="-90"/>
+<vertex x="8.89" y="0" curve="-90"/>
+<vertex x="0" y="-8.89" curve="-90"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="-8.89" y="0" curve="-90"/>
+<vertex x="0" y="8.89" curve="-90"/>
+<vertex x="8.89" y="0" curve="-90"/>
+<vertex x="0" y="-8.89" curve="-90"/>
+</polygon>
+<polygon width="0.127" layer="31">
+<vertex x="-8.89" y="0" curve="-90"/>
+<vertex x="0" y="8.89" curve="-90"/>
+<vertex x="8.89" y="0" curve="-90"/>
+<vertex x="0" y="-8.89" curve="-90"/>
+</polygon>
+<circle x="0" y="0" radius="9.919" width="0.127" layer="41"/>
 </package>
 </packages>
 <symbols>
@@ -3573,22 +3585,21 @@ For more documentation, visit http://www.raspberrypi.org/documentation/hardware/
 <wire x1="0" y1="0" x2="-1.27" y2="0" width="0.254" layer="94"/>
 <wire x1="1.27" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="2.54" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="0" y2="0" width="0.1524" layer="94"/>
-<wire x1="-2.032" y1="1.778" x2="-3.429" y2="0.381" width="0.1524" layer="94"/>
-<wire x1="-1.905" y1="0.635" x2="-3.302" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="-0.508" x2="-1.905" y2="-1.905" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="-1.651" x2="-1.778" y2="-3.048" width="0.1524" layer="94"/>
 <text x="1.016" y="-0.508" size="1.27" layer="95" rot="R90" align="center-right">&gt;NAME</text>
 <text x="1.016" y="3.048" size="1.27" layer="96" rot="R90" align="center-left">&gt;VALUE</text>
 <pin name="C" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
 <pin name="A" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
 <polygon width="0.1524" layer="94">
-<vertex x="-3.429" y="0.381"/>
-<vertex x="-3.048" y="1.27"/>
-<vertex x="-2.54" y="0.762"/>
+<vertex x="-1.905" y="-1.905"/>
+<vertex x="-1.524" y="-1.016"/>
+<vertex x="-1.016" y="-1.524"/>
 </polygon>
 <polygon width="0.1524" layer="94">
-<vertex x="-3.302" y="-0.762"/>
-<vertex x="-2.921" y="0.127"/>
-<vertex x="-2.413" y="-0.381"/>
+<vertex x="-1.778" y="-3.048"/>
+<vertex x="-1.397" y="-2.159"/>
+<vertex x="-0.889" y="-2.667"/>
 </polygon>
 </symbol>
 <symbol name="PCA9865">
@@ -4099,13 +4110,6 @@ DISPLAY</text>
 <text x="-4.318" y="5.334" size="1.27" layer="94">MCP7940N</text>
 <text x="-5.08" y="8.128" size="1.778" layer="95">&gt;NAME</text>
 </symbol>
-<symbol name="COINBATTERYHOLDER-20MM">
-<circle x="0" y="0" radius="5.6796" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="97">20mm</text>
-<text x="-1.27" y="0" size="1.778" layer="97">3V</text>
-<pin name="+1" x="-2.54" y="7.62" length="short" rot="R270"/>
-<pin name="-" x="-2.54" y="-7.62" length="short" rot="R90"/>
-</symbol>
 <symbol name="TESTPOINT">
 <pin name="P$1" x="0" y="-2.54" visible="off" length="short" rot="R90"/>
 <circle x="0" y="0" radius="0.635" width="0.254" layer="94"/>
@@ -4116,6 +4120,13 @@ DISPLAY</text>
 <wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
 <wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
 <circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
+<symbol name="COINBATTERYHOLDER-20MM">
+<circle x="0" y="0" radius="5.6796" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="97">20mm</text>
+<text x="-1.27" y="0" size="1.778" layer="97">3V</text>
+<pin name="+1" x="-2.54" y="7.62" length="short" rot="R270"/>
+<pin name="-" x="-2.54" y="-7.62" length="short" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -4254,49 +4265,59 @@ More information and support community is available at http://www.element14.com/
 <gate name="G$1" symbol="C" x="0" y="0"/>
 </gates>
 <devices>
-<device name="-USC0603" package="C0603">
+<device name="-0603" package="C0603">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESC" value="16V Y5V -20%,+80%" constant="no"/>
+</technology>
 </technologies>
 </device>
-<device name="-USC0402" package="C0402">
+<device name="-0402" package="C0402">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESC" value="16V Y5V -20%,+80%" constant="no"/>
+</technology>
 </technologies>
 </device>
-<device name="-USC0805" package="C0805">
+<device name="-0805" package="C0805">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESC" value="16V Y5V -20%,+80%" constant="no"/>
+</technology>
 </technologies>
 </device>
-<device name="-USC1206" package="C1206">
+<device name="-1206" package="C1206">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESC" value="16V Y5V -20%,+80%" constant="no"/>
+</technology>
 </technologies>
 </device>
-<device name="-USC1210" package="C1210">
+<device name="-1210" package="C1210">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESC" value="16V Y5V -20%,+80%" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -4362,58 +4383,70 @@ Source: &lt;a href="http://focus.ti.com/docs/prod/folders/print/ads1015.html"&gt
 <gate name="G$1" symbol="R" x="0" y="0"/>
 </gates>
 <devices>
-<device name="-US_R0603" package="R0603">
+<device name="-0603" package="R0603">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESC" value="5%" constant="no"/>
+</technology>
 </technologies>
 </device>
-<device name="-US_R0402" package="R0402">
+<device name="-0402" package="R0402">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESC" value="5%" constant="no"/>
+</technology>
 </technologies>
 </device>
-<device name="-US_R1206" package="R1206">
+<device name="-1206" package="R1206">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESC" value="5%" constant="no"/>
+</technology>
 </technologies>
 </device>
-<device name="-US_R1210" package="R1210">
+<device name="-1210" package="R1210">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESC" value="5%" constant="no"/>
+</technology>
 </technologies>
 </device>
-<device name="-US_R0805" package="R0805">
+<device name="-0805" package="R0805">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESC" value="5%" constant="no"/>
+</technology>
 </technologies>
 </device>
-<device name="-US_R2512" package="R2512">
+<device name="-2512" package="R2512">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESC" value="5%" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -4692,7 +4725,7 @@ Source: &lt;a href="http://focus.ti.com/docs/prod/folders/print/ads1015.html"&gt
 </device>
 </devices>
 </deviceset>
-<deviceset name="M02" prefix="J" uservalue="yes">
+<deviceset name="CONN-02" prefix="J" uservalue="yes">
 <description>CONN HEADER 2POS</description>
 <gates>
 <gate name="G$1" symbol="M02" x="0" y="-2.54"/>
@@ -4799,7 +4832,7 @@ Source: &lt;a href="http://focus.ti.com/docs/prod/folders/print/ads1015.html"&gt
 </device>
 </devices>
 </deviceset>
-<deviceset name="M04" prefix="J" uservalue="yes">
+<deviceset name="CONN-04" prefix="J" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="M04" x="0" y="5.08"/>
 </gates>
@@ -4991,7 +5024,7 @@ Source: &lt;a href="http://focus.ti.com/docs/prod/folders/print/ads1015.html"&gt
 </device>
 </devices>
 </deviceset>
-<deviceset name="M03" prefix="J" uservalue="yes">
+<deviceset name="CONN-03" prefix="J" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="M03" x="0" y="0"/>
 </gates>
@@ -5404,7 +5437,7 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="M06" prefix="J" uservalue="yes">
+<deviceset name="CONN-06" prefix="J" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="M06" x="5.08" y="-2.54"/>
 </gates>
@@ -5576,7 +5609,7 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="M05" prefix="J" uservalue="yes">
+<deviceset name="CONN-05" prefix="J" uservalue="yes">
 <description>&lt;b&gt;Header 5&lt;/b&gt;
 Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-00116), right angle break away headers (PRT-00553), swiss pins (PRT-00743), machine pins (PRT-00117), and female headers (PRT-00115). Molex polarized connector foot print use with SKU : PRT-08230 with associated crimp pins and housings.</description>
 <gates>
@@ -5829,22 +5862,6 @@ Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN-COINBATTERYHOLDER-20MM" prefix="B">
-<gates>
-<gate name="G$1" symbol="COINBATTERYHOLDER-20MM" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="BAT-HLD-001">
-<connects>
-<connect gate="G$1" pin="+1" pad="+1"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="TESTPOINT" prefix="TP" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="TESTPOINT" x="0" y="0"/>
@@ -5913,6 +5930,22 @@ Various fiducial points for machine vision alignment.</description>
 <technology name="">
 <attribute name="DNP" value="1"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CONN-COINBATTERYHOLDER" prefix="B">
+<gates>
+<gate name="G$1" symbol="COINBATTERYHOLDER-20MM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-20MM" package="BAT-HLD-001">
+<connects>
+<connect gate="G$1" pin="+1" pad="+1"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -6098,24 +6131,24 @@ Source:  FDD4141.pdf</description>
 <part name="GND15" library="holla" deviceset="GND" device=""/>
 <part name="F1" library="holla" deviceset="FUSE-HOLDER" device="-3557-2" value="20A"/>
 <part name="GND1" library="holla" deviceset="GND" device=""/>
-<part name="C16" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C16" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="Y1" library="holla" deviceset="CRYSTAL32-SMD" device="ABS25" value="32.768KHz"/>
 <part name="GND5" library="holla" deviceset="GND" device=""/>
 <part name="U10" library="holla" deviceset="ADC-ADS1015" device="-MSOP10"/>
 <part name="U8" library="holla" deviceset="SENSOR-TEMP-LM75" device="-SO08"/>
 <part name="GND6" library="holla" deviceset="GND" device=""/>
-<part name="C8" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C8" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="GND8" library="holla" deviceset="GND" device=""/>
 <part name="D32" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="D33" library="holla" deviceset="LED" device="-0603" value="RED"/>
 <part name="D34" library="holla" deviceset="LED" device="-0603" value="BLUE"/>
 <part name="GND7" library="holla" deviceset="GND" device=""/>
-<part name="R60" library="holla" deviceset="R" device="-US_R0603" value="220"/>
-<part name="R61" library="holla" deviceset="R" device="-US_R0603" value="220"/>
-<part name="R62" library="holla" deviceset="R" device="-US_R0603" value="220"/>
+<part name="R60" library="holla" deviceset="R" device="-0603" value="220"/>
+<part name="R61" library="holla" deviceset="R" device="-0603" value="220"/>
+<part name="R62" library="holla" deviceset="R" device="-0603" value="220"/>
 <part name="FRAME5" library="holla" deviceset="FRAME_A_L" device="" value="LED"/>
 <part name="U5" library="holla" deviceset="IO-PCA9685" device="-TSSOP28"/>
-<part name="C2" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C2" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="GND46" library="holla" deviceset="GND" device=""/>
 <part name="GND41" library="holla" deviceset="GND" device=""/>
 <part name="Q30" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
@@ -6129,16 +6162,16 @@ Source:  FDD4141.pdf</description>
 <part name="Q26" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
 <part name="Q6" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
 <part name="D16" library="holla" deviceset="LED" device="-0603" value="GRN"/>
-<part name="R13" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R12" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R11" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R10" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R9" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R8" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R7" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R6" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R5" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R4" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R13" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R12" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R11" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R10" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R9" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R8" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R7" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R6" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R5" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R4" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D15" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="D14" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="D13" library="holla" deviceset="LED" device="-0603" value="GRN"/>
@@ -6168,16 +6201,16 @@ Source:  FDD4141.pdf</description>
 <part name="Q16" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="Q15" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="Q39" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
-<part name="R50" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R24" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R49" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R23" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R48" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R22" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R47" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R21" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R45" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R20" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R50" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R24" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R49" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R23" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R48" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R22" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R47" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R21" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R45" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R20" library="holla" deviceset="R" device="-0603" value="47k"/>
 <part name="GND47" library="holla" deviceset="GND" device=""/>
 <part name="GND48" library="holla" deviceset="GND" device=""/>
 <part name="GND49" library="holla" deviceset="GND" device=""/>
@@ -6189,83 +6222,83 @@ Source:  FDD4141.pdf</description>
 <part name="GND55" library="holla" deviceset="GND" device=""/>
 <part name="GND56" library="holla" deviceset="GND" device=""/>
 <part name="Q22" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
-<part name="R37" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R37" library="holla" deviceset="R" device="-0603" value="47k"/>
 <part name="Q33" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="Q2" library="holla" deviceset="FET-NCHANNEL" device="-TO252" value="IRFZ44"/>
 <part name="GND44" library="holla" deviceset="GND" device=""/>
 <part name="Q21" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
-<part name="R36" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R36" library="holla" deviceset="R" device="-0603" value="47k"/>
 <part name="Q32" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="Q1" library="holla" deviceset="FET-NCHANNEL" device="-TO252" value="IRFZ44"/>
 <part name="GND45" library="holla" deviceset="GND" device=""/>
-<part name="R33" library="holla" deviceset="R" device="-US_R1210" value="1"/>
+<part name="R33" library="holla" deviceset="R" device="-1210" value="1"/>
 <part name="Q24" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
-<part name="R35" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R35" library="holla" deviceset="R" device="-0603" value="47k"/>
 <part name="Q31" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="Q4" library="holla" deviceset="FET-NCHANNEL" device="-TO252" value="IRFZ44"/>
 <part name="GND42" library="holla" deviceset="GND" device=""/>
 <part name="Q23" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
-<part name="R38" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R38" library="holla" deviceset="R" device="-0603" value="47k"/>
 <part name="Q34" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="Q3" library="holla" deviceset="FET-NCHANNEL" device="-TO252" value="IRFZ44"/>
 <part name="GND43" library="holla" deviceset="GND" device=""/>
-<part name="R34" library="holla" deviceset="R" device="-US_R1210" value="1"/>
-<part name="R18" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R34" library="holla" deviceset="R" device="-1210" value="1"/>
+<part name="R18" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D18" library="holla" deviceset="LED" device="-0603" value="RED"/>
 <part name="D20" library="holla" deviceset="LED" device="-0603" value="GRN"/>
-<part name="R15" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R15" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D17" library="holla" deviceset="LED" device="-0603" value="RED"/>
 <part name="D19" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="Q25" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
 <part name="Q5" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FDD4141"/>
 <part name="Q11" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="Q35" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
-<part name="R46" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R27" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R46" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R27" library="holla" deviceset="R" device="-0603" value="47k"/>
 <part name="GND57" library="holla" deviceset="GND" device=""/>
 <part name="GND58" library="holla" deviceset="GND" device=""/>
-<part name="R3" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R3" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D6" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND35" library="holla" deviceset="GND" device=""/>
-<part name="R2" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R2" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D5" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND36" library="holla" deviceset="GND" device=""/>
-<part name="R44" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R55" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R44" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R55" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="U6" library="holla" deviceset="AMP-OPAMP-DUAL" device="-SO08"/>
-<part name="R53" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
-<part name="R56" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R53" library="holla" deviceset="R" device="-0603" value="10k"/>
+<part name="R56" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="AGND21" library="holla" deviceset="AGND" device=""/>
-<part name="C5" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="R54" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
+<part name="C5" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="R54" library="holla" deviceset="R" device="-0603" value="10k"/>
 <part name="AGND19" library="holla" deviceset="AGND" device=""/>
-<part name="C4" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="R57" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="C9" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C4" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="R57" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="C9" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="U17" library="holla" deviceset="MEMORY-EEPROM" device="-SO08" value="24LC32A"/>
-<part name="R77" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R77" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="JP2" library="holla" deviceset="JUMPER-PAD-2-NO" device="" value="DNP"/>
 <part name="GND10" library="holla" deviceset="GND" device=""/>
-<part name="R73" library="holla" deviceset="R" device="-US_R0603" value="3.9k"/>
-<part name="R74" library="holla" deviceset="R" device="-US_R0603" value="3.9k"/>
-<part name="R17" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R73" library="holla" deviceset="R" device="-0603" value="3.9k"/>
+<part name="R74" library="holla" deviceset="R" device="-0603" value="3.9k"/>
+<part name="R17" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D3" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND38" library="holla" deviceset="GND" device=""/>
-<part name="R1" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R1" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D4" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND37" library="holla" deviceset="GND" device=""/>
-<part name="R16" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R16" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D2" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND39" library="holla" deviceset="GND" device=""/>
-<part name="R14" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R14" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D1" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND40" library="holla" deviceset="GND" device=""/>
-<part name="R51" library="holla" deviceset="R" device="-US_R1210" value="10"/>
-<part name="J20" library="holla" deviceset="M02" device="-6.35MM"/>
-<part name="J4" library="holla" deviceset="M04" device="-PLUGIN-SCREW"/>
-<part name="J3" library="holla" deviceset="M04" device="-PLUGIN-SCREW"/>
-<part name="J2" library="holla" deviceset="M04" device="-PLUGIN-SCREW"/>
-<part name="J1" library="holla" deviceset="M04" device="-PLUGIN-SCREW"/>
+<part name="R51" library="holla" deviceset="R" device="-1210" value="10"/>
+<part name="J20" library="holla" deviceset="CONN-02" device="-6.35MM"/>
+<part name="J4" library="holla" deviceset="CONN-04" device="-PLUGIN-SCREW"/>
+<part name="J3" library="holla" deviceset="CONN-04" device="-PLUGIN-SCREW"/>
+<part name="J2" library="holla" deviceset="CONN-04" device="-PLUGIN-SCREW"/>
+<part name="J1" library="holla" deviceset="CONN-04" device="-PLUGIN-SCREW"/>
 <part name="Q44" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="GND61" library="holla" deviceset="GND" device=""/>
 <part name="Q43" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
@@ -6274,32 +6307,32 @@ Source:  FDD4141.pdf</description>
 <part name="GND62" library="holla" deviceset="GND" device=""/>
 <part name="Q46" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="Q45" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
-<part name="R82" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R81" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R80" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R85" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R84" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R83" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R82" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R81" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R80" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R85" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R84" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R83" library="holla" deviceset="R" device="-0603" value="47k"/>
 <part name="U14" library="holla" deviceset="OPTO-LTV817" device=""/>
 <part name="U15" library="holla" deviceset="OPTO-LTV817" device=""/>
 <part name="U12" library="holla" deviceset="OPTO-LTV817" device=""/>
 <part name="U13" library="holla" deviceset="OPTO-LTV817" device=""/>
 <part name="GND60" library="holla" deviceset="GND" device=""/>
-<part name="R67" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R68" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R65" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R66" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="J15" library="holla" deviceset="M04" device="-PLUGIN-SCREW"/>
-<part name="J14" library="holla" deviceset="M04" device="-PLUGIN-SCREW"/>
+<part name="R67" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R68" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R65" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R66" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="J15" library="holla" deviceset="CONN-04" device="-PLUGIN-SCREW"/>
+<part name="J14" library="holla" deviceset="CONN-04" device="-PLUGIN-SCREW"/>
 <part name="GND59" library="holla" deviceset="GND" device=""/>
 <part name="K4" library="holla" deviceset="RELAY-HLS8L-DC5V-S-C(5P-19X15MM)" device="" value="HLS8L-DC5V-S-C"/>
 <part name="K3" library="holla" deviceset="RELAY-HLS8L-DC5V-S-C(5P-19X15MM)" device="" value="HLS8L-DC5V-S-C"/>
 <part name="K1" library="holla" deviceset="RELAY-HLS8L-DC5V-S-C(5P-19X15MM)" device="" value="HLS8L-DC5V-S-C"/>
 <part name="K2" library="holla" deviceset="RELAY-HLS8L-DC5V-S-C(5P-19X15MM)" device="" value="HLS8L-DC5V-S-C"/>
-<part name="J9" library="holla" deviceset="M03" device="-PLUGIN-SCREW"/>
-<part name="J8" library="holla" deviceset="M03" device="-PLUGIN-SCREW"/>
-<part name="J7" library="holla" deviceset="M03" device="-PLUGIN-SCREW"/>
-<part name="J10" library="holla" deviceset="M03" device="-PLUGIN-SCREW"/>
+<part name="J9" library="holla" deviceset="CONN-03" device="-PLUGIN-SCREW"/>
+<part name="J8" library="holla" deviceset="CONN-03" device="-PLUGIN-SCREW"/>
+<part name="J7" library="holla" deviceset="CONN-03" device="-PLUGIN-SCREW"/>
+<part name="J10" library="holla" deviceset="CONN-03" device="-PLUGIN-SCREW"/>
 <part name="Q20" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="Q17" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
 <part name="Q19" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="2N7002"/>
@@ -6312,109 +6345,109 @@ Source:  FDD4141.pdf</description>
 <part name="D23" library="holla" deviceset="DIODE" device="-0603" value="1n4148"/>
 <part name="D22" library="holla" deviceset="DIODE" device="-0603" value="1n4148"/>
 <part name="D21" library="holla" deviceset="DIODE" device="-0603" value="1n4148"/>
-<part name="R32" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R32" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D30" library="holla" deviceset="LED" device="-0603" value="GRN"/>
-<part name="R31" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R31" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D29" library="holla" deviceset="LED" device="-0603" value="GRN"/>
-<part name="R30" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R30" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D28" library="holla" deviceset="LED" device="-0603" value="GRN"/>
-<part name="R29" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R29" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D27" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="U2" library="holla" deviceset="RELAY-S108T02" device="PTH"/>
 <part name="U1" library="holla" deviceset="RELAY-S108T02" device="PTH"/>
-<part name="J6" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
-<part name="J5" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
-<part name="R26" library="holla" deviceset="R" device="-US_R0603" value="220"/>
-<part name="R25" library="holla" deviceset="R" device="-US_R0603" value="220"/>
+<part name="J6" library="holla" deviceset="CONN-02" device="-PLUGIN-SCREW"/>
+<part name="J5" library="holla" deviceset="CONN-02" device="-PLUGIN-SCREW"/>
+<part name="R26" library="holla" deviceset="R" device="-0603" value="220"/>
+<part name="R25" library="holla" deviceset="R" device="-0603" value="220"/>
 <part name="D26" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="D25" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND3" library="holla" deviceset="GND" device=""/>
 <part name="FRAME6" library="holla" deviceset="FRAME_A_L" device="" value="SENSORS"/>
 <part name="FRAME7" library="holla" deviceset="FRAME_A_L" device="" value="MOTOR"/>
 <part name="U18" library="holla" deviceset="IO-HC4051" device=""/>
-<part name="R28" library="holla" deviceset="R" device="-US_R0603" value="DNP"/>
-<part name="R19" library="holla" deviceset="R" device="-US_R0603" value="0"/>
+<part name="R28" library="holla" deviceset="R" device="-0603" value="DNP"/>
+<part name="R19" library="holla" deviceset="R" device="-0603" value="0"/>
 <part name="U16" library="holla" deviceset="IO-MCP23017" device="SO"/>
 <part name="GND20" library="holla" deviceset="GND" device=""/>
-<part name="J29" library="holla" deviceset="M06" device="-PLUGIN-SCREW"/>
-<part name="C29" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C28" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C27" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C26" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C25" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C24" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="J29" library="holla" deviceset="CONN-06" device="-PLUGIN-SCREW"/>
+<part name="C29" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="C28" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="C27" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="C26" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="C25" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="C24" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="GND19" library="holla" deviceset="GND" device=""/>
-<part name="J16" library="holla" deviceset="M06" device="-PLUGIN-SCREW"/>
-<part name="J19" library="holla" deviceset="M06" device="-PLUGIN-SCREW"/>
+<part name="J16" library="holla" deviceset="CONN-06" device="-PLUGIN-SCREW"/>
+<part name="J19" library="holla" deviceset="CONN-06" device="-PLUGIN-SCREW"/>
 <part name="GND12" library="holla" deviceset="GND" device=""/>
-<part name="J21" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
-<part name="J22" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
-<part name="J23" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
-<part name="J24" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
-<part name="R90" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
-<part name="C19" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C18" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="J27" library="holla" deviceset="M03" device="-PLUGIN-SCREW"/>
-<part name="J28" library="holla" deviceset="M03" device="-PLUGIN-SCREW"/>
-<part name="C23" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C22" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C21" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C20" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C7" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="J25" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
-<part name="J26" library="holla" deviceset="M02" device="-PLUGIN-SCREW"/>
-<part name="R86" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R87" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
+<part name="J21" library="holla" deviceset="CONN-02" device="-PLUGIN-SCREW"/>
+<part name="J22" library="holla" deviceset="CONN-02" device="-PLUGIN-SCREW"/>
+<part name="J23" library="holla" deviceset="CONN-02" device="-PLUGIN-SCREW"/>
+<part name="J24" library="holla" deviceset="CONN-02" device="-PLUGIN-SCREW"/>
+<part name="R90" library="holla" deviceset="R" device="-0603" value="10k"/>
+<part name="C19" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="C18" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="J27" library="holla" deviceset="CONN-03" device="-PLUGIN-SCREW"/>
+<part name="J28" library="holla" deviceset="CONN-03" device="-PLUGIN-SCREW"/>
+<part name="C23" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="C22" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="C21" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="C20" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="C7" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="J25" library="holla" deviceset="CONN-02" device="-PLUGIN-SCREW"/>
+<part name="J26" library="holla" deviceset="CONN-02" device="-PLUGIN-SCREW"/>
+<part name="R86" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R87" library="holla" deviceset="R" device="-0603" value="10k"/>
 <part name="U7" library="holla" deviceset="ADC-INA219" device="-SOIC8"/>
 <part name="U4" library="brightleaf" deviceset="AZ23CXXX" device="" value="AZ23C5V1"/>
 <part name="Q41" library="brightleaf" deviceset="FDD4141" device="TO252" value="FDD4141"/>
-<part name="C6" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C6" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="GND17" library="holla" deviceset="GND" device=""/>
 <part name="GND16" library="holla" deviceset="GND" device=""/>
-<part name="J30" library="holla" deviceset="M06" device="-PLUGIN-SCREW"/>
+<part name="J30" library="holla" deviceset="CONN-06" device="-PLUGIN-SCREW"/>
 <part name="GND22" library="holla" deviceset="GND" device=""/>
-<part name="J18" library="holla" deviceset="M05" device="-PLUGIN-SCREW"/>
-<part name="J17" library="holla" deviceset="M05" device="-PLUGIN-SCREW"/>
+<part name="J18" library="holla" deviceset="CONN-05" device="-PLUGIN-SCREW"/>
+<part name="J17" library="holla" deviceset="CONN-05" device="-PLUGIN-SCREW"/>
 <part name="GND63" library="holla" deviceset="GND" device=""/>
 <part name="GND64" library="holla" deviceset="GND" device=""/>
-<part name="R94" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
-<part name="R93" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
-<part name="R92" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
-<part name="R91" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
+<part name="R94" library="holla" deviceset="R" device="-0603" value="10k"/>
+<part name="R93" library="holla" deviceset="R" device="-0603" value="10k"/>
+<part name="R92" library="holla" deviceset="R" device="-0603" value="10k"/>
+<part name="R91" library="holla" deviceset="R" device="-0603" value="10k"/>
 <part name="U20" library="holla" deviceset="DISP-I2C-4PIN" device=""/>
 <part name="U3" library="holla" deviceset="COMM-MAX13433E" device=""/>
-<part name="J13" library="holla" deviceset="M05" device="-PLUGIN-SCREW"/>
-<part name="J12" library="holla" deviceset="M02" device="-0.1"/>
+<part name="J13" library="holla" deviceset="CONN-05" device="-PLUGIN-SCREW"/>
+<part name="J12" library="holla" deviceset="CONN-02" device="-0.1"/>
 <part name="GND9" library="holla" deviceset="GND" device=""/>
 <part name="S1" library="holla" deviceset="SWITCH-PUSHBUTTON" device="-6MMX3.5MM"/>
 <part name="S2" library="holla" deviceset="SWITCH-PUSHBUTTON" device="-6MMX3.5MM"/>
-<part name="C3" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C1" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="C3" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="C1" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="GND11" library="holla" deviceset="GND" device=""/>
-<part name="R52" library="holla" deviceset="R" device="-US_R0603" value="120"/>
-<part name="R42" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R41" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R52" library="holla" deviceset="R" device="-0603" value="120"/>
+<part name="R42" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R41" library="holla" deviceset="R" device="-0603" value="47k"/>
 <part name="D31" library="holla" deviceset="DIODE" device="-SMA" value="VZ=15.0"/>
 <part name="D35" library="holla" deviceset="DIODE" device="-0805" value="1n4148"/>
-<part name="R76" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
+<part name="R76" library="holla" deviceset="R" device="-0603" value="10k"/>
 <part name="D36" library="holla" deviceset="DIODE" device="-0805" value="1n4148"/>
-<part name="R75" library="holla" deviceset="R" device="-US_R0603" value="DNP"/>
-<part name="R88" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
-<part name="R89" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
-<part name="C17" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="C11" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="R72" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R71" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="R75" library="holla" deviceset="R" device="-0603" value="DNP"/>
+<part name="R88" library="holla" deviceset="R" device="-0603" value="47k"/>
+<part name="R89" library="holla" deviceset="R" device="-0603" value="10k"/>
+<part name="C17" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="C11" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="R72" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R71" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="U11" library="holla" deviceset="AMP-OPAMP-DUAL" device="-SO08"/>
-<part name="R63" library="holla" deviceset="R" device="-US_R0603" value="0"/>
-<part name="R70" library="holla" deviceset="R" device="-US_R0603" value="DNP"/>
+<part name="R63" library="holla" deviceset="R" device="-0603" value="0"/>
+<part name="R70" library="holla" deviceset="R" device="-0603" value="DNP"/>
 <part name="AGND8" library="holla" deviceset="AGND" device=""/>
-<part name="C10" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="R69" library="holla" deviceset="R" device="-US_R0603" value="10k"/>
+<part name="C10" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="R69" library="holla" deviceset="R" device="-0603" value="10k"/>
 <part name="AGND3" library="holla" deviceset="AGND" device=""/>
-<part name="C12" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
-<part name="R58" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
-<part name="R59" library="holla" deviceset="R" device="-US_R0603" value="1k"/>
+<part name="C12" library="holla" deviceset="C" device="-0603" value=".1u"/>
+<part name="R58" library="holla" deviceset="R" device="-0603" value="1k"/>
+<part name="R59" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="AGND4" library="holla" deviceset="AGND" device=""/>
 <part name="AGND7" library="holla" deviceset="AGND" device=""/>
 <part name="AGND9" library="holla" deviceset="AGND" device=""/>
@@ -6432,24 +6465,24 @@ Source:  FDD4141.pdf</description>
 <part name="AGND18" library="holla" deviceset="AGND" device=""/>
 <part name="AGND2" library="holla" deviceset="AGND" device=""/>
 <part name="GND13" library="holla" deviceset="GND" device=""/>
-<part name="R64" library="holla" deviceset="R" device="-US_R0603" value="0"/>
-<part name="R43" library="holla" deviceset="R" device="-US_R0603" value="47k"/>
+<part name="R64" library="holla" deviceset="R" device="-0603" value="0"/>
+<part name="R43" library="holla" deviceset="R" device="-0603" value="47k"/>
 <part name="U19" library="holla" deviceset="RTC-MCP7940N" device=""/>
-<part name="R79" library="holla" deviceset="R" device="-US_R0603" value="120"/>
-<part name="B100" library="holla" deviceset="CONN-COINBATTERYHOLDER-20MM" device=""/>
+<part name="R79" library="holla" deviceset="R" device="-0603" value="120"/>
 <part name="GND4" library="holla" deviceset="GND" device=""/>
-<part name="C13" library="holla" deviceset="C" device="-USC0603" value="10p"/>
-<part name="C14" library="holla" deviceset="C" device="-USC0603" value="10p"/>
+<part name="C13" library="holla" deviceset="C" device="-0603" value="12p"/>
+<part name="C14" library="holla" deviceset="C" device="-0603" value="12p"/>
 <part name="GND2" library="holla" deviceset="GND" device=""/>
-<part name="J11" library="holla" deviceset="M04" device="-0.1"/>
-<part name="R39" library="holla" deviceset="R" device="-US_R0603" value="120"/>
-<part name="R40" library="holla" deviceset="R" device="-US_R0603" value="120"/>
-<part name="R78" library="holla" deviceset="R" device="-US_R0603" value="100"/>
-<part name="C15" library="holla" deviceset="C" device="-USC0603" value=".1u"/>
+<part name="J11" library="holla" deviceset="CONN-04" device="-0.1"/>
+<part name="R39" library="holla" deviceset="R" device="-0603" value="120"/>
+<part name="R40" library="holla" deviceset="R" device="-0603" value="120"/>
+<part name="R78" library="holla" deviceset="R" device="-0603" value="120"/>
+<part name="C15" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="AGND1" library="holla" deviceset="AGND" device=""/>
 <part name="TP1" library="holla" deviceset="TESTPOINT" device="THRU"/>
 <part name="JP1" library="holla" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
 <part name="JP3" library="holla" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
+<part name="B1" library="holla" deviceset="CONN-COINBATTERYHOLDER" device="-20MM" value=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7305,7 +7338,6 @@ VBATT, 5V, 3.3V available</text>
 <instance part="R41" gate="G$1" x="254" y="91.44" rot="R90"/>
 <instance part="U19" gate="G$1" x="134.62" y="27.94"/>
 <instance part="R79" gate="G$1" x="127" y="38.1" rot="R90"/>
-<instance part="B100" gate="G$1" x="149.86" y="40.64" rot="R90"/>
 <instance part="GND4" gate="1" x="157.48" y="35.56"/>
 <instance part="C13" gate="G$1" x="114.3" y="27.94" rot="R270"/>
 <instance part="C14" gate="G$1" x="114.3" y="20.32" rot="R270"/>
@@ -7313,6 +7345,7 @@ VBATT, 5V, 3.3V available</text>
 <instance part="J11" gate="G$1" x="88.9" y="35.56" rot="MR0"/>
 <instance part="R39" gate="G$1" x="66.04" y="134.62" rot="R90"/>
 <instance part="R40" gate="G$1" x="63.5" y="134.62" rot="R90"/>
+<instance part="B1" gate="G$1" x="149.86" y="40.64" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -7478,9 +7511,9 @@ VBATT, 5V, 3.3V available</text>
 <junction x="27.94" y="185.42"/>
 </segment>
 <segment>
-<pinref part="B100" gate="G$1" pin="-"/>
 <wire x1="157.48" y1="38.1" x2="157.48" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
+<pinref part="B1" gate="G$1" pin="-"/>
 </segment>
 <segment>
 <pinref part="C13" gate="G$1" pin="2"/>
@@ -7971,8 +8004,8 @@ VBATT, 5V, 3.3V available</text>
 <net name="N$118" class="0">
 <segment>
 <pinref part="U19" gate="G$1" pin="VBAT"/>
-<pinref part="B100" gate="G$1" pin="+1"/>
 <wire x1="139.7" y1="38.1" x2="142.24" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="+1"/>
 </segment>
 </net>
 <net name="INPUTINTERRUPT" class="0">
