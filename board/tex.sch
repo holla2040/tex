@@ -1414,20 +1414,6 @@ Source: http://www.vishay.com/docs/83673/sfh618.pdf</description>
 <rectangle x1="-1.651" y1="3.2" x2="-0.889" y2="5.15" layer="51" rot="R180"/>
 <circle x="-1.27" y="-2.286" radius="0.359209375" width="0.2032" layer="51"/>
 </package>
-<package name="REY5-19.0X15.0X15.0MM">
-<pad name="3" x="-6.1" y="6" drill="1.3" diameter="2.1"/>
-<pad name="5" x="6.1" y="6" drill="1.3" diameter="2.1"/>
-<pad name="2" x="-6.1" y="-6" drill="1.3" diameter="2.1"/>
-<pad name="4" x="6.1" y="-6" drill="1.3" diameter="2.1"/>
-<pad name="1" x="-8.1" y="0" drill="1.3" diameter="2.1"/>
-<text x="-1.905" y="8.255" size="0.889" layer="25" ratio="11">&gt;NAME</text>
-<text x="-1.905" y="-0.635" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
-<wire x1="-9.5" y1="-7.75" x2="9.5" y2="-7.75" width="0.127" layer="21"/>
-<wire x1="9.5" y1="-7.75" x2="9.5" y2="7.75" width="0.127" layer="21"/>
-<wire x1="9.5" y1="7.75" x2="-9.5" y2="7.75" width="0.127" layer="21"/>
-<wire x1="-9.5" y1="7.75" x2="-9.5" y2="-7.75" width="0.127" layer="21"/>
-<rectangle x1="-9.5" y1="-7.75" x2="9.5" y2="7.75" layer="39"/>
-</package>
 <package name="1X03">
 <wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
 <wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
@@ -3268,6 +3254,20 @@ C&amp;K PTS525SM10SMTR LFS</description>
 </polygon>
 <circle x="0" y="0" radius="9.919" width="0.127" layer="41"/>
 </package>
+<package name="RELAY-SPST-19.0X15.0X15.0MM">
+<pad name="3" x="-6.1" y="6" drill="1.3" diameter="2.1"/>
+<pad name="5" x="6.1" y="6" drill="1.3" diameter="2.1"/>
+<pad name="2" x="-6.1" y="-6" drill="1.3" diameter="2.1"/>
+<pad name="4" x="6.1" y="-6" drill="1.3" diameter="2.1"/>
+<pad name="1" x="-8.1" y="0" drill="1.3" diameter="2.1"/>
+<text x="-1.905" y="8.255" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-1.905" y="-0.635" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<wire x1="-9.5" y1="-7.75" x2="9.5" y2="-7.75" width="0.127" layer="21"/>
+<wire x1="9.5" y1="-7.75" x2="9.5" y2="7.75" width="0.127" layer="21"/>
+<wire x1="9.5" y1="7.75" x2="-9.5" y2="7.75" width="0.127" layer="21"/>
+<wire x1="-9.5" y1="7.75" x2="-9.5" y2="-7.75" width="0.127" layer="21"/>
+<rectangle x1="-9.5" y1="-7.75" x2="9.5" y2="7.75" layer="39"/>
+</package>
 </packages>
 <symbols>
 <symbol name="BOARD-RPI2">
@@ -5007,7 +5007,7 @@ Source: &lt;a href="http://focus.ti.com/docs/prod/folders/print/ads1015.html"&gt
 <gate name="G$1" symbol="RELAY-HLS8L-DC5V-S-C" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="REY5-19.0X15.0X15.0MM">
+<device name="" package="RELAY-SPST-19.0X15.0X15.0MM">
 <connects>
 <connect gate="G$1" pin="COM" pad="1"/>
 <connect gate="G$1" pin="NC" pad="5"/>
@@ -5950,6 +5950,27 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="RELAY-SPST" prefix="K" uservalue="yes">
+<description>315030000&lt;br&gt;
+HLS8L-DC5V-S-C</description>
+<gates>
+<gate name="G$1" symbol="RELAY-HLS8L-DC5V-S-C" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-19X15X15MM" package="RELAY-SPST-19.0X15.0X15.0MM">
+<connects>
+<connect gate="G$1" pin="COM" pad="1"/>
+<connect gate="G$1" pin="NC" pad="5"/>
+<connect gate="G$1" pin="NO" pad="4"/>
+<connect gate="G$1" pin="V+" pad="2"/>
+<connect gate="G$1" pin="V-" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="brightleaf">
@@ -6325,10 +6346,11 @@ Source:  FDD4141.pdf</description>
 <part name="J15" library="holla" deviceset="CONN-04" device="-PLUGIN-SCREW"/>
 <part name="J14" library="holla" deviceset="CONN-04" device="-PLUGIN-SCREW"/>
 <part name="GND59" library="holla" deviceset="GND" device=""/>
-<part name="K4" library="holla" deviceset="RELAY-HLS8L-DC5V-S-C(5P-19X15MM)" device="" value="HLS8L-DC5V-S-C"/>
-<part name="K3" library="holla" deviceset="RELAY-HLS8L-DC5V-S-C(5P-19X15MM)" device="" value="HLS8L-DC5V-S-C"/>
-<part name="K1" library="holla" deviceset="RELAY-HLS8L-DC5V-S-C(5P-19X15MM)" device="" value="HLS8L-DC5V-S-C"/>
-<part name="K2" library="holla" deviceset="RELAY-HLS8L-DC5V-S-C(5P-19X15MM)" device="" value="HLS8L-DC5V-S-C"/>
+<part name="K1" library="holla" deviceset="RELAY-SPST" device="-19X15X15MM"/>
+<part name="K2" library="holla" deviceset="RELAY-SPST" device="-19X15X15MM"/>
+<part name="K3" library="holla" deviceset="RELAY-SPST" device="-19X15X15MM"/>
+<part name="K4" library="holla" deviceset="RELAY-SPST" device="-19X15X15MM"/>
+<part name="K5" library="holla" deviceset="RELAY-SPST" device="-19X15X15MM"/>
 <part name="J9" library="holla" deviceset="CONN-03" device="-PLUGIN-SCREW"/>
 <part name="J8" library="holla" deviceset="CONN-03" device="-PLUGIN-SCREW"/>
 <part name="J7" library="holla" deviceset="CONN-03" device="-PLUGIN-SCREW"/>
@@ -7102,7 +7124,7 @@ VBATT, 5V, 3.3V available</text>
 <wire x1="172.72" y1="135.89" x2="172.72" y2="141.605" width="0.1524" layer="94"/>
 <wire x1="172.72" y1="141.605" x2="242.57" y2="141.605" width="0.1524" layer="94"/>
 <wire x1="242.57" y1="141.605" x2="242.57" y2="132.715" width="0.1524" layer="94"/>
-<text x="106.68" y="182.88" size="1.778" layer="94" align="top-left">ToDo List</text>
+<text x="58.42" y="195.58" size="1.778" layer="94" align="top-left">ToDo List</text>
 <text x="136.906" y="132.08" size="1.016" layer="94" rot="R180" align="center">ISENSE</text>
 <wire x1="140.97" y1="130.81" x2="135.89" y2="130.81" width="0.1524" layer="94"/>
 <wire x1="135.89" y1="130.81" x2="133.35" y2="130.81" width="0.1524" layer="94"/>
@@ -8393,6 +8415,7 @@ install 0ohm resistor to select</text>
 <instance part="GND19" gate="1" x="71.12" y="88.9"/>
 <instance part="J30" gate="G$1" x="109.22" y="134.62" rot="MR0"/>
 <instance part="GND22" gate="1" x="101.6" y="119.38"/>
+<instance part="K5" gate="G$1" x="116.84" y="175.26"/>
 </instances>
 <busses>
 </busses>
