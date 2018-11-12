@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -5001,29 +5001,6 @@ Source: &lt;a href="http://focus.ti.com/docs/prod/folders/print/ads1015.html"&gt
 </device>
 </devices>
 </deviceset>
-<deviceset name="RELAY-HLS8L-DC5V-S-C(5P-19X15MM)" prefix="K" uservalue="yes">
-<description>315030000</description>
-<gates>
-<gate name="G$1" symbol="RELAY-HLS8L-DC5V-S-C" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="RELAY-SPST-19.0X15.0X15.0MM">
-<connects>
-<connect gate="G$1" pin="COM" pad="1"/>
-<connect gate="G$1" pin="NC" pad="5"/>
-<connect gate="G$1" pin="NO" pad="4"/>
-<connect gate="G$1" pin="V+" pad="2"/>
-<connect gate="G$1" pin="V-" pad="3"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MPN" value="HLS8L-DC5V-S-C"/>
-<attribute name="VALUE" value="HLS8L-DC5V-S-C" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="CONN-03" prefix="J" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="M03" x="0" y="0"/>
@@ -5226,7 +5203,7 @@ Source: &lt;a href="http://focus.ti.com/docs/prod/folders/print/ads1015.html"&gt
 </device>
 </devices>
 </deviceset>
-<deviceset name="RELAY-S108T02" prefix="U">
+<deviceset name="RELAY-S108T02" prefix="U" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="RELAY-SOLIDSTATE" x="0" y="0"/>
 </gates>
@@ -5951,8 +5928,12 @@ Various fiducial points for machine vision alignment.</description>
 </devices>
 </deviceset>
 <deviceset name="RELAY-SPST" prefix="K" uservalue="yes">
-<description>315030000&lt;br&gt;
-HLS8L-DC5V-S-C</description>
+<description>Seeed 315030000&lt;br&gt;
+HLS8L-DC5V-S-C&lt;br&gt;
+&lt;br&gt;
+Alt:&lt;br&gt; 
+ORWH-SH-105D1F,000&lt;br&gt;
+G5LE-14 DC5</description>
 <gates>
 <gate name="G$1" symbol="RELAY-HLS8L-DC5V-S-C" x="0" y="0"/>
 </gates>
@@ -6350,7 +6331,6 @@ Source:  FDD4141.pdf</description>
 <part name="K2" library="holla" deviceset="RELAY-SPST" device="-19X15X15MM"/>
 <part name="K3" library="holla" deviceset="RELAY-SPST" device="-19X15X15MM"/>
 <part name="K4" library="holla" deviceset="RELAY-SPST" device="-19X15X15MM"/>
-<part name="K5" library="holla" deviceset="RELAY-SPST" device="-19X15X15MM"/>
 <part name="J9" library="holla" deviceset="CONN-03" device="-PLUGIN-SCREW"/>
 <part name="J8" library="holla" deviceset="CONN-03" device="-PLUGIN-SCREW"/>
 <part name="J7" library="holla" deviceset="CONN-03" device="-PLUGIN-SCREW"/>
@@ -6890,9 +6870,8 @@ Motor</text>
 <wire x1="160.02" y1="133.35" x2="165.735" y2="133.35" width="0.1524" layer="94"/>
 <wire x1="165.735" y1="133.35" x2="160.02" y2="133.35" width="0.1524" layer="94"/>
 <wire x1="160.02" y1="133.35" x2="160.02" y2="135.89" width="0.1524" layer="94"/>
-<wire x1="44.45" y1="132.08" x2="44.45" y2="138.43" width="0.1524" layer="94"/>
 <circle x="143.51" y="132.08" radius="0.127" width="0.4064" layer="94"/>
-<circle x="44.45" y="132.08" radius="0.127" width="0.4064" layer="94"/>
+<circle x="142.24" y="138.43" radius="0.127" width="0.4064" layer="94"/>
 <circle x="205.74" y="132.08" radius="0.127" width="0.4064" layer="94"/>
 <circle x="208.28" y="132.08" radius="0.127" width="0.4064" layer="94"/>
 <circle x="210.82" y="132.08" radius="0.127" width="0.4064" layer="94"/>
@@ -7071,8 +7050,8 @@ VBATT, 5V, 3.3V available</text>
 <wire x1="166.37" y1="157.48" x2="165.1" y2="157.48" width="0.1524" layer="94"/>
 <wire x1="165.1" y1="157.48" x2="162.56" y2="157.48" width="0.1524" layer="94"/>
 <wire x1="162.56" y1="157.48" x2="162.56" y2="160.02" width="0.1524" layer="94"/>
-<wire x1="161.29" y1="144.78" x2="44.45" y2="144.78" width="0.1524" layer="94"/>
-<wire x1="44.45" y1="144.78" x2="44.45" y2="138.43" width="0.1524" layer="94"/>
+<wire x1="161.29" y1="144.78" x2="142.24" y2="144.78" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="142.24" y1="144.78" x2="142.24" y2="138.43" width="0.1524" layer="94"/>
 <wire x1="151.13" y1="135.89" x2="151.13" y2="137.16" width="0.1524" layer="94"/>
 <wire x1="151.13" y1="137.16" x2="143.51" y2="137.16" width="0.1524" layer="94"/>
 <wire x1="143.51" y1="137.16" x2="143.51" y2="132.08" width="0.1524" layer="94"/>
@@ -7124,7 +7103,14 @@ VBATT, 5V, 3.3V available</text>
 <wire x1="172.72" y1="135.89" x2="172.72" y2="141.605" width="0.1524" layer="94"/>
 <wire x1="172.72" y1="141.605" x2="242.57" y2="141.605" width="0.1524" layer="94"/>
 <wire x1="242.57" y1="141.605" x2="242.57" y2="132.715" width="0.1524" layer="94"/>
-<text x="58.42" y="195.58" size="1.778" layer="94" align="top-left">ToDo List</text>
+<text x="58.42" y="195.58" size="1.778" layer="97" align="top-left">Description
+The Tex Hat is a multi-purpose expansion board. This page is
+overall block diagram. Each page contains brief descriptions 
+outlining individual functionality. The board does not require full 
+component population to function. System designers can pick and 
+choose what capabilities required.
+
+Also, see "use cases.ods" for additional functionally descriptions.</text>
 <text x="136.906" y="132.08" size="1.016" layer="94" rot="R180" align="center">ISENSE</text>
 <wire x1="140.97" y1="130.81" x2="135.89" y2="130.81" width="0.1524" layer="94"/>
 <wire x1="135.89" y1="130.81" x2="133.35" y2="130.81" width="0.1524" layer="94"/>
@@ -7137,7 +7123,8 @@ VBATT, 5V, 3.3V available</text>
 <wire x1="132.08" y1="132.08" x2="133.35" y2="132.08" width="0.1524" layer="94"/>
 <wire x1="140.97" y1="132.08" x2="143.51" y2="132.08" width="0.1524" layer="94"/>
 <wire x1="132.08" y1="132.08" x2="132.08" y2="138.43" width="0.1524" layer="94"/>
-<wire x1="132.08" y1="138.43" x2="152.4" y2="138.43" width="0.1524" layer="94"/>
+<wire x1="132.08" y1="138.43" x2="142.24" y2="138.43" width="0.1524" layer="94"/>
+<wire x1="142.24" y1="138.43" x2="152.4" y2="138.43" width="0.1524" layer="94"/>
 <wire x1="152.4" y1="138.43" x2="152.4" y2="135.89" width="0.1524" layer="94"/>
 <circle x="132.08" y="132.08" radius="0.127" width="0.4064" layer="94"/>
 <text x="22.86" y="83.82" size="2.54" layer="97" align="top-left">I2C Address Table
@@ -7299,6 +7286,7 @@ VBATT, 5V, 3.3V available</text>
 <wire x1="200.66" y1="109.22" x2="205.105" y2="109.22" width="0.1524" layer="94"/>
 <wire x1="200.66" y1="109.22" x2="172.72" y2="109.22" width="0.1524" layer="94"/>
 <wire x1="172.72" y1="109.22" x2="172.72" y2="114.3" width="0.1524" layer="94"/>
+<text x="261.62" y="7.62" size="1.778" layer="97">v0.1 CH</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -7318,6 +7306,37 @@ VBATT, 5V, 3.3V available</text>
 <text x="33.02" y="55.88" size="1.778" layer="97">addr 100 1100</text>
 <text x="137.16" y="7.62" size="1.778" layer="97">addr 110 1111</text>
 <text x="60.96" y="22.86" size="1.778" layer="97">addr 111 1000</text>
+<text x="11.684" y="136.144" size="1.27" layer="97" align="top-left">Description
+U3 is a full-duplex differential line driver 
+connected to UART0 commonly used for 
+RS-485 and RS-422 inter-board serial 
+communication.</text>
+<text x="6.604" y="49.784" size="1.27" layer="97" align="top-left">Description
+U8 is an I2C digital temperature sensor 
+to monitor board-level temperature. </text>
+<text x="47.244" y="19.304" size="1.27" layer="97" align="top-left">Description
+U20 isn't an IC but a connector for a
+display module, can be LCD or OLED. 
+CAUTION: verify display pinout before 
+plugging in display. Display pinouts
+are not standardized. Use J11 for 
+harness connection if required or for
+other additionalexternal I2C devices. </text>
+<text x="161.544" y="47.244" size="1.27" layer="97" align="top-left">Description
+U19 is a battery-backed real time clock 
+for offline RPi operation where NTP is
+not available.</text>
+<text x="232.664" y="57.404" size="1.27" layer="97" align="top-left">Description
+These switches and LEDs are directly 
+connected to RPi I/O for simplicity. 
+During development these can be used 
+for debugging, during operation they 
+offer a local front panel interface. </text>
+<text x="186.69" y="208.534" size="1.27" layer="97" align="top-left">Description
+HATs that follow RPi interface guidelines 
+contain an on-board EEPROM used 
+during linux startup hardware discovery 
+phase. It is optional.</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
@@ -8087,6 +8106,47 @@ VBATT, 5V, 3.3V available</text>
 <text x="48.26" y="205.74" size="1.778" layer="97">Reverse Protection</text>
 <text x="48.26" y="208.28" size="1.778" layer="97">http://hackaday.com/2011/12/06/reverse-voltage-protection-with-a-p-fet/</text>
 <text x="154.94" y="119.38" size="1.778" layer="97">addr 100 0000</text>
+<text x="41.656" y="170.434" size="1.27" layer="97" align="top-left">Description
+Q41, R43, U4 form protect the circuit 
+from reverse-polarity power connection. 
+Q41, P-CH FET has much lower voltage 
+drop than a simple schottky diode. See
+link above for more information.</text>
+<text x="191.008" y="171.704" size="1.27" layer="97" align="top-left">Description
+U7 and R51 form a high-side system 
+current monitor. Used for power 
+consumption calculation during battery 
+operation and peripheral fault detection. 
+For example, LED lighting failures can 
+be detected and reported. U7 reports voltage, current and power, see datasheet.
+
+If U7 is not required, populate R51 with 
+0 ohm resistor.</text>
+<text x="69.596" y="136.652" size="1.6764" layer="97">U4</text>
+<text x="164.084" y="129.54" size="1.6764" layer="97">U7</text>
+<text x="102.108" y="118.364" size="1.27" layer="97" align="top-left">Description
+U9 is a low-cost board mounted DC/DC 
+converter suppling system level +5V 
+DC.
+
+D31 is 15V system voltage limiting 
+diode. Its there to limit DC Motor 
+current switching induced spikes but 
+not battery charge voltages. Might 
+need to increase the Vz to handle 
+battery voltages above 12-14.5 volts.
+ 
+TP1 is a meter test point for system GND.</text>
+<text x="69.088" y="87.884" size="1.27" layer="97" align="top-left">Description
+R64 is the single tie-point between 
+digital and analog ground.
+
+R78 and C15 form a simple low-pass 
+filter for analog VCC. </text>
+<text x="142.748" y="49.784" size="1.27" layer="97" align="top-left">Description
+J16 and J19 are convenience system 
+power connectors for supply voltage, 
+regulated +5V and GND. </text>
 </plain>
 <instances>
 <instance part="FRAME3" gate="G$1" x="0" y="0"/>
@@ -8097,9 +8157,9 @@ VBATT, 5V, 3.3V available</text>
 <instance part="F1" gate="G$1" x="45.72" y="152.4"/>
 <instance part="R51" gate="G$1" x="96.52" y="147.32" rot="R270"/>
 <instance part="J20" gate="G$1" x="27.94" y="149.86"/>
-<instance part="J16" gate="G$1" x="152.4" y="71.12" rot="R180"/>
-<instance part="J19" gate="G$1" x="132.08" y="45.72" rot="R180"/>
-<instance part="GND12" gate="1" x="124.46" y="35.56"/>
+<instance part="J16" gate="G$1" x="152.4" y="60.96" rot="R180"/>
+<instance part="J19" gate="G$1" x="132.08" y="35.56" rot="R180"/>
+<instance part="GND12" gate="1" x="124.46" y="25.4"/>
 <instance part="U7" gate="G$1" x="160.02" y="142.24"/>
 <instance part="U4" gate="G$1" x="68.58" y="139.7"/>
 <instance part="Q41" gate="G$1" x="55.88" y="149.86" rot="MR90"/>
@@ -8131,30 +8191,30 @@ VBATT, 5V, 3.3V available</text>
 <junction x="124.46" y="121.92"/>
 </segment>
 <segment>
-<wire x1="124.46" y1="55.88" x2="124.46" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="53.34" x2="124.46" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="50.8" x2="124.46" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="48.26" x2="124.46" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="45.72" x2="124.46" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="43.18" x2="124.46" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="43.18" x2="124.46" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="40.64" x2="124.46" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="38.1" x2="124.46" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="35.56" x2="124.46" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="33.02" x2="124.46" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="J19" gate="G$1" pin="1"/>
-<wire x1="124.46" y1="55.88" x2="127" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="J19" gate="G$1" pin="2"/>
-<wire x1="127" y1="53.34" x2="124.46" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="J19" gate="G$1" pin="3"/>
-<wire x1="124.46" y1="50.8" x2="127" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="J19" gate="G$1" pin="4"/>
-<wire x1="127" y1="48.26" x2="124.46" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="J19" gate="G$1" pin="5"/>
 <wire x1="124.46" y1="45.72" x2="127" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="J19" gate="G$1" pin="6"/>
+<pinref part="J19" gate="G$1" pin="2"/>
 <wire x1="127" y1="43.18" x2="124.46" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="J19" gate="G$1" pin="3"/>
+<wire x1="124.46" y1="40.64" x2="127" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="J19" gate="G$1" pin="4"/>
+<wire x1="127" y1="38.1" x2="124.46" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="J19" gate="G$1" pin="5"/>
+<wire x1="124.46" y1="35.56" x2="127" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="J19" gate="G$1" pin="6"/>
+<wire x1="127" y1="33.02" x2="124.46" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="GND12" gate="1" pin="GND"/>
-<junction x="124.46" y="53.34"/>
-<junction x="124.46" y="50.8"/>
-<junction x="124.46" y="48.26"/>
-<junction x="124.46" y="45.72"/>
 <junction x="124.46" y="43.18"/>
+<junction x="124.46" y="40.64"/>
+<junction x="124.46" y="38.1"/>
+<junction x="124.46" y="35.56"/>
+<junction x="124.46" y="33.02"/>
 </segment>
 <segment>
 <pinref part="GND14" gate="1" pin="GND"/>
@@ -8215,18 +8275,18 @@ VBATT, 5V, 3.3V available</text>
 </segment>
 <segment>
 <pinref part="J16" gate="G$1" pin="4"/>
-<wire x1="147.32" y1="73.66" x2="144.78" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="73.66" x2="142.24" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="73.66" x2="142.24" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="73.66" x2="144.78" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="63.5" x2="144.78" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="63.5" x2="142.24" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="63.5" x2="142.24" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="63.5" x2="144.78" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="J16" gate="G$1" pin="5"/>
-<wire x1="144.78" y1="71.12" x2="147.32" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="60.96" x2="147.32" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="J16" gate="G$1" pin="6"/>
-<wire x1="147.32" y1="68.58" x2="144.78" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="68.58" x2="144.78" y2="71.12" width="0.1524" layer="91"/>
-<junction x="144.78" y="73.66"/>
-<junction x="144.78" y="71.12"/>
-<label x="142.24" y="86.36" size="1.016" layer="95" rot="R90" xref="yes"/>
+<wire x1="147.32" y1="58.42" x2="144.78" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="58.42" x2="144.78" y2="60.96" width="0.1524" layer="91"/>
+<junction x="144.78" y="63.5"/>
+<junction x="144.78" y="60.96"/>
+<label x="142.24" y="76.2" size="1.016" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R78" gate="G$1" pin="1"/>
@@ -8258,19 +8318,19 @@ VBATT, 5V, 3.3V available</text>
 <junction x="91.44" y="142.24"/>
 </segment>
 <segment>
-<wire x1="144.78" y1="76.2" x2="144.78" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="78.74" x2="144.78" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="81.28" x2="144.78" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="66.04" x2="144.78" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="68.58" x2="144.78" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="71.12" x2="144.78" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="J16" gate="G$1" pin="3"/>
-<wire x1="147.32" y1="76.2" x2="144.78" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="66.04" x2="144.78" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="J16" gate="G$1" pin="2"/>
-<wire x1="147.32" y1="78.74" x2="144.78" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="68.58" x2="144.78" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="J16" gate="G$1" pin="1"/>
-<wire x1="147.32" y1="81.28" x2="144.78" y2="81.28" width="0.1524" layer="91"/>
-<label x="144.78" y="86.36" size="1.016" layer="95" rot="R90" xref="yes"/>
-<junction x="144.78" y="76.2"/>
-<junction x="144.78" y="78.74"/>
-<junction x="144.78" y="81.28"/>
+<wire x1="147.32" y1="71.12" x2="144.78" y2="71.12" width="0.1524" layer="91"/>
+<label x="144.78" y="76.2" size="1.016" layer="95" rot="R90" xref="yes"/>
+<junction x="144.78" y="66.04"/>
+<junction x="144.78" y="68.58"/>
+<junction x="144.78" y="71.12"/>
 </segment>
 </net>
 <net name="VBATTISENSE" class="0">
@@ -8361,6 +8421,39 @@ VBATT, 5V, 3.3V available</text>
 switch inputs</text>
 <text x="210.82" y="199.39" size="1.778" layer="97">Relays can be VBATT voltage or +5V,
 install 0ohm resistor to select</text>
+<text x="43.688" y="171.704" size="1.27" layer="97" align="top-left">Description
+U16 is a 16-bit I2C power expander. Port 
+A0-5 outputs enables for relay drivers 
+for U1, U2, and K1-K4.
+
+U16 can be configured to send interrupt 
+single to RPi on input pin change. See 
+datasheet for more information.</text>
+<text x="152.908" y="169.164" size="1.27" layer="97" align="top-left">Description
+K1-K4 are general purpose relays 
+permitting both normally-open and 
+normally-closed connections. Voltage 
+and current maximum are relay 
+dependent. </text>
+<text x="117.348" y="133.604" size="1.27" layer="97" align="top-left">Description
+J30 is a convenience connector suppling 
++5V, 4 I/O pins and GND. Pins 
+configured for input can have interrupt 
+on change if configured. See U16 
+datasheet.</text>
+<text x="99.568" y="113.284" size="1.27" layer="97" align="top-left">Description
+J29 is a convenience connector for 
+external switches. Connect switch to J29 
+and GND, requires U16 input pin pull-up 
+resistor configuration. See datasheet.</text>
+<text x="140.208" y="57.404" size="1.27" layer="97" align="top-left">Description
+U1 and U2 are board mounted 
+solid-state relays, SSR. Originally 
+designed for Sharp S108T2 SSR, which 
+is no-longer available. IXYS CPC1998 
+can be used with slight pin bending. 
+Remember, SSRs are for AC line 
+switching.</text>
 </plain>
 <instances>
 <instance part="FRAME4" gate="G$1" x="0" y="0"/>
@@ -8415,7 +8508,6 @@ install 0ohm resistor to select</text>
 <instance part="GND19" gate="1" x="71.12" y="88.9"/>
 <instance part="J30" gate="G$1" x="109.22" y="134.62" rot="MR0"/>
 <instance part="GND22" gate="1" x="101.6" y="119.38"/>
-<instance part="K5" gate="G$1" x="116.84" y="175.26"/>
 </instances>
 <busses>
 </busses>
@@ -9017,6 +9109,31 @@ install 0ohm resistor to select</text>
 <description>LED</description>
 <plain>
 <text x="15.24" y="104.14" size="2.54" layer="95">addr 110 0000</text>
+<text x="13.208" y="98.044" size="1.27" layer="97" align="top-left">Description
+U5 is a 16-channel I2C PWM 
+generator. It combined with the top 
+row of P-CH FETs form 16 battery-
+power modulation circuits, i.e. for 12V 
+LED intensity control. 
+
+Channels 12-15 offer an additional 
+functionality, 2 full H-Bridges for DC 
+motor speed and direction control. 
+R33 and R34 are motor current sense 
+resistors for monitoring, fault 
+detection and reporting.
+
+If motor control isn't a system 
+requirement, channels 12-15 function 
+like 0-11, high-side switching.
+
+All channels have board mounted 
+power exist LED indication.</text>
+<text x="229.108" y="70.104" size="1.27" layer="97" align="top-left">Description
+For H-bridge operation (DC Motor), 
+populate D17-D20 instead of D1-D4. 
+D17-D20 indicate H-bridge output 
+direction.  </text>
 </plain>
 <instances>
 <instance part="FRAME5" gate="G$1" x="0" y="0"/>
@@ -9119,10 +9236,10 @@ install 0ohm resistor to select</text>
 <instance part="R34" gate="G$1" x="218.44" y="157.48" rot="R270"/>
 <instance part="R18" gate="G$1" x="223.52" y="121.92" rot="R90"/>
 <instance part="D18" gate="G$1" x="223.52" y="104.14"/>
-<instance part="D20" gate="G$1" x="226.06" y="106.68" rot="R180"/>
+<instance part="D20" gate="G$1" x="228.6" y="106.68" rot="R180"/>
 <instance part="R15" gate="G$1" x="254" y="121.92" rot="R90"/>
 <instance part="D17" gate="G$1" x="254" y="104.14"/>
-<instance part="D19" gate="G$1" x="256.54" y="106.68" rot="R180"/>
+<instance part="D19" gate="G$1" x="259.08" y="106.68" rot="R180"/>
 <instance part="Q25" gate="G$1" x="193.04" y="187.96"/>
 <instance part="Q5" gate="G$1" x="205.74" y="187.96"/>
 <instance part="Q11" gate="G$1" x="198.12" y="180.34"/>
@@ -9892,11 +10009,11 @@ install 0ohm resistor to select</text>
 <wire x1="266.7" y1="124.46" x2="266.7" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="266.7" y1="93.98" x2="266.7" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="254" y1="101.6" x2="254" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="254" y1="93.98" x2="256.54" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="254" y1="93.98" x2="259.08" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="D19" gate="G$1" pin="A"/>
-<wire x1="256.54" y1="93.98" x2="266.7" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="101.6" x2="256.54" y2="93.98" width="0.1524" layer="91"/>
-<junction x="256.54" y="93.98"/>
+<wire x1="259.08" y1="93.98" x2="266.7" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="101.6" x2="259.08" y2="93.98" width="0.1524" layer="91"/>
+<junction x="259.08" y="93.98"/>
 <junction x="266.7" y="93.98"/>
 <wire x1="241.3" y1="83.82" x2="241.3" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="86.36" x2="266.7" y2="86.36" width="0.1524" layer="91"/>
@@ -10000,11 +10117,11 @@ install 0ohm resistor to select</text>
 <wire x1="236.22" y1="124.46" x2="236.22" y2="92.71" width="0.1524" layer="91"/>
 <wire x1="236.22" y1="92.71" x2="236.22" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="101.6" x2="223.52" y2="92.71" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="92.71" x2="226.06" y2="92.71" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="92.71" x2="228.6" y2="92.71" width="0.1524" layer="91"/>
 <pinref part="D20" gate="G$1" pin="A"/>
-<wire x1="226.06" y1="92.71" x2="236.22" y2="92.71" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="101.6" x2="226.06" y2="92.71" width="0.1524" layer="91"/>
-<junction x="226.06" y="92.71"/>
+<wire x1="228.6" y1="92.71" x2="236.22" y2="92.71" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="101.6" x2="228.6" y2="92.71" width="0.1524" layer="91"/>
+<junction x="228.6" y="92.71"/>
 <junction x="236.22" y="92.71"/>
 <wire x1="236.22" y1="88.9" x2="236.22" y2="83.82" width="0.1524" layer="91"/>
 <junction x="236.22" y="124.46"/>
@@ -10064,9 +10181,9 @@ install 0ohm resistor to select</text>
 <pinref part="D18" gate="G$1" pin="A"/>
 <wire x1="223.52" y1="119.38" x2="223.52" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="111.76" x2="223.52" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="111.76" x2="226.06" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="111.76" x2="228.6" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="D20" gate="G$1" pin="C"/>
-<wire x1="226.06" y1="111.76" x2="226.06" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="111.76" x2="228.6" y2="109.22" width="0.1524" layer="91"/>
 <junction x="223.52" y="111.76"/>
 </segment>
 </net>
@@ -10076,9 +10193,9 @@ install 0ohm resistor to select</text>
 <pinref part="D17" gate="G$1" pin="A"/>
 <wire x1="254" y1="119.38" x2="254" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="254" y1="111.76" x2="254" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="254" y1="111.76" x2="256.54" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="254" y1="111.76" x2="259.08" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="D19" gate="G$1" pin="C"/>
-<wire x1="256.54" y1="111.76" x2="256.54" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="111.76" x2="259.08" y2="109.22" width="0.1524" layer="91"/>
 <junction x="254" y="111.76"/>
 </segment>
 </net>
@@ -10287,6 +10404,19 @@ install 0ohm resistor to select</text>
 <text x="43.18" y="193.04" size="1.016" layer="97" rot="R90">AC Voltage ~9VAC</text>
 <text x="48.26" y="193.04" size="1.016" layer="97" rot="R90">AC Current ~1VAC</text>
 <text x="213.36" y="109.22" size="1.778" layer="97">addr  100 1000</text>
+<text x="79.248" y="204.724" size="1.27" layer="97" align="top-left">Description
+This page contains 8-channel external analog-voltage sense circuitry, J21-J28. Each voltage is 
+conditioned and feed to an 8-to-1 analog demultiplexer, U18. RPi makes channel selection via 
+SENSORS0-SENSORS2 using direct I/O pins. U18 output voltage is buffered through U11A and voltage 
+divider R58 and R59. U10, an I2C ADC is configured for single-ended ground referenced inputs, 1 for 
+U18 and 2 for DC motor current if configured.
+
+Each channel offers differenting voltage input range. U18 maximum input voltage is limited to +5V. 
+J25, J26 and J27 offer voltage dividers with optional half-wave recifier diode. J25 has gain stage. Design 
+wisely.
+
+If U7 sheet 3 is not populated and VBATT monitoring is required, design voltage divider resistors R88 
+and R89 for +5 voltage range then externally jumper VBATT to analog spare1, J16-1 sheet 3 to J27-2.</text>
 </plain>
 <instances>
 <instance part="FRAME6" gate="G$1" x="0" y="0"/>
@@ -10859,6 +10989,29 @@ install 0ohm resistor to select</text>
 <description>MOTOR</description>
 <plain>
 <text x="72.644" y="71.374" size="1.27" layer="94">gain = 10</text>
+<text x="133.604" y="193.802" size="1.27" layer="97" align="top-left">Description
+J17 and J18 are labeled for external 
+stepper-motor driver operation. 
+However, J17 and J18 circuitry each 
+offers direct RPi output pin controlled 3 
+channel general purpose open-drain 
+signals. The output current is limited by 
+device selected for Q42-Q47. </text>
+<text x="123.444" y="127.762" size="1.27" layer="97" align="top-left">Description
+J14, J15, U12-U14 provide 4 channels of 
+optically isolated inputs connected 
+directly to RPi input pins. These are 
+labeled and DC motor encoder A-B 
+inputs but they are general purpose 
+inputs. R65-R68 need to current-limit 
+opto input to less that 30mA if LTV817 is 
+used. </text>
+<text x="103.124" y="46.482" size="1.27" layer="97" align="top-left">Description
+U6A-B are gain/filter stages for DC 
+MOTORA and MOTORB powered by 
+PWM-enabled H-Bridges on sheet 5.  
+Their output is feed into U10 ADC on 
+sheet 6.</text>
 </plain>
 <instances>
 <instance part="FRAME7" gate="G$1" x="0" y="0"/>
