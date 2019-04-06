@@ -6136,8 +6136,8 @@ Source:  FDD4141.pdf</description>
 <part name="C16" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="Y1" library="holla" deviceset="CRYSTAL32-SMD" device="ABS25" value="32.768KHz"/>
 <part name="GND5" library="holla" deviceset="GND" device=""/>
-<part name="U10" library="holla" deviceset="ADC-ADS1015" device="-MSOP10"/>
-<part name="U8" library="holla" deviceset="SENSOR-TEMP-LM75" device="-SO08"/>
+<part name="U10" library="holla" deviceset="ADC-ADS1015" device="-MSOP10" value="ADS1x15"/>
+<part name="U8" library="holla" deviceset="SENSOR-TEMP-LM75" device="-SO08" value="LM75"/>
 <part name="GND6" library="holla" deviceset="GND" device=""/>
 <part name="C8" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="GND8" library="holla" deviceset="GND" device=""/>
@@ -6149,7 +6149,7 @@ Source:  FDD4141.pdf</description>
 <part name="R61" library="holla" deviceset="R" device="-0603" value="220"/>
 <part name="R62" library="holla" deviceset="R" device="-0603" value="220"/>
 <part name="FRAME5" library="holla" deviceset="FRAME_A_L" device="" value="LED"/>
-<part name="U5" library="holla" deviceset="IO-PCA9685" device="-TSSOP28"/>
+<part name="U5" library="holla" deviceset="IO-PCA9685" device="-TSSOP28" value="PCA9685"/>
 <part name="C2" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="GND46" library="holla" deviceset="GND" device=""/>
 <part name="GND41" library="holla" deviceset="GND" device=""/>
@@ -6267,7 +6267,7 @@ Source:  FDD4141.pdf</description>
 <part name="GND36" library="holla" deviceset="GND" device=""/>
 <part name="R44" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="R55" library="holla" deviceset="R" device="-0603" value="1k"/>
-<part name="U6" library="holla" deviceset="AMP-OPAMP-DUAL" device="-SO08"/>
+<part name="U6" library="holla" deviceset="AMP-OPAMP-DUAL" device="-SO08" value="DUALOPAMP"/>
 <part name="R53" library="holla" deviceset="R" device="-0603" value="10k"/>
 <part name="R56" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="AGND21" library="holla" deviceset="AGND" device=""/>
@@ -6369,7 +6369,7 @@ Source:  FDD4141.pdf</description>
 <part name="U18" library="holla" deviceset="IO-HC4051" device=""/>
 <part name="R28" library="holla" deviceset="R" device="-0603" value="DNP"/>
 <part name="R19" library="holla" deviceset="R" device="-0603" value="0"/>
-<part name="U16" library="holla" deviceset="IO-MCP23017" device="SO"/>
+<part name="U16" library="holla" deviceset="IO-MCP23017" device="SO" value="MCP23017"/>
 <part name="GND20" library="holla" deviceset="GND" device=""/>
 <part name="J29" library="holla" deviceset="CONN-06" device="-PLUGIN-SCREW"/>
 <part name="C29" library="holla" deviceset="C" device="-0603" value=".1u"/>
@@ -6400,7 +6400,7 @@ Source:  FDD4141.pdf</description>
 <part name="J26" library="holla" deviceset="CONN-02" device="-PLUGIN-SCREW"/>
 <part name="R86" library="holla" deviceset="R" device="-0603" value="47k"/>
 <part name="R87" library="holla" deviceset="R" device="-0603" value="10k"/>
-<part name="U7" library="holla" deviceset="ADC-INA219" device="-SOIC8"/>
+<part name="U7" library="holla" deviceset="ADC-INA219" device="-SOIC8" value="INA219"/>
 <part name="U4" library="brightleaf" deviceset="AZ23CXXX" device="" value="AZ23C5V1"/>
 <part name="Q41" library="brightleaf" deviceset="FDD4141" device="TO252" value="FDD4141"/>
 <part name="C6" library="holla" deviceset="C" device="-0603" value=".1u"/>
@@ -6417,7 +6417,7 @@ Source:  FDD4141.pdf</description>
 <part name="R92" library="holla" deviceset="R" device="-0603" value="10k"/>
 <part name="R91" library="holla" deviceset="R" device="-0603" value="10k"/>
 <part name="U20" library="holla" deviceset="DISP-I2C-4PIN" device=""/>
-<part name="U3" library="holla" deviceset="COMM-MAX13433E" device=""/>
+<part name="U3" library="holla" deviceset="COMM-MAX13433E" device="" value="MAX13433E"/>
 <part name="J13" library="holla" deviceset="CONN-05" device="-PLUGIN-SCREW"/>
 <part name="J12" library="holla" deviceset="CONN-02" device="-0.1"/>
 <part name="GND9" library="holla" deviceset="GND" device=""/>
@@ -6440,7 +6440,7 @@ Source:  FDD4141.pdf</description>
 <part name="C11" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="R72" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="R71" library="holla" deviceset="R" device="-0603" value="1k"/>
-<part name="U11" library="holla" deviceset="AMP-OPAMP-DUAL" device="-SO08"/>
+<part name="U11" library="holla" deviceset="AMP-OPAMP-DUAL" device="-SO08" value="DUALOPAMP"/>
 <part name="R63" library="holla" deviceset="R" device="-0603" value="0"/>
 <part name="R70" library="holla" deviceset="R" device="-0603" value="DNP"/>
 <part name="AGND8" library="holla" deviceset="AGND" device=""/>
@@ -6469,7 +6469,7 @@ Source:  FDD4141.pdf</description>
 <part name="GND13" library="holla" deviceset="GND" device=""/>
 <part name="R64" library="holla" deviceset="R" device="-0603" value="0"/>
 <part name="R43" library="holla" deviceset="R" device="-0603" value="47k"/>
-<part name="U19" library="holla" deviceset="RTC-MCP7940N" device=""/>
+<part name="U19" library="holla" deviceset="RTC-MCP7940N" device="" value="MCP7940N"/>
 <part name="R79" library="holla" deviceset="R" device="-0603" value="120"/>
 <part name="GND4" library="holla" deviceset="GND" device=""/>
 <part name="C13" library="holla" deviceset="C" device="-0603" value="12p"/>
@@ -7110,7 +7110,7 @@ outlining individual functionality. The board does not require full
 component population to function. System designers can pick and 
 choose what capabilities required.
 
-Also, see "use cases.ods" for additional functionally descriptions.</text>
+Also, see "use cases.ods" for additional functionality descriptions.</text>
 <text x="136.906" y="132.08" size="1.016" layer="94" rot="R180" align="center">ISENSE</text>
 <wire x1="140.97" y1="130.81" x2="135.89" y2="130.81" width="0.1524" layer="94"/>
 <wire x1="135.89" y1="130.81" x2="133.35" y2="130.81" width="0.1524" layer="94"/>
@@ -8422,7 +8422,7 @@ switch inputs</text>
 <text x="210.82" y="199.39" size="1.778" layer="97">Relays can be VBATT voltage or +5V,
 install 0ohm resistor to select</text>
 <text x="43.688" y="171.704" size="1.27" layer="97" align="top-left">Description
-U16 is a 16-bit I2C power expander. Port 
+U16 is a 16-bit I2C port expander. Port 
 A0-5 outputs enables for relay drivers 
 for U1, U2, and K1-K4.
 

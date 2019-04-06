@@ -1592,7 +1592,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="195.54" y="73.524" size="1.016" layer="25" ratio="21" rot="R270"/>
 <attribute name="VALUE" x="188.936" y="75.683" size="1.016" layer="27" ratio="21" rot="R270"/>
 </element>
-<element name="U10" library="holla" package="MSOP10_0.5" value="" x="46.482" y="64.516" smashed="yes" rot="R90">
+<element name="U10" library="holla" package="MSOP10_0.5" value="ADS1x15" x="46.482" y="64.516" smashed="yes" rot="R90">
 <attribute name="NAME" x="47.316" y="62.922" size="1.016" layer="25" ratio="21" rot="R270"/>
 <attribute name="VALUE" x="49.022" y="67.818" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
@@ -1601,7 +1601,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="198.762" y="59.25" size="1.016" layer="27" ratio="21" rot="R90" align="top-center"/>
 <attribute name="DESC" value="16V Y5V -20%,+80%" x="198" y="59.25" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="U8" library="holla" package="SO08" value="" x="194" y="61" smashed="yes" rot="R180">
+<element name="U8" library="holla" package="SO08" value="LM75" x="194" y="61" smashed="yes" rot="R180">
 <attribute name="NAME" x="196.517" y="64.37" size="1.016" layer="25" ratio="21" rot="R270"/>
 <attribute name="VALUE" x="191.333" y="61" size="1.016" layer="27" ratio="21" rot="R270" align="top-center"/>
 </element>
@@ -1632,7 +1632,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="176.5" y="66.484" size="1.016" layer="27" ratio="21" align="top-center"/>
 <attribute name="DESC" value="5%" x="176.5" y="67.5" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U5" library="holla" package="TSSOP28" value="" x="64.5" y="53.5" smashed="yes" rot="R90">
+<element name="U5" library="holla" package="TSSOP28" value="PCA9685" x="64.5" y="53.5" smashed="yes" rot="R90">
 <attribute name="NAME" x="66.256" y="48.346" size="1.016" layer="25" ratio="21" rot="R180"/>
 </element>
 <element name="C2" library="holla" package="C0603" value=".1u" x="61.25" y="46.84" smashed="yes" rot="R270">
@@ -2018,7 +2018,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="33.528" y="56.388" size="1.016" layer="27" ratio="21" rot="R270" align="top-center"/>
 <attribute name="DESC" value="5%" x="34.544" y="56.388" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U6" library="holla" package="SO08" value="" x="41.402" y="54.356" smashed="yes" rot="R90">
+<element name="U6" library="holla" package="SO08" value="DUALOPAMP" x="41.402" y="54.356" smashed="yes" rot="R90">
 <attribute name="NAME" x="42.672" y="51.689" size="1.016" layer="25" ratio="21" rot="R180"/>
 <attribute name="VALUE" x="41.402" y="57.023" size="1.016" layer="27" ratio="21" rot="R180" align="top-center"/>
 </element>
@@ -2385,7 +2385,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="125" y="22.516" size="1.016" layer="27" ratio="21" rot="R180" align="top-center"/>
 <attribute name="DESC" value="5%" x="125" y="21.5" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="U16" library="holla" package="SO28W" value="" x="122.5" y="75" smashed="yes" rot="R270">
+<element name="U16" library="holla" package="SO28W" value="MCP23017" x="122.5" y="75" smashed="yes" rot="R270">
 <attribute name="MF" value="MICROCHIP" x="122.5" y="75" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="MCP23017-E/SO" x="122.5" y="75" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_NEWARK" value="31K2958" x="122.5" y="75" size="1.778" layer="27" rot="R270" display="off"/>
@@ -2517,7 +2517,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="61.016" y="89.5" size="1.016" layer="27" ratio="21" rot="R90" align="top-center"/>
 <attribute name="DESC" value="5%" x="60" y="89.5" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="U7" library="holla" package="SOIC8" value="" x="27.94" y="55.118" smashed="yes" rot="R90">
+<element name="U7" library="holla" package="SOIC8" value="INA219" x="27.94" y="55.118" smashed="yes" rot="R90">
 <attribute name="NAME" x="29.845" y="52.451" size="1.016" layer="25" ratio="21" rot="R180"/>
 <attribute name="VALUE" x="29.845" y="59.055" size="1.27" layer="27" rot="R180"/>
 </element>
@@ -2570,7 +2570,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="171.75" y="94.05" size="1.016" layer="25" ratio="21"/>
 <attribute name="VALUE" x="169" y="92" size="1.27" layer="27"/>
 </element>
-<element name="U3" library="holla" package="SO14" value="" x="120" y="47" smashed="yes">
+<element name="U3" library="holla" package="SO14" value="MAX13433E" x="120" y="47" smashed="yes">
 <attribute name="NAME" x="115.428" y="45.095" size="1.016" layer="25" ratio="21" rot="R90"/>
 <attribute name="VALUE" x="125.842" y="45.095" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -2667,7 +2667,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="40.386" y="72.39" size="1.016" layer="27" ratio="21" rot="R270" align="top-center"/>
 <attribute name="DESC" value="5%" x="41.402" y="72.39" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U11" library="holla" package="SO08" value="" x="46.482" y="69.088" smashed="yes" rot="R90">
+<element name="U11" library="holla" package="SO08" value="DUALOPAMP" x="46.482" y="69.088" smashed="yes" rot="R90">
 <attribute name="NAME" x="42.248" y="65.829" size="1.016" layer="25" ratio="21"/>
 <attribute name="VALUE" x="46.482" y="71.755" size="1.016" layer="27" ratio="21" rot="R180" align="top-center"/>
 </element>
@@ -2716,7 +2716,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="11.938" y="45.466" size="1.016" layer="27" ratio="21" rot="R180" align="top-center"/>
 <attribute name="DESC" value="5%" x="11.938" y="44.45" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="U19" library="holla" package="SO08" value="" x="194.5" y="81.5" smashed="yes">
+<element name="U19" library="holla" package="SO08" value="MCP7940N" x="194.5" y="81.5" smashed="yes">
 <attribute name="NAME" x="189.58" y="78.617" size="1.016" layer="25" ratio="21"/>
 <attribute name="VALUE" x="197.167" y="81.5" size="1.016" layer="27" ratio="21" rot="R90" align="top-center"/>
 </element>
