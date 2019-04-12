@@ -1,0 +1,11 @@
+dd bs=4M if=2019-04-08-raspbian-stretch-lite.img of=/dev/mmcblk0 conv=fsync
+touch /boot/ssh
+ping raspberrypi.local
+ssh pi@raspberrypi.local   pass raspberry
+
+
+sudo apt-get install python-smbus
+sudo apt-get install i2c-tools
+sudo raspi-config
+    enable interface options/I2C
+sudo i2cdetect -y 1
