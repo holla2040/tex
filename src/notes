@@ -9,3 +9,12 @@ sudo apt-get install i2c-tools
 sudo raspi-config
     enable interface options/I2C
 sudo i2cdetect -y 1
+
+
+local machine
+rsync -av .ssh/ pi@raspberrypi.local:.ssh/ 
+alias rpi='ssh pi@raspberrypi.local'
+
+rsync -av src/ pi@raspberrypi.local:src/ 
+
+
