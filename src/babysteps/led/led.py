@@ -1,21 +1,16 @@
 #!/usr/bin/env python2.7
-# Servo2.py
-# Two servo motors driven by PCA9685 chip
 
 from smbus import SMBus
 from PCA9685 import PWM
 import time,sys
 
 fPWM = 50
-i2c_address = 0x60 # (standard) adapt to your module
-channel = 0 # adapt to your wiring
-a = 8.5 # adapt to your servo
-b = 2  # adapt to your servo
+i2c_address = 0x60
 
-global pwm
-bus = SMBus(1) # Raspberry Pi revision 2
+bus = SMBus(1) 
 pwm = PWM(bus, i2c_address)
 pwm.setFreq(fPWM)
+
 
 '''
 pwm.setDuty(0, 80)
