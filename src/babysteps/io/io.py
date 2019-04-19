@@ -26,8 +26,8 @@ bus.write_byte_data(DEVICE,OLATA,0)
 while True:
     for i in range(1,65):
       # Count from 1 to 8 which in binary will count
-      # from 001 to 111
-      bus.write_byte_data(DEVICE,OLATA,i)
+      # from 00001 to 00111
+      bus.write_byte_data(DEVICE,OLATA,i^0x30) # bits 4 and 5 after inverted logic from 0-3
       print "%02d %s"%(i,"{0:b}".format(i))
       time.sleep(0.1)
  
