@@ -24,12 +24,12 @@ bus.write_byte_data(DEVICE,IODIRA,0x00)
 bus.write_byte_data(DEVICE,OLATA,0)
  
 while True:
-    for i in range(1,17):
+    for i in range(1,65):
       # Count from 1 to 8 which in binary will count
       # from 001 to 111
       bus.write_byte_data(DEVICE,OLATA,i)
       print "%02d %s"%(i,"{0:b}".format(i))
-      time.sleep(0.25)
+      time.sleep(0.1)
  
 # Set all bits to zero
 bus.write_byte_data(DEVICE,OLATA,0)
