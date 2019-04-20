@@ -6872,7 +6872,6 @@ Motor</text>
 <wire x1="165.735" y1="133.35" x2="160.02" y2="133.35" width="0.1524" layer="94"/>
 <wire x1="160.02" y1="133.35" x2="160.02" y2="135.89" width="0.1524" layer="94"/>
 <circle x="143.51" y="132.08" radius="0.127" width="0.4064" layer="94"/>
-<circle x="142.24" y="138.43" radius="0.127" width="0.4064" layer="94"/>
 <circle x="205.74" y="132.08" radius="0.127" width="0.4064" layer="94"/>
 <circle x="208.28" y="132.08" radius="0.127" width="0.4064" layer="94"/>
 <circle x="210.82" y="132.08" radius="0.127" width="0.4064" layer="94"/>
@@ -7051,8 +7050,6 @@ VBATT, 5V, 3.3V available</text>
 <wire x1="166.37" y1="157.48" x2="165.1" y2="157.48" width="0.1524" layer="94"/>
 <wire x1="165.1" y1="157.48" x2="162.56" y2="157.48" width="0.1524" layer="94"/>
 <wire x1="162.56" y1="157.48" x2="162.56" y2="160.02" width="0.1524" layer="94"/>
-<wire x1="161.29" y1="144.78" x2="142.24" y2="144.78" width="0.1524" layer="94" style="shortdash"/>
-<wire x1="142.24" y1="144.78" x2="142.24" y2="138.43" width="0.1524" layer="94"/>
 <wire x1="151.13" y1="135.89" x2="151.13" y2="137.16" width="0.1524" layer="94"/>
 <wire x1="151.13" y1="137.16" x2="143.51" y2="137.16" width="0.1524" layer="94"/>
 <wire x1="143.51" y1="137.16" x2="143.51" y2="132.08" width="0.1524" layer="94"/>
@@ -7137,13 +7134,14 @@ Add pull-down to turn relays off until the 23017 turns pins as output</text>
 <circle x="132.08" y="132.08" radius="0.127" width="0.4064" layer="94"/>
 <text x="22.86" y="83.82" size="2.54" layer="97" align="top-left">I2C Address Table
  0x20 010 0000 I/O MCP23107
+ 0x3C 011 1100 128x64 OLED Display SSD1306
  0x40 100 0000 VBATT Current Sense INA219
  0x48 100 1000 ADC ADS1015
  0x4C 100 1100 TEMP LM75
  0x60 110 0000 LED PCA9685
  0x6F 110 1111 RTC MCP7940
- 0x78 111 1000 Display SSD1306 Banggood
-
+ 0x70 111 0000 unknown, might be RTC BB RAM
+ 
 pi@raspberrypi: i2cdetect -y 1
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
@@ -7191,7 +7189,6 @@ pi@raspberrypi: i2cdetect -y 1
 <wire x1="167.64" y1="139.7" x2="167.64" y2="157.48" width="0.1524" layer="94"/>
 <wire x1="166.37" y1="139.7" x2="166.37" y2="157.48" width="0.1524" layer="94"/>
 <wire x1="165.1" y1="139.7" x2="165.1" y2="157.48" width="0.1524" layer="94"/>
-<wire x1="161.29" y1="139.7" x2="161.29" y2="144.78" width="0.1524" layer="94"/>
 <wire x1="161.29" y1="161.29" x2="170.18" y2="161.29" width="0.1524" layer="94"/>
 <wire x1="170.18" y1="161.29" x2="170.18" y2="160.02" width="0.1524" layer="94"/>
 <wire x1="162.56" y1="158.75" x2="161.29" y2="158.75" width="0.1524" layer="94"/>
@@ -7325,7 +7322,7 @@ pi@raspberrypi: i2cdetect -y 1
 <text x="137.16" y="10.16" size="1.778" layer="97">Real Time Clock</text>
 <text x="33.02" y="55.88" size="1.778" layer="97">addr 100 1100</text>
 <text x="137.16" y="7.62" size="1.778" layer="97">addr 110 1111</text>
-<text x="60.96" y="22.86" size="1.778" layer="97">addr 111 1000</text>
+<text x="60.96" y="22.86" size="1.778" layer="97">addr 011 1100</text>
 <text x="11.684" y="136.144" size="1.27" layer="97" align="top-left">Description
 U3 is a full-duplex differential line driver 
 connected to UART0 commonly used for 
