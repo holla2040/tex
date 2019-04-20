@@ -6131,7 +6131,7 @@ Source:  FET-PCH.pdf</description>
 <part name="U9" library="holla" deviceset="DCDC-CONVERTER" device="-LM2577-BOARD"/>
 <part name="GND14" library="holla" deviceset="GND" device=""/>
 <part name="GND15" library="holla" deviceset="GND" device=""/>
-<part name="F1" library="holla" deviceset="FUSE-HOLDER" device="-3557-2" value="20A"/>
+<part name="F1" library="holla" deviceset="FUSE-HOLDER" device="-3557-2" value="10A"/>
 <part name="GND1" library="holla" deviceset="GND" device=""/>
 <part name="C16" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="Y1" library="holla" deviceset="CRYSTAL32-SMD" device="ABS25" value="32.768KHz"/>
@@ -6233,7 +6233,7 @@ Source:  FET-PCH.pdf</description>
 <part name="Q32" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="FET-NCH"/>
 <part name="Q1" library="holla" deviceset="FET-NCHANNEL" device="-TO252" value="FET-NCH"/>
 <part name="GND45" library="holla" deviceset="GND" device=""/>
-<part name="R33" library="holla" deviceset="R" device="-1210" value="1"/>
+<part name="R33" library="holla" deviceset="R" device="-1210" value="0.1"/>
 <part name="Q24" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FET-PCH"/>
 <part name="R35" library="holla" deviceset="R" device="-0603" value="47k"/>
 <part name="Q31" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="FET-NCH"/>
@@ -6244,7 +6244,7 @@ Source:  FET-PCH.pdf</description>
 <part name="Q34" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="FET-NCH"/>
 <part name="Q3" library="holla" deviceset="FET-NCHANNEL" device="-TO252" value="FET-NCH"/>
 <part name="GND43" library="holla" deviceset="GND" device=""/>
-<part name="R34" library="holla" deviceset="R" device="-1210" value="1"/>
+<part name="R34" library="holla" deviceset="R" device="-1210" value="0.1"/>
 <part name="R18" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D18" library="holla" deviceset="LED" device="-0603" value="RED"/>
 <part name="D20" library="holla" deviceset="LED" device="-0603" value="GRN"/>
@@ -6295,7 +6295,7 @@ Source:  FET-PCH.pdf</description>
 <part name="R14" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D1" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND40" library="holla" deviceset="GND" device=""/>
-<part name="R51" library="holla" deviceset="R" device="-1210" value="10"/>
+<part name="R51" library="holla" deviceset="R" device="-1210" value="0.1"/>
 <part name="J20" library="holla" deviceset="CONN-02" device="-6.35MM"/>
 <part name="J4" library="holla" deviceset="CONN-04" device="-PLUGIN-SCREW"/>
 <part name="J3" library="holla" deviceset="CONN-04" device="-PLUGIN-SCREW"/>
@@ -7104,7 +7104,7 @@ VBATT, 5V, 3.3V available</text>
 <wire x1="172.72" y1="135.89" x2="172.72" y2="141.605" width="0.1524" layer="94"/>
 <wire x1="172.72" y1="141.605" x2="242.57" y2="141.605" width="0.1524" layer="94"/>
 <wire x1="242.57" y1="141.605" x2="242.57" y2="132.715" width="0.1524" layer="94"/>
-<text x="58.42" y="195.58" size="1.778" layer="97" align="top-left">Description
+<text x="7.62" y="208.28" size="1.778" layer="97" align="top-left">Description
 The Tex Hat is a multi-purpose expansion board. This page is
 overall block diagram. Each page contains brief descriptions 
 outlining individual functionality. The board does not require full 
@@ -7114,7 +7114,11 @@ choose what capabilities required.
 Also, see "use cases.ods" for additional functionality descriptions.
 
 TODO
-Make all diodes the same package</text>
+Make all diodes the same package
+The board's RPI mounting holes need to be 3.5mm dia
+Add battery polarity in SS
+Add connector labels
+Add pull-down to turn relays off until the 23017 turns pins as output</text>
 <text x="136.906" y="132.08" size="1.016" layer="94" rot="R180" align="center">ISENSE</text>
 <wire x1="140.97" y1="130.81" x2="135.89" y2="130.81" width="0.1524" layer="94"/>
 <wire x1="135.89" y1="130.81" x2="133.35" y2="130.81" width="0.1524" layer="94"/>
@@ -7139,6 +7143,18 @@ Make all diodes the same package</text>
  0x60 110 0000 LED PCA9685
  0x6F 110 1111 RTC MCP7940
  0x78 111 1000 Display SSD1306 Banggood
+
+pi@raspberrypi: i2cdetect -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: 20 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- 3c -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- 4c -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: 60 -- -- -- -- -- -- -- -- -- -- -- -- -- -- 6f 
+70: 70 -- -- -- -- -- -- --                         
+
 </text>
 <text x="114.554" y="100.33" size="1.016" layer="94" rot="R180" align="center">RELAY</text>
 <wire x1="110.49" y1="101.6" x2="114.3" y2="101.6" width="0.1524" layer="94"/>

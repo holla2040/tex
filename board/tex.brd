@@ -1560,7 +1560,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="100.15" y="85.69" size="1.016" layer="25" ratio="21"/>
 <attribute name="VALUE" x="109.35" y="85.94" size="1.27" layer="27"/>
 </element>
-<element name="F1" library="holla" package="3557-2" value="20A" x="9" y="65" smashed="yes" rot="R270">
+<element name="F1" library="holla" package="3557-2" value="10A" x="9" y="65" smashed="yes" rot="R270">
 <attribute name="NAME" x="12.81" y="73.89" size="1.016" layer="25" ratio="21" rot="R270"/>
 <attribute name="VALUE" x="3.92" y="73.89" size="1.016" layer="27" ratio="21" rot="R270"/>
 </element>
@@ -1875,7 +1875,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="9.71" y="22.19" size="1.016" layer="25" ratio="21" rot="R270"/>
 <attribute name="VALUE" x="0.92" y="22.54" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="R33" library="holla" package="R1210" value="1" x="11.246" y="40" smashed="yes" rot="R90">
+<element name="R33" library="holla" package="R1210" value="0.1" x="11.246" y="40" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.45" y="37.518" size="1.016" layer="25" ratio="21" rot="R180" align="bottom-center"/>
 <attribute name="VALUE" x="13.024" y="40" size="1.016" layer="27" ratio="21" rot="R90" align="top-center"/>
 <attribute name="DESC" value="5%" x="11.246" y="40" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1914,7 +1914,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="28.81" y="22.54" size="1.016" layer="25" ratio="21" rot="R270"/>
 <attribute name="VALUE" x="19.92" y="22.54" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="R34" library="holla" package="R1210" value="1" x="30.5" y="40" smashed="yes" rot="R90">
+<element name="R34" library="holla" package="R1210" value="0.1" x="30.5" y="40" smashed="yes" rot="R90">
 <attribute name="NAME" x="30.65" y="37.472" size="1.016" layer="25" ratio="21" rot="R180" align="bottom-center"/>
 <attribute name="VALUE" x="32.278" y="40" size="1.016" layer="27" ratio="21" rot="R90" align="top-center"/>
 <attribute name="DESC" value="5%" x="30.5" y="40" size="1.778" layer="27" rot="R90" display="off"/>
@@ -2097,7 +2097,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="23.815" y="7.785" size="1.016" layer="25" ratio="21"/>
 <attribute name="VALUE" x="25.135" y="11.405" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="R51" library="holla" package="R1210" value="10" x="24.13" y="49.022" smashed="yes" rot="R270">
+<element name="R51" library="holla" package="R1210" value="0.1" x="24.13" y="49.022" smashed="yes" rot="R270">
 <attribute name="NAME" x="27.428" y="49.658" size="1.016" layer="25" ratio="21" align="bottom-center"/>
 <attribute name="VALUE" x="22.352" y="49.022" size="1.016" layer="27" ratio="21" rot="R270" align="top-center"/>
 <attribute name="DESC" value="5%" x="24.13" y="49.022" size="1.778" layer="27" rot="R270" display="off"/>
