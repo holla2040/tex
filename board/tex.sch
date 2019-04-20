@@ -6472,8 +6472,8 @@ Source:  FET-PCH.pdf</description>
 <part name="U19" library="holla" deviceset="RTC-MCP7940N" device="" value="MCP7940N"/>
 <part name="R79" library="holla" deviceset="R" device="-0603" value="120"/>
 <part name="GND4" library="holla" deviceset="GND" device=""/>
-<part name="C13" library="holla" deviceset="C" device="-0603" value="12p"/>
-<part name="C14" library="holla" deviceset="C" device="-0603" value="12p"/>
+<part name="C13" library="holla" deviceset="C" device="-0603" value="6p"/>
+<part name="C14" library="holla" deviceset="C" device="-0603" value="6p"/>
 <part name="GND2" library="holla" deviceset="GND" device=""/>
 <part name="J11" library="holla" deviceset="CONN-04" device="-0.1"/>
 <part name="R39" library="holla" deviceset="R" device="-0603" value="1k"/>
@@ -7354,6 +7354,8 @@ HATs that follow RPi interface guidelines
 contain an on-board EEPROM used 
 during linux startup hardware discovery 
 phase. It is optional.</text>
+<text x="101.6" y="10.16" size="1.778" layer="97">12p not recommended
+for 7940</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>

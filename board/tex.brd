@@ -2706,12 +2706,12 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="190" y="81.516" size="1.016" layer="27" ratio="21" rot="R180" align="top-center"/>
 <attribute name="DESC" value="5%" x="190" y="80.5" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C13" library="holla" package="C0603" value="12p" x="189" y="75.5" smashed="yes" rot="R90">
+<element name="C13" library="holla" package="C0603" value="6p" x="189" y="75.5" smashed="yes" rot="R90">
 <attribute name="NAME" x="189.538" y="72.55" size="1.016" layer="25" ratio="21" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="189.762" y="75.5" size="1.016" layer="27" ratio="21" rot="R90" align="top-center"/>
 <attribute name="DESC" value="16V Y5V -20%,+80%" x="189" y="75.5" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="C14" library="holla" package="C0603" value="12p" x="197" y="75.5" smashed="yes" rot="R90">
+<element name="C14" library="holla" package="C0603" value="6p" x="197" y="75.5" smashed="yes" rot="R90">
 <attribute name="NAME" x="197.688" y="72.65" size="1.016" layer="25" ratio="21" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="197.762" y="75.5" size="1.016" layer="27" ratio="21" rot="R90" align="top-center"/>
 <attribute name="DESC" value="16V Y5V -20%,+80%" x="197" y="75.5" size="1.778" layer="27" rot="R90" display="off"/>
