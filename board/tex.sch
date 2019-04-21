@@ -6131,7 +6131,7 @@ Source:  FET-PCH.pdf</description>
 <part name="U9" library="holla" deviceset="DCDC-CONVERTER" device="-LM2577-BOARD"/>
 <part name="GND14" library="holla" deviceset="GND" device=""/>
 <part name="GND15" library="holla" deviceset="GND" device=""/>
-<part name="F1" library="holla" deviceset="FUSE-HOLDER" device="-3557-2" value="20A"/>
+<part name="F1" library="holla" deviceset="FUSE-HOLDER" device="-3557-2" value="10A"/>
 <part name="GND1" library="holla" deviceset="GND" device=""/>
 <part name="C16" library="holla" deviceset="C" device="-0603" value=".1u"/>
 <part name="Y1" library="holla" deviceset="CRYSTAL32-SMD" device="ABS25" value="32.768KHz"/>
@@ -6233,7 +6233,7 @@ Source:  FET-PCH.pdf</description>
 <part name="Q32" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="FET-NCH"/>
 <part name="Q1" library="holla" deviceset="FET-NCHANNEL" device="-TO252" value="FET-NCH"/>
 <part name="GND45" library="holla" deviceset="GND" device=""/>
-<part name="R33" library="holla" deviceset="R" device="-1210" value="1"/>
+<part name="R33" library="holla" deviceset="R" device="-1210" value="0.1"/>
 <part name="Q24" library="holla" deviceset="FET-PCHANNEL" device="-TO252" value="FET-PCH"/>
 <part name="R35" library="holla" deviceset="R" device="-0603" value="47k"/>
 <part name="Q31" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="FET-NCH"/>
@@ -6244,7 +6244,7 @@ Source:  FET-PCH.pdf</description>
 <part name="Q34" library="holla" deviceset="FET-NCHANNEL" device="-SOT23" value="FET-NCH"/>
 <part name="Q3" library="holla" deviceset="FET-NCHANNEL" device="-TO252" value="FET-NCH"/>
 <part name="GND43" library="holla" deviceset="GND" device=""/>
-<part name="R34" library="holla" deviceset="R" device="-1210" value="1"/>
+<part name="R34" library="holla" deviceset="R" device="-1210" value="0.1"/>
 <part name="R18" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D18" library="holla" deviceset="LED" device="-0603" value="RED"/>
 <part name="D20" library="holla" deviceset="LED" device="-0603" value="GRN"/>
@@ -6295,7 +6295,7 @@ Source:  FET-PCH.pdf</description>
 <part name="R14" library="holla" deviceset="R" device="-0603" value="1k"/>
 <part name="D1" library="holla" deviceset="LED" device="-0603" value="GRN"/>
 <part name="GND40" library="holla" deviceset="GND" device=""/>
-<part name="R51" library="holla" deviceset="R" device="-1210" value="10"/>
+<part name="R51" library="holla" deviceset="R" device="-1210" value="0.1"/>
 <part name="J20" library="holla" deviceset="CONN-02" device="-6.35MM"/>
 <part name="J4" library="holla" deviceset="CONN-04" device="-PLUGIN-SCREW"/>
 <part name="J3" library="holla" deviceset="CONN-04" device="-PLUGIN-SCREW"/>
@@ -6472,8 +6472,8 @@ Source:  FET-PCH.pdf</description>
 <part name="U19" library="holla" deviceset="RTC-MCP7940N" device="" value="MCP7940N"/>
 <part name="R79" library="holla" deviceset="R" device="-0603" value="120"/>
 <part name="GND4" library="holla" deviceset="GND" device=""/>
-<part name="C13" library="holla" deviceset="C" device="-0603" value="12p"/>
-<part name="C14" library="holla" deviceset="C" device="-0603" value="12p"/>
+<part name="C13" library="holla" deviceset="C" device="-0603" value="6p"/>
+<part name="C14" library="holla" deviceset="C" device="-0603" value="6p"/>
 <part name="GND2" library="holla" deviceset="GND" device=""/>
 <part name="J11" library="holla" deviceset="CONN-04" device="-0.1"/>
 <part name="R39" library="holla" deviceset="R" device="-0603" value="1k"/>
@@ -6872,7 +6872,6 @@ Motor</text>
 <wire x1="165.735" y1="133.35" x2="160.02" y2="133.35" width="0.1524" layer="94"/>
 <wire x1="160.02" y1="133.35" x2="160.02" y2="135.89" width="0.1524" layer="94"/>
 <circle x="143.51" y="132.08" radius="0.127" width="0.4064" layer="94"/>
-<circle x="142.24" y="138.43" radius="0.127" width="0.4064" layer="94"/>
 <circle x="205.74" y="132.08" radius="0.127" width="0.4064" layer="94"/>
 <circle x="208.28" y="132.08" radius="0.127" width="0.4064" layer="94"/>
 <circle x="210.82" y="132.08" radius="0.127" width="0.4064" layer="94"/>
@@ -7051,8 +7050,6 @@ VBATT, 5V, 3.3V available</text>
 <wire x1="166.37" y1="157.48" x2="165.1" y2="157.48" width="0.1524" layer="94"/>
 <wire x1="165.1" y1="157.48" x2="162.56" y2="157.48" width="0.1524" layer="94"/>
 <wire x1="162.56" y1="157.48" x2="162.56" y2="160.02" width="0.1524" layer="94"/>
-<wire x1="161.29" y1="144.78" x2="142.24" y2="144.78" width="0.1524" layer="94" style="shortdash"/>
-<wire x1="142.24" y1="144.78" x2="142.24" y2="138.43" width="0.1524" layer="94"/>
 <wire x1="151.13" y1="135.89" x2="151.13" y2="137.16" width="0.1524" layer="94"/>
 <wire x1="151.13" y1="137.16" x2="143.51" y2="137.16" width="0.1524" layer="94"/>
 <wire x1="143.51" y1="137.16" x2="143.51" y2="132.08" width="0.1524" layer="94"/>
@@ -7104,7 +7101,7 @@ VBATT, 5V, 3.3V available</text>
 <wire x1="172.72" y1="135.89" x2="172.72" y2="141.605" width="0.1524" layer="94"/>
 <wire x1="172.72" y1="141.605" x2="242.57" y2="141.605" width="0.1524" layer="94"/>
 <wire x1="242.57" y1="141.605" x2="242.57" y2="132.715" width="0.1524" layer="94"/>
-<text x="58.42" y="195.58" size="1.778" layer="97" align="top-left">Description
+<text x="7.62" y="208.28" size="1.778" layer="97" align="top-left">Description
 The Tex Hat is a multi-purpose expansion board. This page is
 overall block diagram. Each page contains brief descriptions 
 outlining individual functionality. The board does not require full 
@@ -7114,7 +7111,11 @@ choose what capabilities required.
 Also, see "use cases.ods" for additional functionality descriptions.
 
 TODO
-Make all diodes the same package</text>
+Make all diodes the same package
+The board's RPI mounting holes need to be 3.5mm dia
+Add battery polarity in SS
+Add connector labels
+Add pull-down to turn relays off until the 23017 turns pins as output</text>
 <text x="136.906" y="132.08" size="1.016" layer="94" rot="R180" align="center">ISENSE</text>
 <wire x1="140.97" y1="130.81" x2="135.89" y2="130.81" width="0.1524" layer="94"/>
 <wire x1="135.89" y1="130.81" x2="133.35" y2="130.81" width="0.1524" layer="94"/>
@@ -7133,12 +7134,25 @@ Make all diodes the same package</text>
 <circle x="132.08" y="132.08" radius="0.127" width="0.4064" layer="94"/>
 <text x="22.86" y="83.82" size="2.54" layer="97" align="top-left">I2C Address Table
  0x20 010 0000 I/O MCP23107
+ 0x3C 011 1100 128x64 OLED Display SSD1306
  0x40 100 0000 VBATT Current Sense INA219
  0x48 100 1000 ADC ADS1015
  0x4C 100 1100 TEMP LM75
  0x60 110 0000 LED PCA9685
  0x6F 110 1111 RTC MCP7940
- 0x78 111 1000 Display SSD1306 Banggood
+ 0x70 111 0000 unknown, might be RTC BB RAM
+ 
+pi@raspberrypi: i2cdetect -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: 20 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- 3c -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- 4c -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: 60 -- -- -- -- -- -- -- -- -- -- -- -- -- -- 6f 
+70: 70 -- -- -- -- -- -- --                         
+
 </text>
 <text x="114.554" y="100.33" size="1.016" layer="94" rot="R180" align="center">RELAY</text>
 <wire x1="110.49" y1="101.6" x2="114.3" y2="101.6" width="0.1524" layer="94"/>
@@ -7175,7 +7189,6 @@ Make all diodes the same package</text>
 <wire x1="167.64" y1="139.7" x2="167.64" y2="157.48" width="0.1524" layer="94"/>
 <wire x1="166.37" y1="139.7" x2="166.37" y2="157.48" width="0.1524" layer="94"/>
 <wire x1="165.1" y1="139.7" x2="165.1" y2="157.48" width="0.1524" layer="94"/>
-<wire x1="161.29" y1="139.7" x2="161.29" y2="144.78" width="0.1524" layer="94"/>
 <wire x1="161.29" y1="161.29" x2="170.18" y2="161.29" width="0.1524" layer="94"/>
 <wire x1="170.18" y1="161.29" x2="170.18" y2="160.02" width="0.1524" layer="94"/>
 <wire x1="162.56" y1="158.75" x2="161.29" y2="158.75" width="0.1524" layer="94"/>
@@ -7309,7 +7322,7 @@ Make all diodes the same package</text>
 <text x="137.16" y="10.16" size="1.778" layer="97">Real Time Clock</text>
 <text x="33.02" y="55.88" size="1.778" layer="97">addr 100 1100</text>
 <text x="137.16" y="7.62" size="1.778" layer="97">addr 110 1111</text>
-<text x="60.96" y="22.86" size="1.778" layer="97">addr 111 1000</text>
+<text x="60.96" y="22.86" size="1.778" layer="97">addr 011 1100</text>
 <text x="11.684" y="136.144" size="1.27" layer="97" align="top-left">Description
 U3 is a full-duplex differential line driver 
 connected to UART0 commonly used for 
@@ -7341,6 +7354,8 @@ HATs that follow RPi interface guidelines
 contain an on-board EEPROM used 
 during linux startup hardware discovery 
 phase. It is optional.</text>
+<text x="101.6" y="10.16" size="1.778" layer="97">12p not recommended
+for 7940</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
