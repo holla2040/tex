@@ -56,6 +56,8 @@ class PWM:
     def _writeByte(self, reg, value):
         try:
             self.bus.write_byte_data(self.address, reg, value)
+        except KeyboardInterrupt:
+            raise
         except:
             print "Error while writing to I2C device"
 
@@ -63,6 +65,8 @@ class PWM:
         try:
             result = self.bus.read_byte_data(self.address, reg)
             return result
+        except KeyboardInterrupt:
+            raise
         except:
             print "Error while reading from I2C device"
             return None

@@ -1,0 +1,7 @@
+to display ip at startup add to /etc/rc.local
+cd /home/pi/tex/src/babysteps/ip;/usr/bin/python2.7 ip.py
+
+
+
+using this deprecated lib because its simple
+https://github.com/BLavery/lib_oled96

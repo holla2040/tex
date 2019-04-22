@@ -27,8 +27,10 @@ class LM75():
     def getTemp(self):
         raw = self._bus.read_word_data(self._address, LM75_TEMP_REGISTER) & 0xFFFF
 	print "0x%04X"%raw
-	print "{0:b}".format(raw)
-        raw = ((raw << 8) & 0xFF00) + (raw >> 8)
+	print "0b{0:b}".format(raw)
+        # raw = ((raw << 8) & 0xFF00) + (raw >> 8)
+        raw = ((raw >> 5) & 0xFF00)
+	print "0b{0:b}".format(raw)
         return self.toFah(self.regdata2float(raw))
 
 

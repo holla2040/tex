@@ -5,9 +5,8 @@
 #   https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-rtc-time
 
 import smbus
-import time
+import time,sys
 import signal
-import sys
  
 bus = smbus.SMBus(1)
 RTC_ADDR = 0x6f
