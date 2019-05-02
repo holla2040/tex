@@ -1,21 +1,25 @@
 dd bs=4M if=2019-04-08-raspbian-stretch-lite.img of=/dev/mmcblk0 conv=fsync status=progress
-touch /boot/ssh
+touch /media/holla/boot/ssh
 ping raspberrypi.local
 ssh pi@raspberrypi.local   pass raspberry
 
-local machine
-rsync -av .ssh/ pi@raspberrypi.local:.ssh/ 
-alias rpi='ssh pi@raspberrypi.local'
+on host linux machine, not rpi
+rsync -av ~/.ssh/ pi@raspberrypi.local:.ssh/ 
+ssh pi@raspberrypi.local "echo \"alias rpi='ssh pi@raspberrypi.local'\" >> ~/.bashrc"
+ssh pi@raspberrypi.local "echo \"alias l='ls -als'\" >> ~/.bashrc"
 
-echo "alias l='ls -als'" >> ~/.bashrc
-
+now on rpi
+ssh pi@raspberrypi.local 
+sudo apt update; sudo apt -y dist-upgrade
 sudo apt-get -y install python-smbus i2c-tools git vim
 sudo raspi-config
     enable interface options/I2C
+    expand filesystem to full sd size
 sudo i2cdetect -y 1
 
 
+git clone git@github.com:holla2040/tex.git
+ln -s tex/src/babysteps src
 
-rsync -av src/ pi@raspberrypi.local:src/ 
 
 
