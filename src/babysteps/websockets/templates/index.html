@@ -11,22 +11,39 @@
     socket.on('connect', function() {
         console.log("connected");
     });
-    socket.on('data', function(data) {
+    socket.on('tex', function(event) {
+        var data = event.data;
         console.log(data);
+        if ('s1' in data) {
+            document.getElementById('s1').innerHTML = data['s1'];
+        }
+        if ('s2' in data) {
+            document.getElementById('s2').innerHTML = data['s2'];
+        }
+        if ('time' in data) {
+            document.getElementById('time').innerHTML = data['time'];
+        }
     });
 </script>
 </head>
 <body>
-Tex
+<h3>Tex</h3>
 <hr>
+<div id='time'>&nbsp;</div><br>
 <button onclick="socket.emit('tex',{data:{red:1}})">Red On</button>
-<button onclick="socket.emit('tex',{data:{red:0}})">Red Off</button>
+<button onclick="socket.emit('tex',{data:{red:0}})">Red Off</button><br>
+<br>
 <button onclick="socket.emit('tex',{data:{green:1}})">Green On</button>
-<button onclick="socket.emit('tex',{data:{green:0}})">Green Off</button>
+<button onclick="socket.emit('tex',{data:{green:0}})">Green Off</button><br>
+<br>
 <button onclick="socket.emit('tex',{data:{blue:1}})">Blue On</button>
 <button onclick="socket.emit('tex',{data:{blue:0}})">Blue Off</button><br>
+<br>
 <button onclick="socket.emit('tex',{data:{red:1,green:1,blue:1}})">All On</button>
 <button onclick="socket.emit('tex',{data:{red:0,green:0,blue:0}})">All Off</button><br>
+<br>
+Switch 1:<span id='s1'>?</span><br>
+Switch 2:<span id='s2'>?</span><br>
 
 </body>
 </html>
