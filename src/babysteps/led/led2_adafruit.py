@@ -29,11 +29,11 @@ def loop():
     pwm.set_pwm(5,0,80)
     pwm.set_pwm(6,0,80)
     '''
-    v = 0
+    v = 255
     for channel in range (0,16):
         print ("Setting channel %s to %s" % (channel, v))
         pwm.set_pwm(channel,0,v)
-        v += int(4096/16)
+        v += 256
 
     response = raw_input("Hit any key to continue ")
         
