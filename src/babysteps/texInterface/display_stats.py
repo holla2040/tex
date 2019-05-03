@@ -6,7 +6,7 @@ import time
 import sys
 from ina219 import INA219
 from ina219 import DeviceRangeError
-import LM75
+import temperatureSensor
 
 i2cbus = SMBus(1)        
 oled = ssd1306(i2cbus)   
@@ -17,7 +17,7 @@ button2Pressed = False
 SHUNT_OHMS = 0.15
 ina = INA219(SHUNT_OHMS)
 ina.configure()
-tempSensor = LM75(address=0x4C)
+tempSensor = temperatureSensor.LM75(address=0x4C)
 
 def buttonEvent(channel):
     global button1Pressed
@@ -75,9 +75,9 @@ def loop ():
         if button2Pressed:
             button2Pressed = False
             screenMessage = [' ', 'Tex Temperture:',
-                             tempSensor.getTemp() + 'degrees F']
+                            '%.2f' %tempSensor.getTemp() + ' deg F']
             printToScreen(screenMessage)
-        time.sleep(.001)
+        time.sleep(.01)
     
 def destroy ():
     oled.cls()
