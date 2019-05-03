@@ -1,0 +1,11 @@
+refs
+    http://flask.pocoo.org/
+    https://flask-socketio.readthedocs.io/en/latest/
+
+
+every 500mS app sends a custom 'tex' json message with localtime, s1 and s2 
+js parses and updates dom
+
+
+
+
