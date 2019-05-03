@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import time
 import smbus
@@ -13,7 +13,7 @@ LM75_CONF_OS_COMP_INT   = 1
 LM75_CONF_OS_POL        = 2
 LM75_CONF_OS_F_QUE      = 3
 
-class LM75():
+class TemperatureSensor(object):
     def __init__(self, mode=LM75_CONF_OS_COMP_INT, address=LM75_ADDRESS, busnum=1):
         self._mode = mode
         self._address = address
@@ -25,18 +25,24 @@ class LM75():
     def toFah(self, temp):
         return (temp * (9.0/5.0)) + 32.0
 
-    def getTemp(self):
+    def getTempC(self):
         raw = self._bus.read_word_data(self._address, LM75_TEMP_REGISTER) & 0xFFFF
-#	print "0x%04X"%raw
-#	print "0b{0:b}".format(raw)
-        # raw = ((raw << 8) & 0xFF00) + (raw >> 8)
- #       raw = ((raw >> 5) & 0xFF00)
-#	print "0b{0:b}".format(raw)
         raw = ((raw << 8) & 0xFF00) + (raw >> 8)
-        return self.toFah(self.regdata2float(raw))
+        return self.regdata2float(raw)
+
+    def getTempF(self):
+        return self.toFah(self.getTempC())
 
 
 if __name__ == "__main__":
-    print "this is not functional yet"
-    sensor = LM75(address=0x4C)
-    print sensor.getTemp()
+    sensor = TemperatureSensor(address=0x4C)
+    while True:
+        try:
+            tempC = sensor.getTempC()
+            tempF = sensor.toFah(tempC)
+            print('Temp = %.2f°C, %.2f°F' % (tempC,tempF))
+            time.sleep(.5)
+        except KeyboardInterrupt:
+            print('')
+            break
+    print('Exiting...')
