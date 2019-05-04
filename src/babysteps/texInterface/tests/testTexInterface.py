@@ -7,16 +7,23 @@ sys.path.insert(0,os.path.join(filePath, ".."))
 
 import unittest
 from texInterface import TexInterface
+from humanTestFeedback import HumanTestFeedback
 
 class TestTexInterface(unittest.TestCase):
     def setUp(self):
         self.texInterface = TexInterface()
         
-    def msgToScreenGetResponse(self, message):
-        
     def tearDown(self):
         pass
 
+    @classmethod
+    def setUpClass(cls):
+        cls._humanTestFeedback = HumanTestFeedback()
+        
+    @classmethod
+    def tearDownClass(cls):
+        pass
+                
     def testTempFInBounds(self):
         temp = self.texInterface.getTempF()
         self.assertGreater(temp, 32,
@@ -30,11 +37,14 @@ class TestTexInterface(unittest.TestCase):
                          'Temperature greater than 0 deg C')
         self.assertLess   (temp, 43.0,
                          'Temperature less than 43 deg C')
+        
     def testTempFViaHuman(self):
-        temp = self.texTinterface.getTempF()
-        #Write question out to screen
-        #Get response                        yes    no
-        #If response is no, fail the test    \/     \/
+        temp = self.texInterface.getTempF()
+        message = ['For temp of board, is', '%.2f°F about right?' %temp]
+        response = TestTexInterface._humanTestFeedback.msgToScreenGetResponse(message)
+        self.assertTrue(response,
+                    'Asking user if temperature is about %.2f°F' %temp)
 
+        
 if __name__ == '__main__':
     unittest.main()

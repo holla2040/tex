@@ -43,7 +43,7 @@ class HumanTestFeedback():
                 print ('button2Pressed = True')
 
     def printMsgToScreen(self, message):
-        xPos = 0
+        xPos = 1
         yPos = 0
         self.oled.cls()
         #self.oled.canvas.rectangle((0, 0, self.oled.width-1, self.oled.height-1), outline=1, fill=0)
@@ -51,9 +51,9 @@ class HumanTestFeedback():
             print (('WARNING: length of argument messageArray >4 lines. '
            'Only first 4 lines will be printed'))
         for line in message [0:2]:
-            self.oled.canvas.text((xPos,yPos),' '+ line, fill=1)
+            self.oled.canvas.text((xPos,yPos), line, fill=1)
             yPos += 15
-        self.oled.canvas.text((0,30), 'Push Button:', fill=1)
+        self.oled.canvas.text((xPos,30), 'Push Button:', fill=1)
         self.oled.canvas.text((76,30), 'yes   no', fill=1)
         self.oled.canvas.text((77,45), '\/    \/', fill=1)
         self.oled.display()
@@ -72,11 +72,12 @@ class HumanTestFeedback():
                 response = False
                 break
             time.sleep(.01)
+        self.oled.cls()
         return response
     
     def __del__ (self):
        self.oled.cls()
-        gpio.cleanup()
+       gpio.cleanup()
 
 if __name__ == "__main__":
     humanTestFeedback = HumanTestFeedback()
