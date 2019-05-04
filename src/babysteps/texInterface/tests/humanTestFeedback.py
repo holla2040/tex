@@ -1,4 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+import sys
+import os
+
+(filePath, fileName) = os.path.split(__file__)
+sys.path.insert(0,os.path.join(filePath, "../lib"))
+
 from lib_oled96 import ssd1306
 from smbus import SMBus
 import RPi.GPIO as gpio
@@ -13,84 +20,75 @@ class HumanTestFeedback():
         self.waitForResponseSecs = waitForResponseSecs
         self.debug = debug
         self.i2cbus = SMBus(1)
-        self.oled = ssd1306(i2cbus)   
+        self.oled = ssd1306(self.i2cbus)   
         self.button1Pressed = False
         self.button2Pressed = False
-        gpio.setmode(gpio.BCM)n
-        gpio.setup(button1, gpio.IN, pull_up_down=gpio.PUD_UP)
-        gpio.setup(button2, gpio.IN, pull_up_down=gpio.PUD_UP)
-        gpio.add_event_detect(button1,gpio.FALLING,callback = buttonEvent,bouncetime=300)
-        gpio.add_event_detect(button2,gpio.FALLING,callback = buttonEvent,bouncetime=300)
-        oled.cls()
+        gpio.setmode(gpio.BCM)
+        gpio.setup(HumanTestFeedback.button1, gpio.IN, pull_up_down=gpio.PUD_UP)
+        gpio.setup(HumanTestFeedback.button2, gpio.IN, pull_up_down=gpio.PUD_UP)
+        gpio.add_event_detect(HumanTestFeedback.button1,gpio.FALLING,callback = self.buttonEvent,bouncetime=300)
+        gpio.add_event_detect(HumanTestFeedback.button2,gpio.FALLING,callback = self.buttonEvent,bouncetime=300)
+        self.oled.cls()
         
-    def buttonEvent(channel):
+    def buttonEvent(self, channel):
         self.button1Pressed
         self.button2Pressed
         if channel == HumanTestFeedback.button1:
             self.button1Pressed = True
-            if debug:
+            if self.debug:
                 print ('button1Pressed = True')
         elif channel == HumanTestFeedback.button2:
             self.button2Pressed = True
-            if debug:
+            if self.debug:
                 print ('button2Pressed = True')
 
-    def printToScreen(messageArray):
+    def printMsgToScreen(self, message):
         xPos = 0
         yPos = 0
-        oled.cls()
-        oled.canvas.rectangle((0, 0, oled.width-1, oled.height-1), outline=1, fill=0)
-        if len(messageArray) > 4:
+        self.oled.cls()
+        #self.oled.canvas.rectangle((0, 0, self.oled.width-1, self.oled.height-1), outline=1, fill=0)
+        if self.debug and len(message) > 2:
             print (('WARNING: length of argument messageArray >4 lines. '
            'Only first 4 lines will be printed'))
-        for message in messageArray [0:4]:
-            oled.canvas.text((xPos,yPos),' '+ message, fill=1)
+        for line in message [0:2]:
+            self.oled.canvas.text((xPos,yPos),' '+ line, fill=1)
             yPos += 15
-        oled.display()
-
-    def loop ():
-        global button1Pressed
-        global button2Pressed 
-        count = -1
-        screenMessageArray = [['Bus Voltage:%.1fV' % (ina.voltage()),
-                               'Bus Current:%.1fmA' % ina.current(),
-                               'Power:%.1fmW' % ina.power(),
-                               'Shunt voltage:%.1fmV' % ina.shunt_voltage()],
-                              ['', 'Flux Capacitor:', '1.21 Gigawatts ;)'],
-                              [' ', 'Tex Temperture:',
-                               '%.2f' %tempSensor.getTemp() + ' deg F']]
-        #Button2 as a forward button and Button1 as a back button
+        self.oled.canvas.text((0,30), 'Push Button:', fill=1)
+        self.oled.canvas.text((76,30), 'yes   no', fill=1)
+        self.oled.canvas.text((77,45), '\/    \/', fill=1)
+        self.oled.display()
+        
+    def msgToScreenGetResponse(self, message):
+        self.printMsgToScreen(message)
+        response = None
+        #Button1 = yes Button2 = no
         while True:            
-            if button2Pressed:
-                count+=1
-                button2Pressed = False
-                count = count%len(screenMessageArray)
-                print (count%len(screenMessageArray))
-                print ('count = %d' % count)
-                printToScreen(screenMessageArray[count])
-                
-            elif button1Pressed:
-                count2 = count
-                count2-=1
-                button1Pressed = False
-                print (count2)
-                count2 = (count2%len(screenMessageArray))
-                printToScreen(screenMessageArray[count2])
-                count-=1
-            
+            if self.button1Pressed: #yes
+                self.button1Pressed = False
+                response = True
+                break
+            elif self.button2Pressed: #no
+                self.button2Pressed = False
+                response = False
+                break
             time.sleep(.01)
-            
-        def destroy ():
-            oled.cls()
-            gpio.cleanup()
+        return response
+    
+    def __del__ (self):
+       self.oled.cls()
+        gpio.cleanup()
 
 if __name__ == "__main__":
-    setup()
+    humanTestFeedback = HumanTestFeedback()
     try:
-        loop()
+        message = ["hello world"]
+        response = humanTestFeedback.msgToScreenGetResponse(message)
+        if response:
+            print ('yes')
+        else:
+            print ('no')
     except KeyboardInterrupt:
-        destroy()
-
-
+        pass
+    humanTestFeedback.__del__()
     
     
