@@ -2,18 +2,27 @@
 
 from temperatureSensor import TemperatureSensor
 
+
 class TexInterface():
 
+    tempSensorAddress = 0x4C
+
     def __init__(self):
-        self.temperatureSensor = None
+        self.tempSensor = None
 
     def helloWorld(self):
         print("Hello world")
 
-    def getTempF(self):
-
+    def createTempSensor(self):
+        if None == self.tempSensor:
+            self.tempSensor = TemperatureSensor(address=TexInterface.tempSensorAddress)
     def getTempC(self):
-        if None == self.temperatureSensor:
+        self.createTempSensor()
+        return self.tempSensor.getTempC()
+    def getTempF(self):
+        self.createTempSensor()
+        return self.tempSensor.getTempF()
+
                       
 
 if __name__ == "__main__":
