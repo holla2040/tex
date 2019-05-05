@@ -52,19 +52,17 @@ class TestTexInterface(unittest.TestCase):
     # Red, Green, Blue LED Tests
     def testBlueLed(self):
         imOK = False
-        self.texInterface.blueLightOn()
-        time.sleep(.1)
-        self.texInterface.blueLightOff()
-        time.sleep(.1)
-        self.texInterface.blueLightOn()
-        time.sleep(.1)
-        self.texInterface.blueLightOff()
+        for i in range(2):
+          self.texInterface.blueLightOn()
+          time.sleep(.1)
+          self.texInterface.blueLightOff()
+          time.sleep(.1)
         imOK = True
         self.assertTrue(imOK,
                         'Flashing blue LED on and off twice')
 
 
-class TestTexHumanInterface(TestTexInterface):
+class TestTexInterfaceHuman(TestTexInterface):
     '''
     Class derived from base class TestTexInterface that will use
     base class's setUp() and tearDown() methods, and run all its
