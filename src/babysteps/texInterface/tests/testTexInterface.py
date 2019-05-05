@@ -5,7 +5,7 @@ import os
 (filePath, fileName) = os.path.split(__file__)
 sys.path.insert(0,os.path.join(filePath, ".."))
 
-import unittest
+import unittest, time
 from texInterface import TexInterface
 from humanTestFeedback import HumanTestFeedback
 
@@ -14,7 +14,7 @@ class TestTexInterface(unittest.TestCase):
         self.texInterface = TexInterface()
         
     def tearDown(self):
-        pass
+        self.texInterface.cleanup()
 
     @classmethod
     def setUpClass(cls):
@@ -23,7 +23,8 @@ class TestTexInterface(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         pass
-                
+    
+    # Temperture Sensor Tests
     def testTempFInBounds(self):
         temp = self.texInterface.getTempF()
         self.assertGreater(temp, 32,
@@ -45,6 +46,16 @@ class TestTexInterface(unittest.TestCase):
         self.assertTrue(response,
                     'Asking user if temperature is about %.2f°F' %temp)
 
+    # Red, Green, Blue LED Tests
+    def testBlueLed(self):
+        imOK = True
+        self.texInterface.blueLightOn()
+        time.sleep(.1)
+        self.texInterface.blueLightOff()
+        time.sleep(.1)
+        self.texInterface.blueLightOn()
+        time.sleep(.1)
+        self.texInterface.blueLightOff()
         
 if __name__ == '__main__':
     unittest.main()
