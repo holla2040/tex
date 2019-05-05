@@ -43,6 +43,8 @@ class HumanTestFeedback():
                 print ('button2Pressed = True')
 
     def printMsgToScreen(self, message):
+        if isinstance(message, str): # Put string in list if needed
+            message = [message]
         xPos = 1
         yPos = 0
         self.oled.cls()
@@ -58,10 +60,10 @@ class HumanTestFeedback():
         self.oled.canvas.text((77,45), '\/    \/', fill=1)
         self.oled.display()
         
-    def msgToScreenGetResponse(self, message):
-        self.printMsgToScreen(message)
+    def getResponse(self):
         response = None
         #Button1 = yes Button2 = no
+        startTime = time.time()
         while True:            
             if self.button1Pressed: #yes
                 self.button1Pressed = False
@@ -72,12 +74,22 @@ class HumanTestFeedback():
                 response = False
                 break
             time.sleep(.01)
+            if (time.time() - startTime > self.waitForResponseSecs):
+                response = None
+                break
         self.oled.cls()
         return response
+
+    def msgToScreenGetResponse(self, message):
+        self.printMsgToScreen(message)
+        response = self.getResponse()
+        return response
     
-    def __del__ (self):
+    
+    def cleanup (self, cleanUpGPIO=True):
        self.oled.cls()
-       gpio.cleanup()
+       if cleanUpGPIO:
+           gpio.cleanup()
 
 if __name__ == "__main__":
     humanTestFeedback = HumanTestFeedback()
@@ -90,6 +102,6 @@ if __name__ == "__main__":
             print ('no')
     except KeyboardInterrupt:
         pass
-    humanTestFeedback.__del__()
+    humanTestFeedback.cleanup()
     
     

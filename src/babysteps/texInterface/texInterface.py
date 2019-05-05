@@ -12,13 +12,15 @@ class TexInterface():
     
     def __init__(self):
         self.tempSensor = None
+
         gpio.setmode(gpio.BCM)
-        #gpio.setup(TexInterface.ledPinRed, gpio.OUT)
-        #gpio.setup(TexInterface.ledPinGreen, gpio.OUT)
+        gpio.setup(TexInterface.ledPinRed, gpio.OUT)
+        gpio.setup(TexInterface.ledPinGreen, gpio.OUT)
         gpio.setup(TexInterface.ledPinBlue, gpio.OUT)
 
-    def cleanup(self):
-        gpio.cleanup()
+    def cleanup(self,cleanUpGPIO=True):
+        if cleanUpGPIO:
+            gpio.cleanup()
         
     def helloWorld(self):
         print("Hello world")
@@ -42,7 +44,6 @@ class TexInterface():
 
     def blueLightOff(self):
         gpio.output(TexInterface.ledPinBlue, gpio.LOW)
-
 
     if __name__ == "__main__":
         tex = TexInterface()

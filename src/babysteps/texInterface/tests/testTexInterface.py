@@ -11,14 +11,24 @@ from humanTestFeedback import HumanTestFeedback
 
 class TestTexInterface(unittest.TestCase):
     def setUp(self):
+        #print ("In setUp()")
         self.texInterface = TexInterface()
+        self.humanTestFeedback = None
         
     def tearDown(self):
+        #print ("In tearDown()")
+        if self.humanTestFeedback:
+            self.humanTestFeedback.cleanup(cleanUpGPIO=False)
         self.texInterface.cleanup()
+
+    def createHumanTestFeedback(self):
+        if not self.humanTestFeedback:
+            self.humanTestFeedback = HumanTestFeedback()
+        return self.humanTestFeedback
 
     @classmethod
     def setUpClass(cls):
-        cls._humanTestFeedback = HumanTestFeedback()
+        pass
         
     @classmethod
     def tearDownClass(cls):
@@ -38,24 +48,41 @@ class TestTexInterface(unittest.TestCase):
                          'Temperature greater than 0 deg C')
         self.assertLess   (temp, 43.0,
                          'Temperature less than 43 deg C')
-        
-    def testTempFViaHuman(self):
-        temp = self.texInterface.getTempF()
-        message = ['For temp of board, is', '%.2f°F about right?' %temp]
-        response = TestTexInterface._humanTestFeedback.msgToScreenGetResponse(message)
-        self.assertTrue(response,
-                    'Asking user if temperature is about %.2f°F' %temp)
 
     # Red, Green, Blue LED Tests
     def testBlueLed(self):
+        imOK = False
+        self.texInterface.blueLightOn()
+        time.sleep(.1)
+        self.texInterface.blueLightOff()
+        time.sleep(.1)
+        self.texInterface.blueLightOn()
+        time.sleep(.1)
+        self.texInterface.blueLightOff()
         imOK = True
-        self.texInterface.blueLightOn()
-        time.sleep(.1)
-        self.texInterface.blueLightOff()
-        time.sleep(.1)
-        self.texInterface.blueLightOn()
-        time.sleep(.1)
-        self.texInterface.blueLightOff()
+        self.assertTrue(imOK,
+                        'Flashing blue LED on and off twice')
+
+
+class TestTexHumanInterface(TestTexInterface):
+    '''
+    Class derived from base class TestTexInterface that will use
+    base class's setUp() and tearDown() methods, and run all its
+    tests.  But provides a way to not run the tests that require
+    human interfention.  
+    '''
+
+    # Temperture Sensor Tests
+    def testTempFViaHuman(self):
+        humanTestFeedback = self.createHumanTestFeedback()
+        temp = self.texInterface.getTempF()
+        message = ['For temp of board, is', '%.2f°F about right?' %temp]
+        response = humanTestFeedback.msgToScreenGetResponse(message)
+        self.assertNotEqual(response,None,
+                            'User responded by pushing yes or no button')
+        self.assertTrue(response,
+                    'Asking user if temperature is about %.2f°F' %temp)
+        
         
 if __name__ == '__main__':
     unittest.main()
