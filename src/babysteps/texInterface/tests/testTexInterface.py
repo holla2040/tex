@@ -62,6 +62,29 @@ class TestTexInterface(unittest.TestCase):
                         'Flashing blue LED on and off twice')
 
 
+    # LED Controller
+    def testLedOnOff(self):
+        imOK = False
+        for i in range(2):
+          self.texInterface.ledOn(0)
+          time.sleep(.1)
+          self.texInterface.ledOff(0)
+          time.sleep(.1)
+        imOK = True
+        self.assertTrue(imOK,
+                        'Flashing blue LED on and off twice')
+    def testAllLedsOnOff(self):
+        imOK = False
+        for i in range(2):
+          self.texInterface.ledAllOn()
+          time.sleep(.1)
+          self.texInterface.ledAllOff()
+          time.sleep(.1)
+        imOK = True
+        self.assertTrue(imOK,
+                        'Flashing blue LED on and off twice')
+        
+
 class TestTexInterfaceHuman(TestTexInterface):
     '''
     Class derived from base class TestTexInterface that will use
