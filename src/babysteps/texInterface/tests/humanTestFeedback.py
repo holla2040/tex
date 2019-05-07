@@ -4,7 +4,7 @@ import sys
 import os
 
 (filePath, fileName) = os.path.split(__file__)
-sys.path.insert(0,os.path.join(filePath, "../lib"))
+sys.path.insert(0,os.path.join(filePath, "..","lib"))
 
 from lib_oled96 import ssd1306
 from smbus import SMBus
