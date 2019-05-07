@@ -108,10 +108,12 @@ class TestTexInterface(unittest.TestCase):
     def testLedOnOff(self):
         imOK = False
         for i in range(2):
-          self.texInterface.ledOn(0)
-          time.sleep(.1)
-          self.texInterface.ledOff(0)
-          time.sleep(.1)
+            for channel in range(0,16):
+                self.texInterface.ledOn(channel)
+            time.sleep(.1)
+            for channel in range(0,16):
+                self.texInterface.ledOff(channel)
+            time.sleep(.1)
         imOK = True
         self.assertTrue(imOK,
                         'Flashing blue LED on and off twice')
@@ -155,8 +157,34 @@ class TestTexInterface(unittest.TestCase):
                                 'Comparing level %s to %s on LED '% (highLevelDown,lowLevel)+\
                                 '%s counting down' % (channel))
         self.texInterface.ledSetLevelAll(0)
-                
+
+    def testCurrentPowerMonitorVoltageCurrentPower(self):
+        imOK = False
+        supplyVoltage = self.texInterface.getSupplyVoltage_V()
+        voltageBus = self.texInterface.getVoltageBus_V()
+        voltageShunt = self.texInterface.getVoltageShunt_mV()
+        current = self.texInterface.getCurrent_mA()
+        power = self.texInterface.getPower_mW()
+        msg =  'Got voltages, current and power from current/power monitor: '
+        msg += 'sup=%.2fV, bus=%.2fV, ' % (supplyVoltage, voltageBus)
+        msg += 'shunt=%.2fmV, I=%.2fmA, P=%.2fmW' % (voltageShunt, current, power)
+        #print(msg)
+        imOK = True
+        self.assertTrue(imOK,msg)
+
+    def testCurrentPowerMonitorSleepWakeOverflowReset(self):
+        imOK = False
+        self.texInterface.currentPowerMonitorSleep()
+        time.sleep(0.5)
+        self.texInterface.currentPowerMonitorWake()
+        self.texInterface.getCurrentPowerMonitorCurrentOverflow()
+        self.texInterface.currentPowerMonitorReset()
+        imOK = True
+        self.assertTrue(
+            imOK, "Testing current/power monitor sleep, wake, current overflow and reset")
         
+        
+                        
 
 class TestTexInterfaceHuman(TestTexInterface):
     '''
@@ -167,7 +195,7 @@ class TestTexInterfaceHuman(TestTexInterface):
     '''
 
     # Temperture Sensor Tests
-    def testTempFViaHuman(self):
+    def testViaHumanTempF(self):
         humanTestFeedback = self.createHumanTestFeedback()
         temp = self.texInterface.getTempF()
         message = ['For temp of board, is', '%.2f°F about right?' %temp]
@@ -177,7 +205,7 @@ class TestTexInterfaceHuman(TestTexInterface):
         self.assertTrue(response,
                     'Asking user if temperature is about %.2f°F' %temp)
     
-    def testBlueLedOnViaHuman(self):
+    def testViaHumanBlueLedOn(self):
         humanTestFeedback = self.createHumanTestFeedback()
         self.texInterface.blueLightOn()
         message = ['Is the blue LED on?']
@@ -188,7 +216,7 @@ class TestTexInterfaceHuman(TestTexInterface):
         self.assertTrue(response,
                         'Asking user if the blue LED is on')
     
-    def testRedLedOnViaHuman(self):
+    def testViaHumanRedLedOn(self):
         humanTestFeedback = self.createHumanTestFeedback()
         self.texInterface.redLightOn()
         message = ['Is the red LED on?']
@@ -198,7 +226,7 @@ class TestTexInterfaceHuman(TestTexInterface):
         self.assertTrue(response,
                         'Asking user if the red LED is on')
 
-    def testGreenLedOnViaHuman(self):
+    def testViaHumanGreenLedOn(self):
         humanTestFeedback = self.createHumanTestFeedback()
         self.texInterface.greenLightOn()
         message = ['Is the green LED on?']

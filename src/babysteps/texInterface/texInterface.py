@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 
+import sys, os
+(filePath, fileName) = os.path.split(__file__)
+sys.path.insert(0,os.path.join(filePath, "lib"))
+
 from temperatureSensor import TemperatureSensor
-import RPi.GPIO as gpio
+import RPi.GPIO as gpio # ToDo: Change this to Adafruit_GPIO
 import Adafruit_PCA9685
-import sys
+from ina219 import INA219 # Only a Adafruit CircuitPython driver is available
+from ina219 import DeviceRangeError
 
 class TexInterface():
 
@@ -16,12 +21,15 @@ class TexInterface():
     ledPinRed = 11
     ledPinGreen = 9 
     ledPinBlue = 8
+    shunt_ohms = 0.15   # for INA219 current sensor
+
     
     def __init__(self,debug=False):
         self.debug = debug
 
         self.tempSensor = None
         self.ledController = None
+        self.currentPowerMonitor = None
 
         gpio.setmode(gpio.BCM)
         gpio.setup(TexInterface.ledPinRed, gpio.OUT)
@@ -73,6 +81,7 @@ class TexInterface():
         if None == self.ledController:
             self.ledController = Adafruit_PCA9685.PCA9685(address=TexInterface.ledControllerAddress)  # This takes additional arguments: address and i2c
             self.ledController.set_pwm_freq(TexInterface.fPWM) #Set the PWM frequency in hertz
+            
     def ledSetLevel(self, level, ledNumber):
         '''
         Set light level to 'level' of led number 'ledNumber'
@@ -120,6 +129,62 @@ class TexInterface():
         for ledNumber in range (16):
             self.ledSetLevel(level,ledNumber)
     
+    # Current/Power Monitor
+    def createCurrentPowerMonitor(self):
+        if None == self.currentPowerMonitor:
+            self.currentPowerMonitor = INA219(TexInterface.shunt_ohms)
+            self.currentPowerMonitor.configure()
+
+    def getSupplyVoltage_V(self):
+        """ Returns the bus supply voltage in volts. This is the sum of
+        the bus voltage and shunt voltage. A DeviceRangeError
+        exception is thrown if current overflow occurs."""
+        self.createCurrentPowerMonitor()
+        return self.currentPowerMonitor.supply_voltage()
+
+    def getVoltageBus_V(self):
+        """ Returns the bus voltage in volts. """
+        self.createCurrentPowerMonitor()
+        return self.currentPowerMonitor.voltage()
+
+    def getVoltageShunt_mV(self):
+        """ Returns the shunt voltage in millivolts.
+        A DeviceRangeError exception is thrown if current overflow occurs."""
+        self.createCurrentPowerMonitor()
+        return self.currentPowerMonitor.shunt_voltage()
+
+    def getCurrent_mA(self):
+        """ Returns the bus current in milliamps. A DeviceRangeError
+        exception is thrown if current overflow occurs."""
+        self.createCurrentPowerMonitor()
+        return self.currentPowerMonitor.current()
+
+    def getPower_mW(self):
+        """ Returns the bus power consumption in milliwatts.
+        A DeviceRangeError exception is thrown if current overflow occurs."""
+        self.createCurrentPowerMonitor()
+        return self.currentPowerMonitor.power()
+
+    def currentPowerMonitorSleep(self):
+        """ Put the INA219 into power down mode. """
+        self.createCurrentPowerMonitor()
+        return self.currentPowerMonitor.sleep()
+
+    def currentPowerMonitorWake(self):
+        """ Wake the INA219 from power down mode """
+        self.createCurrentPowerMonitor()
+        return self.currentPowerMonitor.wake()
+
+    def getCurrentPowerMonitorCurrentOverflow(self):
+        """ Returns true if the sensor has detect current overflow. In
+        this case the current and power values are invalid."""
+        self.createCurrentPowerMonitor()
+        return self.currentPowerMonitor.current_overflow()
+    
+    def currentPowerMonitorReset(self):
+        """ Reset the INA219 to its default configuration. """
+        self.createCurrentPowerMonitor()
+        return self.currentPowerMonitor.reset()
 
     if __name__ == "__main__":
         tex = TexInterface()
