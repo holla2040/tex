@@ -13,8 +13,8 @@ class TexInterface():
     ledHigh = 4095 # PWM has 12 bits of resolution: 0 to 2^12-1 = 0 to 4095
     ledControllerAddress = 0x60
     tempSensorAddress = 0x4C
-    ledPinRed = 9
-    ledPinGreen = 11
+    ledPinRed = 11
+    ledPinGreen = 9 
     ledPinBlue = 8
     
     def __init__(self,debug=False):
@@ -56,6 +56,18 @@ class TexInterface():
     def blueLightOff(self):
         gpio.output(TexInterface.ledPinBlue, gpio.LOW)
 
+    def redLightOn(self):
+        gpio.output(TexInterface.ledPinRed, gpio.HIGH)
+
+    def redLightOff(self):
+        gpio.output(TexInterface.ledPinRed, gpio.LOW)
+
+    def greenLightOn(self):
+        gpio.output(TexInterface.ledPinGreen, gpio.HIGH)
+
+    def greenLightOff(self):
+        gpio.output(TexInterface.ledPinGreen, gpio.LOW)
+    
     # LED Controller
     def createLedController(self):
         if None == self.ledController:
@@ -103,6 +115,10 @@ class TexInterface():
     def ledAllOn(self):
         for ledNumber in range (16):
             self.ledOn(ledNumber)
+            
+    def ledSetLevelAll(self,level):
+        for ledNumber in range (16):
+            self.ledSetLevel(level,ledNumber)
     
 
     if __name__ == "__main__":

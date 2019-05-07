@@ -60,6 +60,48 @@ class TestTexInterface(unittest.TestCase):
         imOK = True
         self.assertTrue(imOK,
                         'Flashing blue LED on and off twice')
+        
+    def testRedLed(self):
+        imOK = False
+        for i in range(2):
+          self.texInterface.redLightOn()
+          time.sleep(.1)
+          self.texInterface.redLightOff()
+          time.sleep(.1)
+        imOK = True
+        self.assertTrue(imOK,
+                        'Flashing red LED on and off twice')
+
+    def testGreenLed(self):
+        imOK = False
+        for i in range(2):
+            self.texInterface.greenLightOn()
+            time.sleep(.1)
+            self.texInterface.greenLightOff()
+            time.sleep(.1)
+        imOK = True
+        self.assertTrue(imOK,
+                        'Flashing green LED on and off twice')
+
+    def testRedGreenBlueLed(self):
+        imOK = False
+        for i in range(2):
+            self.texInterface.blueLightOn()
+            time.sleep(.1)
+            self.texInterface.redLightOn()
+            time.sleep(.1)
+            self.texInterface.greenLightOn()
+            time.sleep(.1)
+            
+            self.texInterface.blueLightOff()
+            time.sleep(.1)
+            self.texInterface.redLightOff()
+            time.sleep(.1)
+            self.texInterface.greenLightOff()
+            time.sleep(.1)
+        imOK = True
+        self.assertTrue(imOK,
+                        'Flashing red LED on and off twice')
 
 
     # LED Controller
@@ -84,6 +126,37 @@ class TestTexInterface(unittest.TestCase):
         self.assertTrue(imOK,
                         'Flashing blue LED on and off twice')
         
+    def testFlashAllLeds(self):
+        highLevelUp   = 1
+        highLevelDown = .5
+        lowLevel = .2
+        sleepTime = .02
+        self.texInterface.ledSetLevelAll(lowLevel)
+        for channel in range(0, 16):
+            with self.subTest(channel=channel):
+                imOK = False
+                self.texInterface.ledSetLevel(highLevelUp,channel)
+                time.sleep(sleepTime)
+                if channel > 0:
+                    self.texInterface.ledSetLevel(lowLevel,channel-1)
+                imOK = True
+                self.assertTrue(imOK,
+                                'Comparing level %s to %s on LED '% (highLevelUp,lowLevel)+\
+                                '%s counting up' % (channel))
+        for channel in range(15,-1,-1):
+            with self.subTest(channel=channel):
+                imOK = False
+                self.texInterface.ledSetLevel(highLevelDown,channel)
+                time.sleep(sleepTime)
+                if channel < 15:
+                    self.texInterface.ledSetLevel(lowLevel,channel+1)
+                imOK = True
+                self.assertTrue(imOK,
+                                'Comparing level %s to %s on LED '% (highLevelDown,lowLevel)+\
+                                '%s counting down' % (channel))
+        self.texInterface.ledSetLevelAll(0)
+                
+        
 
 class TestTexInterfaceHuman(TestTexInterface):
     '''
@@ -103,7 +176,38 @@ class TestTexInterfaceHuman(TestTexInterface):
                             'User responded by pushing yes or no button')
         self.assertTrue(response,
                     'Asking user if temperature is about %.2f°F' %temp)
-        
+    
+    def testBlueLedOnViaHuman(self):
+        humanTestFeedback = self.createHumanTestFeedback()
+        self.texInterface.blueLightOn()
+        message = ['Is the blue LED on?']
+        response = humanTestFeedback.msgToScreenGetResponse(message)
+        self.texInterface.blueLightOff()
+        self.assertNotEqual(response,None,
+                            'User responded by pushing yes or no button')
+        self.assertTrue(response,
+                        'Asking user if the blue LED is on')
+    
+    def testRedLedOnViaHuman(self):
+        humanTestFeedback = self.createHumanTestFeedback()
+        self.texInterface.redLightOn()
+        message = ['Is the red LED on?']
+        response = humanTestFeedback.msgToScreenGetResponse(message)
+        self.assertNotEqual(response,None,
+                            'User responded by pushing yes or no button')
+        self.assertTrue(response,
+                        'Asking user if the red LED is on')
+
+    def testGreenLedOnViaHuman(self):
+        humanTestFeedback = self.createHumanTestFeedback()
+        self.texInterface.greenLightOn()
+        message = ['Is the green LED on?']
+        response = humanTestFeedback.msgToScreenGetResponse(message)
+        self.assertNotEqual(response,None,
+                            'User responded by pushing yes or no button')
+        self.assertTrue(response,
+                        'Asking user if the green LED is on')
+
         
 if __name__ == '__main__':
     unittest.main()
