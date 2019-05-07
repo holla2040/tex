@@ -50,7 +50,7 @@ class TestTexInterface(unittest.TestCase):
                          'Temperature less than 43 deg C')
 
     # Red, Green, Blue LED Tests
-    def testBlueLed(self):
+    def testLed1Blue(self):
         imOK = False
         for i in range(2):
           self.texInterface.blueLightOn()
@@ -61,7 +61,7 @@ class TestTexInterface(unittest.TestCase):
         self.assertTrue(imOK,
                         'Flashing blue LED on and off twice')
         
-    def testRedLed(self):
+    def testLed2Red(self):
         imOK = False
         for i in range(2):
           self.texInterface.redLightOn()
@@ -72,7 +72,7 @@ class TestTexInterface(unittest.TestCase):
         self.assertTrue(imOK,
                         'Flashing red LED on and off twice')
 
-    def testGreenLed(self):
+    def testLed3Green(self):
         imOK = False
         for i in range(2):
             self.texInterface.greenLightOn()
@@ -83,7 +83,7 @@ class TestTexInterface(unittest.TestCase):
         self.assertTrue(imOK,
                         'Flashing green LED on and off twice')
 
-    def testRedGreenBlueLed(self):
+    def testLed4RedGreenBlue(self):
         imOK = False
         for i in range(2):
             self.texInterface.blueLightOn()
