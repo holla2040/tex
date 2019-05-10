@@ -221,6 +221,7 @@ class TestTexInterfaceHuman(TestTexInterface):
         self.texInterface.redLightOn()
         message = ['Is the red LED on?']
         response = humanTestFeedback.msgToScreenGetResponse(message)
+        self.texInterface.redLightOff()
         self.assertNotEqual(response,None,
                             'User responded by pushing yes or no button')
         self.assertTrue(response,
@@ -231,10 +232,84 @@ class TestTexInterfaceHuman(TestTexInterface):
         self.texInterface.greenLightOn()
         message = ['Is the green LED on?']
         response = humanTestFeedback.msgToScreenGetResponse(message)
+        self.texInterface.greenLightOff()
         self.assertNotEqual(response,None,
                             'User responded by pushing yes or no button')
         self.assertTrue(response,
                         'Asking user if the green LED is on')
+        
+    def testViaHumanAllLedsOn(self):
+        humanTestFeedback = self.createHumanTestFeedback()
+        self.texInterface.ledAllOn()
+        time.sleep(.1)
+        message = ["Are all the LED's on?"]
+        response = humanTestFeedback.msgToScreenGetResponse(message)
+        print (response)
+        self.texInterface.ledAllOff()
+        time.sleep(.1)
+        if response == False:
+            channelMessage = 1
+            for channel in range(15,-1,-1):
+                with self.subTest(channel=channel):
+                    self.texInterface.ledOn(channel)
+                    message = ["Is the LED in",
+                               "Position {} on?" .format(channelMessage)]
+                    response = humanTestFeedback.msgToScreenGetResponse(message)
+                    channelMessage+=1
+                    self.texInterface.ledOff(channel)
+                    self.assertNotEqual(response,None,
+                                        'User responded by pushing yes or no button')
+                    self.assertTrue(response,
+                                    "Asking user if LED %s works" %channel  +\
+                                    "(count starts at position 0)")
+        self.assertNotEqual(response,None,
+                            'User responded by pushing yes or no button')
+        self.assertTrue(response,
+                        "Asking user if all the LED's are on")
+
+    def testViaHumanCurrentPowerMotionVoltageCurrentPower(self):
+        humanTestFeedback = self.createHumanTestFeedback()
+        supplyVoltage = self.texInterface.getSupplyVoltage_V()
+        voltageBus = self.texInterface.getVoltageBus_V()
+        voltageShunt = self.texInterface.getVoltageShunt_mV()
+        current = self.texInterface.getCurrent_mA()
+        power = self.texInterface.getPower_mW()
+        
+        message = ["For supply voltage,",
+                   "is %.1fV about right?" %supplyVoltage]
+        response = humanTestFeedback.msgToScreenGetResponse(message)
+        self.assertNotEqual(response,None,
+                            'User responded by pushing yes or no button')
+        self.assertTrue(response,
+                        "Asking user if the supply voltage is correct")
+        message = ["For voltage bus,",
+                   "is %.1fV about right?" %voltageBus]
+        response = humanTestFeedback.msgToScreenGetResponse(message)
+        self.assertNotEqual(response,None,
+                            'User responded by pushing yes or no button')
+        self.assertTrue(response,
+                        "Asking user if voltage bus is correct")
+        message = ["For voltage shunt, is",
+                   "%.1fmV about right?" %voltageBus]
+        response = humanTestFeedback.msgToScreenGetResponse(message)
+        self.assertNotEqual(response,None,
+                            'User responded by pushing yes or no button')
+        self.assertTrue(response,
+                        "Asking user if voltage shunt is correct")
+        message = ["For current, is",
+                   "%.2fmA about right?" %current]
+        response = humanTestFeedback.msgToScreenGetResponse(message)
+        self.assertNotEqual(response,None,
+                            'User responded by pushing yes or no button')
+        self.assertTrue(response,
+                        "Asking user if current is correct")
+        message = ["For power, is",
+                   "%.1fmW about right?" %power]
+        response = humanTestFeedback.msgToScreenGetResponse(message)
+        self.assertNotEqual(response,None,
+                            'User responded by pushing yes or no button')
+        self.assertTrue(response,
+                        "Asking user if power is correct")
 
         
 if __name__ == '__main__':
