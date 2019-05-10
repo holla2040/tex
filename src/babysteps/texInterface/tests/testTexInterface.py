@@ -9,7 +9,7 @@ import unittest, time
 from texInterface import TexInterface
 from humanTestFeedback import HumanTestFeedback
 
-class TestTexInterface(unittest.TestCase):
+class TestTexInterfaceBase(unittest.TestCase):
     def setUp(self):
         #print ("In setUp()")
         self.texInterface = TexInterface()
@@ -33,6 +33,8 @@ class TestTexInterface(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         pass
+
+class TestTexInterface(TestTexInterfaceBase):
     
     # Temperture Sensor Tests
     def testTempFInBounds(self):
@@ -186,7 +188,7 @@ class TestTexInterface(unittest.TestCase):
         
                         
 
-class TestTexInterfaceHuman(TestTexInterface):
+class TestTexInterfaceHuman(TestTexInterfaceBase):
     '''
     Class derived from base class TestTexInterface that will use
     base class's setUp() and tearDown() methods, and run all its
@@ -205,7 +207,7 @@ class TestTexInterfaceHuman(TestTexInterface):
         self.assertTrue(response,
                     'Asking user if temperature is about %.2f°F' %temp)
     
-    def testViaHumanBlueLedOn(self):
+    def testViaHumanLedOn1Blue(self):
         humanTestFeedback = self.createHumanTestFeedback()
         self.texInterface.blueLightOn()
         message = ['Is the blue LED on?']
@@ -216,7 +218,7 @@ class TestTexInterfaceHuman(TestTexInterface):
         self.assertTrue(response,
                         'Asking user if the blue LED is on')
     
-    def testViaHumanRedLedOn(self):
+    def testViaHumanLedOn2Red(self):
         humanTestFeedback = self.createHumanTestFeedback()
         self.texInterface.redLightOn()
         message = ['Is the red LED on?']
@@ -227,7 +229,7 @@ class TestTexInterfaceHuman(TestTexInterface):
         self.assertTrue(response,
                         'Asking user if the red LED is on')
 
-    def testViaHumanGreenLedOn(self):
+    def testViaHumanLedOn3Green(self):
         humanTestFeedback = self.createHumanTestFeedback()
         self.texInterface.greenLightOn()
         message = ['Is the green LED on?']
@@ -242,26 +244,25 @@ class TestTexInterfaceHuman(TestTexInterface):
         humanTestFeedback = self.createHumanTestFeedback()
         self.texInterface.ledAllOn()
         time.sleep(.1)
-        message = ["Are all the LED's on?"]
+        message = ["Are all the LED's","D1 to D15 on?"]
         response = humanTestFeedback.msgToScreenGetResponse(message)
         print (response)
         self.texInterface.ledAllOff()
         time.sleep(.1)
         if response == False:
-            channelMessage = 1
+            boardLedId = 0
             for channel in range(15,-1,-1):
                 with self.subTest(channel=channel):
+                    boardLedId+=1
                     self.texInterface.ledOn(channel)
                     message = ["Is the LED in",
-                               "Position {} on?" .format(channelMessage)]
+                               "Position {} on?" .format(boardLedId)]
                     response = humanTestFeedback.msgToScreenGetResponse(message)
-                    channelMessage+=1
                     self.texInterface.ledOff(channel)
                     self.assertNotEqual(response,None,
                                         'User responded by pushing yes or no button')
                     self.assertTrue(response,
-                                    "Asking user if LED %s works" %channel  +\
-                                    "(count starts at position 0)")
+                                    "Asking user if LED in position D{} works".format(boardLedId))
         self.assertNotEqual(response,None,
                             'User responded by pushing yes or no button')
         self.assertTrue(response,
