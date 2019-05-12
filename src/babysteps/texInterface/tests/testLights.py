@@ -162,6 +162,17 @@ class TestLights(unittest.TestCase):
         self.assertEqual(light.lightMode   , Light.MODE.LIGHT_ON,
                          "Checking light.lightMode   ")
         light.off()
+
+    def testGetLightMode(self):
+        light = Light()
+        self.assertEqual(light.getLightMode(), None)
+        light.setup(self.texInterface, 0, TexInterface.LIGHT_LEVEL.ON*.8)
+        self.assertEqual(light.getLightMode(), Light.MODE.LIGHT_OFF)
+        light.on()
+        self.assertEqual(light.getLightMode(), Light.MODE.LIGHT_ON)
+        light.off()
+        self.assertEqual(light.getLightMode(), Light.MODE.LIGHT_OFF)
+
         
 
     def testLightflash(self):
