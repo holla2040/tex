@@ -12,6 +12,10 @@ from ina219 import DeviceRangeError
 
 class TexInterface():
 
+    class LIGHT_LEVEL:
+        OFF = 0.0
+        ON = 1.0
+
     # LED controller is a PWM, pulse width modulation, controller
     fPWM = 50 # Frequencey of led controller. Range 40-1000Hz
     ledLow = 0
@@ -85,8 +89,8 @@ class TexInterface():
     def ledSetLevel(self, level, ledNumber):
         '''
         Set light level to 'level' of led number 'ledNumber'
-        where level is a float between 0 and 1 and ledNumber
-        is an integer representing led 0 to 15
+        where level is a float between TexInterface.LIGHT_LEVEL.OFF and TexInterface.LIGHT_LEVEL.ON
+        and ledNumber is an integer representing led 0 to 15
         '''
         if not (isinstance(level, float) or isinstance(level, int)):
             msg = "Argument level is of the wrong type sent to "+\
@@ -98,10 +102,12 @@ class TexInterface():
                   "TexInterface.ledSetLevel(level=%s,ledNumber=%s). " % (level, ledNumber)+\
                   "Expection float or int but got %s" % type(ledNumber)
             raise TypeError(msg)
-        if (level < 0 or level > 1):
+        if (level < TexInterface.LIGHT_LEVEL.OFF or level > TexInterface.LIGHT_LEVEL.ON):
             msg = "Bad value of level sent to "+\
                   "TexInterface.ledSetLevel(level=%s,ledNumber=%s). " % (level, ledNumber)+\
-                  "Expeced float between 0 and 1"
+                  "Expeced float between " +\
+                  "TexInterface.LIGHT_LEVEL.OFF(=%s) " % TexInterface.LIGHT_LEVEL.OFF +\
+                  "and TexInterface.LIGHT_LEVEL.ON(=%s)" % TexInterface.LIGHT_LEVEL.OFF
             raise ValueError(msg)
         if (ledNumber < 0 or ledNumber > 15):
             msg = "Bad value of ledNumber sent to "+\
@@ -112,10 +118,10 @@ class TexInterface():
         self.ledController.set_pwm(ledNumber,0,int(level*TexInterface.ledHigh))
 
     def ledOff(self,ledNumber):
-        self.ledSetLevel(0,ledNumber)
+        self.ledSetLevel(TexInterface.LIGHT_LEVEL.OFF,ledNumber)
 
     def ledOn(self,ledNumber):
-        self.ledSetLevel(1,ledNumber)
+        self.ledSetLevel(TexInterface.LIGHT_LEVEL.ON,ledNumber)
 
     def ledAllOff(self):
         for ledNumber in range (16):
@@ -186,7 +192,7 @@ class TexInterface():
         self.createCurrentPowerMonitor()
         return self.currentPowerMonitor.reset()
 
-    if __name__ == "__main__":
-        tex = TexInterface()
-        tex.helloWorld()
+if __name__ == "__main__":
+    tex = TexInterface()
+    tex.helloWorld()
     
