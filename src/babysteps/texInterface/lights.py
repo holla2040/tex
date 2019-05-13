@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 
-import sys, os, math
+import sys, os, math, time
 (filePath, fileName) = os.path.split(__file__)
 sys.path.insert(0,os.path.join(filePath, "lib"))
 
+from texInterface import TexInterface
+
 class Light():
+
+    ledNumbersUsed = { 0:False, 1:False, 2:False, 3:False,
+                       4:False, 5:False, 6:False, 7:False,
+                       8:False, 9:False,10:False,11:False,
+                      12:False,13:False,14:False,15:False }
 
     class MODE():
         LIGHT_MODE_NOTSET = -1
@@ -13,37 +20,52 @@ class Light():
         LIGHT_FLASHING = 2
 
     class LEVEL():
-        ON  = 1
-        OFF = 0
+        HIGH  = TexInterface.PWM_LIGHT_LEVEL.HIGH
+        LOW   = TexInterface.PWM_LIGHT_LEVEL.LOW
         
     def __init__(self,debug=False):
-        print ("In Light.__init__(debug)")
+        #print ("In Light.__init__(debug)")
         self.debug = debug
 
         self.texInterface = None
         self.ledNumber    = None
         self.onLightLevel = None
-        self.lightLevel   = None
         self.lightMode    = None
 
     def setup(self, texInterface, ledNumber, onLightLevel):
         self.texInterface = texInterface
         self.ledNumber    = ledNumber
         self.onLightLevel = onLightLevel
-        self.off();
+        self.off()
+
+        assert Light.ledNumbersUsed[self.ledNumber] == False,\
+            "A Light object is already using ledNumber %s" % self.ledNumber
+        Light.ledNumbersUsed[self.ledNumber] = True
+
+    def cleanup(self):
+        self.off()
+        Light.ledNumbersUsed[self.ledNumber] = False
+
+    def setLightBrightness(self, lightLevel):
+        '''
+        Set the actual LED to the given lightLevel
+        '''
+        self.texInterface.ledSetLevel(lightLevel, self.ledNumber)
 
     def update(self):
-        self.texInterface.ledSetLevel(self.lightLevel, self.ledNumber)
-
+        '''
+        A no-op, because for a simple Light, sine there is no time variation,
+        actual light brightness are set in on and off
+        '''
+        pass
+    
     def off(self):
-        self.lightLevel = Light.LEVEL.OFF;
         self.lightMode  = Light.MODE.LIGHT_OFF
-        self.update()
+        self.setLightBrightness(Light.LEVEL.LOW)
 
     def on(self):
-        self.lightLevel = self.onLightLevel
         self.lightMode  = Light.MODE.LIGHT_ON
-        self.update()
+        self.setLightBrightness(self.onLightLevel)
 
     def toggle(self):
         if (self.lightMode == Light.MODE.LIGHT_MODE_NOTSET or
@@ -110,7 +132,7 @@ class DecayLight(Light):
     """
 
     def __init__(self,debug=False):
-        print ("In DecayLight.__init__(debug)")
+        #print ("In DecayLight.__init__(debug)")
         super().__init__(debug)
         self.decayStartTime  = 0 # Keep track of when decay started.
         self.changeTime      = 0 # Keep track of when its time to change modes
@@ -118,112 +140,123 @@ class DecayLight(Light):
         self.intervalIndex   = 0 # Keep track which lighting inverval we are on
         self.numIntervals    = None # Length of arrays
 
-        self.onLengthArray   = None # Time to stay on before switching to 
-                                    # decay mode, for each interval
-        self.decayLengthArray= None # Time to stay in decay mode, before 
-                                    # starting next interval, for each interval
-        self.maxLightLevelArray = None # Light level when on, for each interval
-        self.tauArray        = None # Time constants in secs. See discussion above
+        self.onLengthArray   = None # Arrays are documented in setup doc string
+        self.decayLengthArray= None 
+        self.maxLightLevelArray = None 
+        self.tauArray        = None 
 
-        def setup(texInterface, ledNumber, onLightLevel,
-                  onLengthArray, decayLengthArray,
-                  maxLightLevelArray, tauArray):
-            super().setup(texInterface, ledNumber, onLightLevl)
-            assert(len(onLengthArray) == len(decayLengthArray) ==
-                   len(maxLightLevelArray) == len(tauArray),
-                   "Expecting all array lenghts to be the same. "+\
-                   "len(onLengthArray) = %s, " % len(onLengthArray) +\
-                   "len(decayLengthArray) = %s, " % len(decayLengthArray) +\
-                   "len(maxLightLevelArray) = %s, " % len(maxLightLevelArray) +\
-                   "len(tauArray) = %s, " % len(tauArray))
-            self.numIntervals = len(onLengthArray)
-            # Overide call to off() made in Light::setup since we want this light
-            # to be in flashing mode right away
-            self.lightLevel = Light.LIGHT_LEVEL.OFF # Set the initial light level
-            self.lightMode = Light.MODE.LIGHT_FLASHING
+    def setup(self,texInterface, ledNumber, onLightLevel,
+              onLengthArray, decayLengthArray,
+              maxLightLevelArray, tauArray):
+        '''
+        texInterface       = The TexInterface object we are using for this LED
+        ledNumber          = The LED we are talking to, 0-15
+        onLightLevel       = Light level LED is set to when user calls on()
+        onLengthArray      = Time to stay on before switching to 
+                             decay mode, for each interval
+        decayLengthArray   = Time to stay in decay mode, before 
+                             starting next interval, for each interval
+        maxLightLevelArray = Light level when on, for each interval
+        tauArray           = Time constants in secs. See discussion above
+        '''
+        super().setup(texInterface, ledNumber, onLightLevel)
+        assert (len(onLengthArray) == len(decayLengthArray) and
+                len(onLengthArray) == len(maxLightLevelArray) and
+                len(onLengthArray) == len(tauArray)),\
+               "Expecting all array lenghts to be the same. "+\
+               "len(onLengthArray) = %s, " % len(onLengthArray) +\
+               "len(decayLengthArray) = %s, " % len(decayLengthArray) +\
+               "len(maxLightLevelArray) = %s, " % len(maxLightLevelArray) +\
+               "len(tauArray) = %s, " % len(tauArray)
+        self.numIntervals = len(onLengthArray)
+        # Overide call to off() made in Light::setup since we want this light
+        # to be in flashing mode right away
+        self.setLightBrightness(Light.LEVEL.LOW) # Set the initial light level
+        self.lightMode = Light.MODE.LIGHT_FLASHING
 
-            self.onLength = onLengthValues;
-            self.decayLength = decayLengthValues;
-            self.maxLightLevel = maxLightLevelValues;
-            self.tauArray = tauArray
+        self.onLengthArray      = onLengthArray
+        self.decayLengthArray   = decayLengthArray
+        self.maxLightLevelArray = maxLightLevelArray
+        self.tauArray           = tauArray
 
-            self.changeTime     = 0    # Change right away
-            self.decaying       = True # Will cause us to go to on mode right away
-            self.decayStartTime = 0
-            self.intervalIndex  = 0    # Will be incremented during first
-                                       # call to update
-            
+        self.changeTime     = 0    # Change right away
+        self.decaying       = True # Will cause us to go to on mode right away
+        self.decayStartTime = 0
+        self.intervalIndex  = 0    # Will be incremented during first call
+                                   # call to update
+        
   
-        def flash(self):
-            self.lightLevel = maxLightLevelArray(self.intervalIndex)
-            self.lightMode = LIGHT_FLASHING
-            self.on()
-            
-        def getDecaying(sefl):
-            return self.decaying
+    def flash(self):
+        self.on()
+        self.lightMode = Light.MODE.LIGHT_FLASHING
+        self.setLightBrightness(self.maxLightLevelArray[self.intervalIndex])
+        
+    def getDecaying(self):
+        return self.decaying
 
-        def update(self):
-            #print ("In update() A"));
-            j = 0
+    def update(self):
+        #print ("In update() A"));
+        j = 0
 
-            changeTimeDelta = 0;
+        changeTimeDelta = 0;
   
-            now = time.time()
-            j = self.intervalIndex % self.numIntervals;
+        now = time.time()
+        j = self.intervalIndex % self.numIntervals;
   
+        if (now >= self.changeTime):
+            if (self.decaying):
+                # print ("In update() B")
+                self.decaying = False
+                self.intervalIndex += 1
+                j = self.intervalIndex % self.numIntervals;
+                if (self.lightMode == Light.MODE.LIGHT_FLASHING):
+                    self.setLightBrightness(self.maxLightLevelArray[j])
+                self.changeTimeDelta = self.onLengthArray[j]
+            else:
+                # println("In update() C")
+                self.decaying = True
+                self.changeTimeDelta = self.decayLengthArray[j]
+            self.decayStartTime = self.changeTime;
+            self.changeTime = self.changeTime + self.changeTimeDelta;
+            # Check if time between calls to update() is > onLengthArray[j]
+            # or decayLengthArray[j]
             if (now >= self.changeTime):
-                if (self.decaying):
-                    # print ("In update() B")
-                    self.decaying = false
-                    self.intervalIndex += 1
-                    j = self.intervalIndex % self.numIntervals;
-                    if (self.lightMode == Light.MODE.LIGHT_FLASHING):
-                        self.lightLevel = self.maxLightLevelArray[j]
-                    self.changeTimeDelta = self.onLengthArray[j]
-                else:
-                    # println("In update() C")
-                    self.decaying = True
-                    self.changeTimeDelta = self.decayLengthArray[j]
-                self.decayStartTime = self.changeTime;
-                self.changeTime = self.changeTime + self.changeTimeDelta;
-                # Check if time between calls to update() is > onLengthArray[j]
-                # or decayLengthArray[j]
-                if (now >= self.changeTime):
-                    # print("In update() D")
-                    self.decayStartTime = now
-                    self.changeTime = now + changeTimeDelta
-                    # print ("decayStartTime, changeTime, decaying = ",
-                    #        self.decayStartTime,", ",self.changeTime,", ",
-                    #        self.decaying,sep="",file=sys.stderr)
+                # print("In update() D")
+                self.decayStartTime = now
+                self.changeTime = now + changeTimeDelta
+                # print ("decayStartTime, changeTime, decaying = ",
+                #        self.decayStartTime,", ",self.changeTime,", ",
+                #        self.decaying,sep="",file=sys.stderr)
 
-            # print("In update() E")
-            if (self.decaying and self.lightMode == Light.MODE.LIGHT_FLASHING):
-                # print("A",file=sys.stderr)
-                if (self.tauArray[j] == 0):
-                    # print("B",file=sys.stderr)
-                    self.lightLevel = Light.LIGHT_LEVEL.OFF;
-                else:
-                    # print("In update() F")
-                    # print("C",file=sys.stderr)
-                    decayTime = now - self.decayStartTime # How long we have been decaying
-                    # print("now", now ,file=sys.stderr)
-                    # print("decayTime", decayTime,file=sys.stderr)
-                    # T = dT*e(-t/tau)  // T = Dt @ t=0, T = 0 @ t = infinity
-                    self.lightLevel = self.maxLightLevelArray[j]*\
-                                      math.exp(-(decayTime)/(tauArray[j]));
-                    # print("lightLevel", lightLevel, file=sys.stderr)
+        # print("In update() E")
+        if (self.decaying and self.lightMode == Light.MODE.LIGHT_FLASHING):
+            # print("A",file=sys.stderr)
+            if not self.tauArray[j]: # If 0 or None or False, no decaying
+                # print("B",file=sys.stderr)
+                self.setLightBrightness(Light.LEVEL.LOW)
+            else:
+                # print("In update() F")
+                # print("C",file=sys.stderr)
+                decayTime = now - self.decayStartTime # How long we have been decaying
+                # print("now", now ,file=sys.stderr)
+                # print("decayTime", decayTime,file=sys.stderr)
+                # T = dT*e(-t/tau)  // T = Dt @ t=0, T = 0 @ t = infinity
+                lightLevel = self.maxLightLevelArray[j]*\
+                             math.exp(-(decayTime)/(self.tauArray[j]));
+                self.setLightBrightness(lightLevel)
+                # print("lightLevel", lightLevel, file=sys.stderr)
 
-                # print("F",file=sys.stderr)
+            # print("F",file=sys.stderr)
 
-                # print ("now =",now,
-                #        "self.decayStartTime =", self.decayStartTime,
-                #        "self.changeTime  =", self.changeTime,
-                #        "self.numIntervals =", self.numIntervals,
-                #        "self.intervalIndex =", sefl.intervalIndex,
-                #        "j =", j, "\n",
-                #        "self.decaying =",self.decaying,
-                #        "self.lightLevel =" << self.lightLevel,
-                #        "self.tauArray  =" << self.tauArray[j],file=sys.stderr)
+            # print ("now =",now,
+            #        "self.decayStartTime =", self.decayStartTime,
+            #        "self.changeTime  =", self.changeTime,
+            #        "self.numIntervals =", self.numIntervals,
+            #        "self.intervalIndex =", sefl.intervalIndex,
+            #        "j =", j, "\n",
+            #        "self.decaying =",self.decaying,
+            #        "self.lightLevel =" << self.lightLevel,
+            #        "self.tauArray  =" << self.tauArray[j],file=sys.stderr)
 
 if __name__ == "__main__":
     print ("Instantiating a Light object")
