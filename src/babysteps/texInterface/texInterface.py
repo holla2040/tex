@@ -12,9 +12,9 @@ from ina219 import DeviceRangeError
 
 class TexInterface():
 
-    class LIGHT_LEVEL:
-        OFF = 0.0
-        ON = 1.0
+    class PWM_LIGHT_LEVEL:
+        LOW = 0.0
+        HIGH = 1.0
 
     # LED controller is a PWM, pulse width modulation, controller
     fPWM = 50 # Frequencey of led controller. Range 40-1000Hz
@@ -89,7 +89,7 @@ class TexInterface():
     def ledSetLevel(self, level, ledNumber):
         '''
         Set light level to 'level' of led number 'ledNumber'
-        where level is a float between TexInterface.LIGHT_LEVEL.OFF and TexInterface.LIGHT_LEVEL.ON
+        where level is a float between TexInterface.PWM_LIGHT_LEVEL.LOW and TexInterface.PWM_LIGHT_LEVEL.HIGH
         and ledNumber is an integer representing led 0 to 15
         '''
         if not (isinstance(level, float) or isinstance(level, int)):
@@ -102,12 +102,12 @@ class TexInterface():
                   "TexInterface.ledSetLevel(level=%s,ledNumber=%s). " % (level, ledNumber)+\
                   "Expection float or int but got %s" % type(ledNumber)
             raise TypeError(msg)
-        if (level < TexInterface.LIGHT_LEVEL.OFF or level > TexInterface.LIGHT_LEVEL.ON):
+        if (level < TexInterface.PWM_LIGHT_LEVEL.LOW or level > TexInterface.PWM_LIGHT_LEVEL.HIGH):
             msg = "Bad value of level sent to "+\
                   "TexInterface.ledSetLevel(level=%s,ledNumber=%s). " % (level, ledNumber)+\
                   "Expeced float between " +\
-                  "TexInterface.LIGHT_LEVEL.OFF(=%s) " % TexInterface.LIGHT_LEVEL.OFF +\
-                  "and TexInterface.LIGHT_LEVEL.ON(=%s)" % TexInterface.LIGHT_LEVEL.OFF
+                  "TexInterface.PWM_LIGHT_LEVEL.LOW(=%s) " % TexInterface.PWM_LIGHT_LEVEL.LOW +\
+                  "and TexInterface.PWM_LIGHT_LEVEL.HIGH(=%s)" % TexInterface.PWM_LIGHT_LEVEL.LOW
             raise ValueError(msg)
         if (ledNumber < 0 or ledNumber > 15):
             msg = "Bad value of ledNumber sent to "+\
@@ -118,10 +118,10 @@ class TexInterface():
         self.ledController.set_pwm(ledNumber,0,int(level*TexInterface.ledHigh))
 
     def ledOff(self,ledNumber):
-        self.ledSetLevel(TexInterface.LIGHT_LEVEL.OFF,ledNumber)
+        self.ledSetLevel(TexInterface.PWM_LIGHT_LEVEL.LOW,ledNumber)
 
     def ledOn(self,ledNumber):
-        self.ledSetLevel(TexInterface.LIGHT_LEVEL.ON,ledNumber)
+        self.ledSetLevel(TexInterface.PWM_LIGHT_LEVEL.HIGH,ledNumber)
 
     def ledAllOff(self):
         for ledNumber in range (16):
