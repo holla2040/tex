@@ -31,6 +31,7 @@ class Light():
         self.ledNumber    = None
         self.onLightLevel = None
         self.lightMode    = None
+        self.lightLevel   = None
 
     def setup(self, texInterface, ledNumber, onLightLevel):
         self.texInterface = texInterface
@@ -50,6 +51,7 @@ class Light():
         '''
         Set the actual LED to the given lightLevel
         '''
+        self.lightLevel = lightLevel # Used so can query for debugging
         self.texInterface.ledSetLevel(lightLevel, self.ledNumber)
 
     def update(self):
