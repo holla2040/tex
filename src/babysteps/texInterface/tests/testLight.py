@@ -9,7 +9,7 @@ import unittest, time
 from texInterface import TexInterface
 from lights import Light
 
-class TestLights(unittest.TestCase):
+class TestLightsBase(unittest.TestCase):
     def setUp(self):
         #print ("In setUp()")
         self.texInterface = TexInterface()
@@ -26,6 +26,7 @@ class TestLights(unittest.TestCase):
     def tearDownClass(cls):
         pass
 
+class TestLight(TestLightsBase):
     def testLightInit(self):
         light = Light()
         self.assertEqual(light.texInterface, None,"Checking light.texInterface")
