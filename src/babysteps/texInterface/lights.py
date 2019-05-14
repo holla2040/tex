@@ -245,7 +245,10 @@ class DecayLight(Light):
                 # T = dT*e(-t/tau)  // T = Dt @ t=0, T = 0 @ t = infinity
                 lightLevel = self.maxLightLevelArray[j]*\
                              math.exp(-(decayTime)/(self.tauArray[j]));
+                if lightLevel < .0075:
+                    lightLevel = Light.LEVEL.LOW
                 self.setLightBrightness(lightLevel)
+                #print(decayTime,",",lightLevel)
                 # print("lightLevel", lightLevel, file=sys.stderr)
 
             # print("F",file=sys.stderr)
