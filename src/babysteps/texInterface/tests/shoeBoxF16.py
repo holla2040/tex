@@ -39,10 +39,17 @@ class ShoeBoxF16():
         self.collisionLight.flash()
 
     def run(self):
+        downTime = .013 #seconds
+        timeLocal = time.time
         while True:
+            startTime = timeLocal()
             self.positionLight.update()
             self.collisionLight.update()
-            time.sleep(.008)
+            elapsedTime = timeLocal()-startTime
+            sleepTime = downTime - elapsedTime
+            #print ("startTime = {}, elapsedTime = {}, sleepTime = {}".format(startTime,elapsedTime,sleepTime))
+            if (sleepTime > 0):
+                time.sleep(sleepTime)
 
     def cleanup(self):
         self.positionLight.cleanup()
